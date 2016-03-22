@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  sudo: yes
+  tasks:
+   - name: Install base packages
+     apt: pkg={{ item }} state=installed update_cache=true
+     with_items:
+      - vim
+   - include: java8-oracle.yml
