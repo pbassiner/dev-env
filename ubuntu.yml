@@ -6,4 +6,6 @@
      apt: pkg={{ item }} state=installed update_cache=true
      with_items:
       - vim
-   - include: java8-oracle.yml
+      - zsh
+      - terminator
+   - include: java-oracle.yml
