@@ -1,6 +1,8 @@
 ---
 - hosts: localhost
   sudo: yes
+  vars:
+    home: /home/pbassiner
   tasks:
    - name: Install base packages
      apt: pkg={{ item }} state=installed update_cache=true
@@ -8,4 +10,9 @@
       - vim
       - zsh
       - terminator
+   - name: Symlink dotfiles
+     file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link
+     with_items:
+      - gitconfig
+      - zshrc
    - include: java-oracle.yml
