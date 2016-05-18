@@ -1,0 +1,5 @@
+---
+- name: "Download .deb file"
+  get_url: url={{ deb_url }} dest={{ deb_tmp_path }}
+- name: Install deb
+  apt: deb={{ deb_tmp_path }}
