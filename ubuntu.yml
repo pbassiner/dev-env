@@ -12,23 +12,34 @@
      sublimetext:
       name: Sublime Text 3
       url: https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
-    atom:
+     atom:
       name: Atom
       url: https://atom.io/download/deb
-    dropbox:
+     dropbox:
       name: Dropbox
       url: https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
+    targzs:
+      intellij:
+       name: IntelliJ IDEA
+       url: https://download.jetbrains.com/idea/ideaIC-2016.1.2b.tar.gz
+       target_dir: "{{ home }}"
   tasks:
    - name: Install base packages
      sudo: yes
      apt: pkg={{ item }} state=installed update_cache=true
      with_items: "{{ packages }}"  
    - name: "Download {{ item.value.name }} .deb file ({{ item.value.url }})"
-     get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb
+     get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb validate_certs=no
      with_dict: "{{ debs }}"
    - name: "Install {{ item.value.name }} .deb"
      apt: deb=/tmp/{{ item.key }}.deb
      with_dict: "{{ debs }}"
+   - name: "Download {{ item.value.name }} .tar.gz file ({{ item.value.url }})"
+     get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.tar.gz validate_certs=no
+     with_dict: "{{ targzs }}"
+   - name: "Extract {{ item.value.name }} .tar.gz to {{ item.value.target }}"
+     unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
+     with_dict: "{{ targzs }}"
    - include: java-oracle.yml
    - name: Symlink dotfiles
      file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link
