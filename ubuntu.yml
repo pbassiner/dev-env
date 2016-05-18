@@ -3,24 +3,25 @@
   sudo: yes
   vars:
     home: /home/pbassiner
-    sublime_text_deb_url: https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
-    sublimetext_tmp_deb: /tmp/sublimetext3.deb
+    packages:
+     - vim
+     - zsh
+     - terminator
+     - keepassx
+    debs:
+     sublimetext:
+      name: Sublime Text 3
+      url: https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
   tasks:
    - name: Install base packages
+     sudo: yes
      apt: pkg={{ item }} state=installed update_cache=true
-     with_items:
-      - vim
-      - zsh
-      - terminator
-      - keepassx
-      - dropbox
+     with_items: "{{ packages }}"
    - name: Symlink dotfiles
      file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link
      with_items:
       - gitconfig
       - zshrc
    - include: install-deb.yml
-     vars:
-      deb_url: "{{ sublimetext_url_deb }}"
-      deb_tmp_path: "{{ sublimetext_tmp_deb }}"
+     with_dict: "{{ debs }}"
    - include: java-oracle.yml
