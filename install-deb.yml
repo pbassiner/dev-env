@@ -1,5 +1,0 @@
----
-- name: "Download {{ item.value.name }} .deb file ({{ item.value.url }})"
-  get_url: url={{ item.value.url }} dest=/tmp/{{ item.name }}.deb
-- name: "Install {{ item.value.name }} .deb"
-  apt: deb=/tmp/{{ item.name }}.deb

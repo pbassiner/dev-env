@@ -12,16 +12,26 @@
      sublimetext:
       name: Sublime Text 3
       url: https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
+    atom:
+      name: Atom
+      url: https://atom.io/download/deb
+    dropbox:
+      name: Dropbox
+      url: https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
   tasks:
    - name: Install base packages
      sudo: yes
      apt: pkg={{ item }} state=installed update_cache=true
-     with_items: "{{ packages }}"
+     with_items: "{{ packages }}"  
+   - name: "Download {{ item.value.name }} .deb file ({{ item.value.url }})"
+     get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb
+     with_dict: "{{ debs }}"
+   - name: "Install {{ item.value.name }} .deb"
+     apt: deb=/tmp/{{ item.key }}.deb
+     with_dict: "{{ debs }}"
+   - include: java-oracle.yml
    - name: Symlink dotfiles
      file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link
      with_items:
       - gitconfig
       - zshrc
-   - include: install-deb.yml
-     with_dict: "{{ debs }}"
-   - include: java-oracle.yml
