@@ -1,12 +1,3 @@
 ```
-cat << EOF > dev-env.sh
-sudo apt-get update
-sudo apt-get --assume-yes install git
-git clone https://github.com/pbassiner/dev-env.git .dev-env
-cd .dev-env
-chmod +x bootstrap.sh
-./bootstrap.sh
-EOF
-chmod +x dev-env.sh
-./dev-env.sh
+wget -q0- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash
 ```
