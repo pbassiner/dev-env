@@ -18,6 +18,12 @@
      dropbox:
       name: Dropbox
       url: https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
+     chrome:
+      name: Google chrome
+      url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+     mysqlworkbench:
+      name: MySQL Workbench
+      url: http://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.6-1ubu1510-amd64.deb
     targzs:
       intellij:
        name: IntelliJ IDEA
@@ -41,22 +47,22 @@
    - name: Extract .tar.gz files
      unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
      with_dict: "{{ targzs }}"
+   - include: java-oracle.yml
+   - include: sdkman.yml
+   - name: Install JVM development tools using sdkman
+     script: sdkman.sh
+   - include: docker.yml
    - include: oh-my-zsh.yml
    - name: Symlink oh-my-zsh themes
      file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/{{ item }} state=link
      with_items:
       - custom.zsh-theme
+   - name: Set zsh as default sh
+     sudo: yes
+     shell: "chsh -s $(which zsh) {{ username }}"
    - name: Symlink dotfiles
      file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link force=yes
      with_items:
       - gitconfig
       - zshrc
       - aliases
-   - name: Set zsh as default sh
-     sudo: yes
-     shell: "chsh -s $(which zsh) {{ username }}"
-   - include: java-oracle.yml
-   - include: sdkman.yml
-   - name: Install JVM development tools using sdkman
-     script: sdkman.sh
-   - include: docker.yml
