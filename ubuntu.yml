@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   vars:
-    home: /home/pbassiner
+    username: pbassiner
+    home: /home/{{ username }}
     packages:
      - vim
      - zsh
@@ -40,12 +41,21 @@
    - name: Extract .tar.gz files
      unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
      with_dict: "{{ targzs }}"
-   - include: java-oracle.yml
+   - include: oh-my-zsh.yml
+   - name: Symlink oh-my-zsh themes
+     file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/{{ item }} state=link
+     with_items:
+      - custom.zsh-theme
    - name: Symlink dotfiles
-     file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link
+     file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link force=yes
      with_items:
       - gitconfig
       - zshrc
+      - aliases
+   - name: Set zsh as default sh
+     sudo: yes
+     shell: "chsh -s $(which zsh) {{ username }}"
+   - include: java-oracle.yml
    - include: sdkman.yml
    - name: Install JVM development tools using sdkman
      script: sdkman.sh

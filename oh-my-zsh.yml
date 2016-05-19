@@ -1,0 +1,5 @@
+---
+- name: Download Oh My Zsh
+  get_url: url=https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh dest=/tmp/oh-my-zsh.sh validate_certs=no
+- name: Install Oh My Zsh
+  script: /tmp/oh-my-zsh.sh
