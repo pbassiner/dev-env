@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  sudo: yes
   vars:
     home: /home/pbassiner
     packages:
@@ -28,16 +27,16 @@
      sudo: yes
      apt: pkg={{ item }} state=installed update_cache=true
      with_items: "{{ packages }}"  
-   - name: "Download {{ item.value.name }} .deb file ({{ item.value.url }})"
+   - name: Download .deb files
      get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb validate_certs=no
      with_dict: "{{ debs }}"
-   - name: "Install {{ item.value.name }} .deb"
+   - name: Install .deb files
      apt: deb=/tmp/{{ item.key }}.deb
      with_dict: "{{ debs }}"
-   - name: "Download {{ item.value.name }} .tar.gz file ({{ item.value.url }})"
+   - name: Download .tar.gz files
      get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.tar.gz validate_certs=no
      with_dict: "{{ targzs }}"
-   - name: "Extract {{ item.value.name }} .tar.gz to {{ item.value.target }}"
+   - name: Extract .tar.gz files
      unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
      with_dict: "{{ targzs }}"
    - include: java-oracle.yml
@@ -46,3 +45,13 @@
      with_items:
       - gitconfig
       - zshrc
+   - include: sdkman.yml
+   - name: Install JVM development tools using sdkman
+     script: sdkman.sh
+   - name: Add Docker Repository
+     sudo: yes
+     apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-wily main' # ubuntu 15.10
+   - name: Install Docker
+     sudo: yes
+     apt: name=docker-engine state=latest update_cache=true force=yes
+    

@@ -1,0 +1,5 @@
+---
+- name: Download sdkman
+  get_url: url=https://get.sdkman.io dest=/tmp/sdkman.sh validate_certs=no
+- name: Install sdkman
+  script: /tmp/sdkman.sh
