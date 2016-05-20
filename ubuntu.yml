@@ -66,3 +66,7 @@
       - gitconfig
       - zshrc
       - aliases
+   - name: Symlink config files
+     file: path={{ home }}/.config/{{ item }} src={{ home }}/.dev-env/config/{{ item }} state=link force=yes
+     with_items:
+      - terminator/config
