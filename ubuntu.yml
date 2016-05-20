@@ -47,6 +47,7 @@
    - name: Extract .tar.gz files
      unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
      with_dict: "{{ targzs }}"
+   - include: atom-plugins.yml
    - include: java-oracle.yml
    - include: sdkman.yml
    - name: Install JVM development tools using sdkman
