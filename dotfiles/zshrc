@@ -72,6 +72,7 @@ export PATH=$GRADLE_HOME/bin:$PATH
 export PATH=/home/pbassiner/android-studio/bin:$PATH
 export PATH=/home/pbassiner/activator-1.2.12:$PATH
 export PATH=/home/pbassiner/.rbenv/bin:$PATH
+export PATH=/home/pbassiner/hub-linux-amd64-2.2.3/bin:$PATH
 
 eval "$(rbenv init -)"
 

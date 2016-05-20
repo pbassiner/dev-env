@@ -25,6 +25,10 @@
       name: MySQL Workbench
       url: http://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.6-1ubu1510-amd64.deb
     targzs:
+      hub:
+       name: hub
+       url: https://github.com/github/hub/releases/download/v2.2.3/hub-linux-amd64-2.2.3.tgz
+       target_dir: "{{ home }}"
       intellij:
        name: IntelliJ IDEA
        url: https://download.jetbrains.com/idea/ideaIC-2016.1.2b.tar.gz
