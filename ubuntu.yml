@@ -8,3 +8,4 @@
    - include: java-oracle.yml
    - include: sdkman.yml
    - include: customization.yml
+   - include: gotty

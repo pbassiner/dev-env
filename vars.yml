@@ -9,6 +9,8 @@ repositories: # ubuntu 16.04
   repository: deb http://linux.dropbox.com/ubuntu xenial main
   keyserver: pgp.mit.edu
   key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+ppas:
+ - "ppa:teejee2008/ppa"
 packages:
  - vim
  - zsh
@@ -21,6 +23,7 @@ packages:
  - virtualbox
  - vagrant
  - httpie
+ - aptik
 debs:
  sublimetext:
   name: Sublime Text 3
@@ -36,6 +39,9 @@ debs:
  chrome:
   name: Google chrome
   url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+ dbeaber:
+  name: DBeaver
+  url: http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
 targzs:
  hub:
   name: hub
@@ -49,6 +55,12 @@ targzs:
   target_dir: "{{ home }}"
   original_dir: idea-IC-163.12024.16
   symlinked_dir: ideaIC
+ go:
+  name: Go
+  url: https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
+  target_dir: "{{ home }}"
+  original_dir: ???
+  symlinked_dir: go
 binaries:
  ammonite:
   name: amm
@@ -60,3 +72,5 @@ binaries:
  kubectl:
    name: kubectl
    url: https://storage.googleapis.com/kubernetes-release/release/v1.5.2/bin/linux/amd64/kubectl
+go-apps:
+ - "github.com/yudai/gotty"
