@@ -1,7 +1,0 @@
----
-- name: Add Docker Repository
-  sudo: yes
-  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-wily main' # ubuntu 15.10
-- name: Install Docker
-  sudo: yes
-  apt: name=docker-engine state=latest update_cache=true force=yes

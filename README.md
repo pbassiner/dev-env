@@ -27,7 +27,7 @@ Note: if no version is specified it means the latest will be installed
 
 ## Utilities
 * Google Chrome
-* Dropbox (v. 2015.10.28)
+* Dropbox
 
 ## Development environments
 * Oracle Java 7
@@ -35,7 +35,7 @@ Note: if no version is specified it means the latest will be installed
 * sdkman, which is used to install:
     * sbt (latest)
     * maven (latest)
-* docker (for Ubuntu 15.10)
+* docker
 
 ## Custom configuration
 * Set zsh as default shell
@@ -48,3 +48,5 @@ Note: if no version is specified it means the latest will be installed
 
 ## ToDo
 * hub zsh completion
+* refactor to simplify ubuntu.yml
+* upgrade to ubuntu 16.04

@@ -3,11 +3,22 @@
   vars:
     username: pbassiner
     home: /home/{{ username }}
+    repositories: # ubuntu 15.10
+     docker:
+      repository: "'deb https://apt.dockerproject.org/repo ubuntu-wily main'"
+      keyserver: hkp://p80.pool.sks-keyservers.net:80
+      key: 58118E89F3A912897C070ADBF76221572C52609D
+     dropbox:
+      repository: "'deb http://linux.dropbox.com/ubuntu wily main'"
+      keyserver: pgp.mit.edu
+      key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
     packages:
      - vim
      - zsh
      - terminator
      - keepassx
+     - dropbox
+     - docker-engine
     debs:
      sublimetext:
       name: Sublime Text 3
@@ -15,9 +26,6 @@
      atom:
       name: Atom
       url: https://atom.io/download/deb
-     dropbox:
-      name: Dropbox
-      url: https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2015.10.28_amd64.deb
      chrome:
       name: Google chrome
       url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -34,9 +42,17 @@
        url: https://download.jetbrains.com/idea/ideaIC-2016.1.2b.tar.gz
        target_dir: "{{ home }}"
   tasks:
-   - name: Install base packages
+   - name: Add apt keys
      sudo: yes
-     apt: pkg={{ item }} state=installed update_cache=true
+     apt_key: keyserver={{ item.value.keyserver }} id={{ item.value.key }}
+     with_dict: "{{ repositories }}"
+   - name: Add apt repositories
+     sudo: yes
+     apt_repository: repo={{ item.value.repository }}
+     with_dict: "{{ repositories }}"
+   - name: Install packages
+     sudo: yes
+     apt: pkg={{ item }} state=latest update_cache=true
      with_items: "{{ packages }}"  
    - name: Download .deb files
      get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb validate_certs=no
@@ -56,7 +72,6 @@
    - include: sdkman.yml
    - name: Install JVM development tools using sdkman
      script: sdkman.sh
-   - include: docker.yml
    - include: oh-my-zsh.yml
    - name: Symlink oh-my-zsh themes
      file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/{{ item }} state=link
@@ -71,6 +86,10 @@
       - gitconfig
       - zshrc
       - aliases
+   - name: Create config folders
+     file: path={{ home }}/.config/{{ item }} state=directory
+     with_items:
+      - terminator
    - name: Symlink config files
      file: path={{ home }}/.config/{{ item }} src={{ home }}/.dev-env/config/{{ item }} state=link force=yes
      with_items:
