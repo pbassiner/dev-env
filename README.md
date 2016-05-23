@@ -49,4 +49,3 @@ Note: if no version is specified it means the latest will be installed
 ## ToDo
 * hub zsh completion
 * fix installation of atom plugins
-* refactor to simplify ubuntu.yml

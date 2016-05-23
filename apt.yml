@@ -1,0 +1,14 @@
+---
+- include_vars: vars.yml
+- name: Add apt keys
+  become: yes
+  apt_key: keyserver={{ item.value.keyserver }} id={{ item.value.key }}
+  with_dict: "{{ repositories }}"
+- name: Add apt repositories
+  become: yes
+  apt_repository: repo={{ item.value.repository }}
+  with_dict: "{{ repositories }}"
+- name: Install packages
+  become: yes
+  apt: pkg={{ item }} state=latest update_cache=true
+  with_items: "{{ packages }}"  

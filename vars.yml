@@ -1,0 +1,38 @@
+username: pbassiner
+ home: /home/{{ username }}
+  repositories: # ubuntu 16.04
+   docker:
+    repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
+    keyserver: hkp://p80.pool.sks-keyservers.net:80
+    key: 58118E89F3A912897C070ADBF76221572C52609D
+   dropbox:
+    repository: deb http://linux.dropbox.com/ubuntu xenial main
+    keyserver: pgp.mit.edu
+    key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+  packages:
+   - vim
+   - zsh
+   - terminator
+   - keepassx
+   - dropbox
+   - docker-engine
+   - mysql-workbench
+  debs:
+   sublimetext:
+    name: Sublime Text 3
+    url: https://download.sublimetext.com/sublime-text_build-3114_amd64.deb
+   atom:
+    name: Atom
+    url: https://atom.io/download/deb
+   chrome:
+    name: Google chrome
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  targzs:
+    hub:
+     name: hub
+     url: https://github.com/github/hub/releases/download/v2.2.3/hub-linux-amd64-2.2.3.tgz
+     target_dir: "{{ home }}"
+    intellij:
+     name: IntelliJ IDEA
+     url: https://download.jetbrains.com/idea/ideaIC-2016.1.2b.tar.gz
+     target_dir: "{{ home }}"
