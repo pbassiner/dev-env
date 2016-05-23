@@ -1,0 +1,34 @@
+---
+- include_vars: vars.yml
+- name: Set zsh as default sh
+  become: yes
+  shell: "chsh -s $(which zsh) {{ username }}"
+- include: oh-my-zsh.yml
+- name: Create completions folder
+  file: path={{ home }}/.zsh/completions state=directory
+- name: Copy hub zsh completion file
+  copy: src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion dest={{ home }}/.zsh/completions/_hub
+- name: Symlink oh-my-zsh themes
+  file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/{{ item }} state=link
+  with_items:
+   - custom.zsh-theme
+- name: Symlink dotfiles
+  file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link force=yes
+  with_items:
+   - gitconfig
+   - zshrc
+   - aliases
+- name: Create config folders
+  file: path={{ home }}/.config/{{ item }} state=directory
+  with_items:
+   - terminator
+- name: Symlink config files
+  file: path={{ home }}/.config/{{ item }} src={{ home }}/.dev-env/config/{{ item }} state=link force=yes
+  with_items:
+   - terminator/config
+- name: Create desktop files folder
+  file: path={{ home }}/.config/autostart state=directory
+- name: Symlink autostart desktop files
+  file: path={{ home }}/.config/autostart/{{ item }}.desktop src={{ home }}/.dev-env/desktop-files/{{ item }}.desktop state=link force=yes
+  with_items:
+   - guake

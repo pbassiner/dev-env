@@ -37,12 +37,11 @@ Note: if no version is specified it means the latest will be installed
 
 ## Custom configuration
 * Set zsh as default shell
+* hub autocompletion on zsh
 * Symlinks
     * oh-my-zsh custom theme
     * .zshrc
     * .gitconfig
     * .aliases
     * terminator custom config
-
-## ToDo
-* hub zsh completion
+    * guake autostart

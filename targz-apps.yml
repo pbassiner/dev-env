@@ -6,3 +6,6 @@
 - name: Extract .tar.gz files
   unarchive: src=/tmp/{{ item.key }}.tar.gz dest={{ item.value.target_dir }}
   with_dict: "{{ targzs }}"
+- name: Symlink extracted folders
+  file: path={{ item.value.target_dir }}/{{ item.value.symlinked_dir }} src={{ item.value.target_dir }}/{{ item.value.original_dir }} state=link
+  with_dict: "{{ targzs }}"

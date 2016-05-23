@@ -3,3 +3,5 @@
   get_url: url=https://get.sdkman.io dest=/tmp/sdkman.sh validate_certs=no
 - name: Install sdkman
   script: /tmp/sdkman.sh
+- name: Install JVM development tools using sdkman
+  script: sdkman.sh

@@ -72,7 +72,7 @@ export PATH=$GRADLE_HOME/bin:$PATH
 export PATH=/home/pbassiner/android-studio/bin:$PATH
 export PATH=/home/pbassiner/activator-1.2.12:$PATH
 export PATH=/home/pbassiner/.rbenv/bin:$PATH
-export PATH=/home/pbassiner/hub-linux-amd64-2.2.3/bin:$PATH
+export PATH=/home/pbassiner/hub/bin:$PATH
 
 eval "$(rbenv init -)"
 
@@ -103,6 +103,10 @@ eval "$(rbenv init -)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# hub autocompletion
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/pbassiner/.sdkman"

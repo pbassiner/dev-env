@@ -32,7 +32,11 @@ targzs:
   name: hub
   url: https://github.com/github/hub/releases/download/v2.2.3/hub-linux-amd64-2.2.3.tgz
   target_dir: "{{ home }}"
+  original_dir: hub-linux-amd64-2.2.3
+  symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
   url: https://download.jetbrains.com/idea/ideaIC-2016.1.2b.tar.gz
   target_dir: "{{ home }}"
+  original_dir: idea-IC-145.972.3
+  symlinked_dir: ideaIC
