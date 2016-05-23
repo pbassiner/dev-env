@@ -19,9 +19,7 @@ Note: if no version is specified it means the latest will be installed
 
 ## Editors & IDEs
 * Sublime Text 3 (build 3114)
-* Atom, with plugins:
-    * git-projects
-    * term3
+* Atom
 * IntelliJ IDEA (Community 2016.1.2b)
 * MySQL Workbench (6.3.6 for Ubuntu 15.10)
 
@@ -48,4 +46,3 @@ Note: if no version is specified it means the latest will be installed
 
 ## ToDo
 * hub zsh completion
-* fix installation of atom plugins

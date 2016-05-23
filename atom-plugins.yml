@@ -1,6 +1,0 @@
----
-- name: Install Atom plugins
-  shell: apm install {{ item }}
-  with_items:
-   - git-projects
-   - term3

@@ -4,7 +4,6 @@
    - include: apt.yml
    - include: deb-packages.yml
    - include: targz-apps.yml
-#   - include: atom-plugins.yml
    - include: java-oracle.yml
    - include: sdkman.yml
    - name: Install JVM development tools using sdkman
@@ -31,3 +30,9 @@
      file: path={{ home }}/.config/{{ item }} src={{ home }}/.dev-env/config/{{ item }} state=link force=yes
      with_items:
       - terminator/config
+   - name: Create desktop files folder
+     file: path={{ home }}/.config/autostart state=directory
+   - name: Symlink autostart desktop files
+     file: path={{ home }}/.config/autostart/{{ item }}.desktop src={{ home }}/.dev-env/desktop-files/{{ item }}.desktop state=link force=yes
+     with_items:
+      - guake

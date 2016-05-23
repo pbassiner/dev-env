@@ -11,4 +11,4 @@
 - name: Install packages
   become: yes
   apt: pkg={{ item }} state=latest update_cache=true
-  with_items: "{{ packages }}"  
+  with_items: "{{ packages }}"
