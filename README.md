@@ -6,7 +6,7 @@ wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash
 ```
 # Disclaimer
 This is just for personal convenience. It's not intended to be highly configurable and I'm most likely not following Ansible's conventions and best practices.
-# Content (specific for Ubuntu 15.10)
+# Content (specific for Ubuntu 16.04)
 Note: if no version is specified it means the latest will be installed
 ## Dev Tools
 * vim
@@ -48,5 +48,5 @@ Note: if no version is specified it means the latest will be installed
 
 ## ToDo
 * hub zsh completion
+* fix installation of atom plugins
 * refactor to simplify ubuntu.yml
-* upgrade to ubuntu 16.04
