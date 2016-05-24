@@ -34,10 +34,14 @@ Note: if no version is specified it means the latest will be installed
     * sbt (latest)
     * maven (latest)
 * docker
+* docker-compose (1.7.1)
 
 ## Custom configuration
-* Set zsh as default shell
-* hub autocompletion on zsh
+* zsh
+    * Set as default shell
+    * autocompletion for:
+        * hub
+        * docker-compose
 * Symlinks
     * oh-my-zsh custom theme
     * .zshrc

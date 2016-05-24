@@ -1,0 +1,5 @@
+---
+- include_vars: vars.yml
+- name: Download docker-compose
+  become: yes
+  get_url: url=https://github.com/docker/compose/releases/download/{{ versions.docker_compose }}/docker-compose-Linux-x86_64 dest=/usr/local/bin/docker-compose validate_certs=no mode=0755
