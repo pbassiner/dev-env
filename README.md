@@ -9,32 +9,32 @@ This is just for personal convenience. It's not intended to be highly configurab
 # Content (specific for Ubuntu 16.04)
 Note: if no version is specified it means the latest will be installed
 ## Dev Tools
-* vim
-* zsh
-* oh-my-zsh
-* terminator
-* git
-* hub (2.2.3)
-* keepassx
+* [vim] (http://www.vim.org/)
+* [zsh](https://github.com/zsh-users/zsh)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [terminator] (https://launchpad.net/terminator/)
+* [git] (https://git-scm.com/)
+* [hub](https://github.com/github/hub) (2.2.3)
+* [keepassx] (https://www.keepassx.org/)
 
 ## Editors & IDEs
-* Sublime Text 3 (build 3114)
-* Atom
-* IntelliJ IDEA (Community 2016.1.2b)
-* MySQL Workbench (6.3.6 for Ubuntu 15.10)
+* [Sublime Text 3](https://www.sublimetext.com/) (build 3114)
+* [Atom] (https://github.com/atom/atom)
+* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.1.2b)
+* [MySQL Workbench] (https://www.mysql.com/products/workbench/) (6.3.6 for Ubuntu 15.10)
 
 ## Utilities
-* Google Chrome
-* Dropbox
+* [Google Chrome] (https://www.google.com/chrome/browser/desktop/index.html)
+* [Dropbox] (https://www.dropbox.com/)
 
 ## Development environments
 * Oracle Java 7
 * Oracle Java 8
-* sdkman, which is used to install:
-    * sbt (latest)
-    * maven (latest)
-* docker
-* docker-compose (1.7.1)
+* [sdkman] (http://sdkman.io/), which is used to install:
+    * [sbt] (http://www.scala-sbt.org/) (latest)
+    * [maven] (https://maven.apache.org/) (latest)
+* [docker] (https://www.docker.com/)
+* [docker-compose] (https://docs.docker.com/compose/) (1.7.1)
 
 ## Custom configuration
 * zsh
