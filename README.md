@@ -31,10 +31,12 @@ Note: if no version is specified it means the latest will be installed
 * Oracle Java 7
 * Oracle Java 8
 * [sdkman] (http://sdkman.io/), which is used to install:
-    * [sbt] (http://www.scala-sbt.org/) (latest)
-    * [maven] (https://maven.apache.org/) (latest)
+    * [sbt] (http://www.scala-sbt.org/)
+    * [maven] (https://maven.apache.org/)
 * [docker] (https://www.docker.com/)
 * [docker-compose] (https://docs.docker.com/compose/) (1.7.1)
+* [virtualbox] (https://www.virtualbox.org/)
+* [vagrant] (https://www.vagrantup.com/)
 
 ## Custom configuration
 * zsh

@@ -17,6 +17,8 @@ packages:
  - dropbox
  - docker-engine
  - mysql-workbench
+ - virtualbox
+ - vagrant
 debs:
  sublimetext:
   name: Sublime Text 3
