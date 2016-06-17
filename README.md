@@ -13,6 +13,7 @@ Note: if no version is specified it means the latest will be installed
 * [zsh](https://github.com/zsh-users/zsh)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [terminator] (https://launchpad.net/terminator/)
+* [guake] (https://github.com/Guake/guake/)
 * [git] (https://git-scm.com/)
 * [hub](https://github.com/github/hub) (2.2.3)
 * [keepassx] (https://www.keepassx.org/)
@@ -49,5 +50,6 @@ Note: if no version is specified it means the latest will be installed
     * .zshrc
     * .gitconfig
     * .aliases
+    * IntelliJ desktop file for launcher
     * terminator custom config
     * guake autostart
