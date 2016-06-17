@@ -50,33 +50,17 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
+source ~/.nq_aliases
 
 # User configuration
 export LESS="-rFnXM"
 
 #javahome
-export JAVA_HOME=/opt/jdk
-export JBOSS_HOME=/opt/jboss
-
-#ANDROID_HOME
-export ANDROID_HOME=/home/pbassiner/android-sdk-linux
-
-#GRADLE
-export GRADLE_HOME=/usr/lib/gradle/2.3
+export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 
 #PATH
-export PATH=/home/pbassiner/mongodb-linux-x86_64-2.4.9/bin:$PATH
-export PATH=/home/pbassiner/sbt/bin:$PATH
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/android-4.4:$PATH
-export PATH=$GRADLE_HOME/bin:$PATH
-export PATH=/home/pbassiner/android-studio/bin:$PATH
-export PATH=/home/pbassiner/activator-1.2.12:$PATH
-export PATH=/home/pbassiner/.rbenv/bin:$PATH
 export PATH=/home/pbassiner/hub/bin:$PATH
 
-eval "$(rbenv init -)"
-
-#export PATH="/home/pbassiner/activator-1.2.12:/home/pbassiner/android-sdk-linux/tools:/home/pbassiner/android-sdk-linux/platform-tools:/home/pbassiner/android-sdk-linux/build-tools/android-4.4:/home/pbassiner/sbt/bin:/home/pbassiner/mongodb-linux-x86_64-2.4.9/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/jdk/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
