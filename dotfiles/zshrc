@@ -55,9 +55,6 @@ source ~/.nq_aliases
 # User configuration
 export LESS="-rFnXM"
 
-#javahome
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle
-
 #PATH
 export PATH=/home/pbassiner/hub/bin:$PATH
 
