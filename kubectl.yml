@@ -1,0 +1,5 @@
+---
+- include_vars: vars.yml
+- name: Download kubectl
+  become: yes
+  get_url: url=https://storage.googleapis.com/kubernetes-release/release/v{{ versions.kubectl }}/bin/linux/amd64/kubectl dest=/usr/local/bin/kubectl validate_certs=no mode=0755
