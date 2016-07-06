@@ -38,6 +38,7 @@ Note: if no version is specified it means the latest will be installed
 * [docker-compose] (https://docs.docker.com/compose/) (1.7.1)
 * [virtualbox] (https://www.virtualbox.org/)
 * [vagrant] (https://www.vagrantup.com/)
+* [kubectl] (https://github.com/kubernetes/kubernetes)
 
 ## Custom configuration
 * zsh
