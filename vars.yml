@@ -20,6 +20,7 @@ packages:
  - mysql-workbench
  - virtualbox
  - vagrant
+ - httpie
 debs:
  sublimetext:
   name: Sublime Text 3

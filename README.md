@@ -17,6 +17,7 @@ Note: if no version is specified it means the latest will be installed
 * [git] (https://git-scm.com/)
 * [hub](https://github.com/github/hub) (2.2.3)
 * [keepassx] (https://www.keepassx.org/)
+* [httpie] (https://github.com/jkbrzt/httpie)
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3114)
