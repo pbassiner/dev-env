@@ -1,6 +1,6 @@
 [user]
-	name = Pol Bassiner
-	email = pbassiner@netquest.com
+    name = Pol Bassiner
+    email = pbassiner@netquest.com
 [credential]
     helper = cache --timeout=600
 [color]
@@ -34,6 +34,9 @@
     lg = !"git lg1"
     lsrh = ls-remote --heads
     lsrt = ls-remote --tags
+    sp = "!sh -c \"git stash pop 'stash@{$1}'\" -"
+    ss = "!sh -c \"git stash save -u $1\" -"
+    sl = stash list
 [apply]
     whitespace = nowarn
 [core]
