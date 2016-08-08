@@ -22,8 +22,8 @@ Note: if no version is specified it means the latest will be installed
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3114)
 * [Atom] (https://github.com/atom/atom)
-* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2)
-* [MySQL Workbench] (https://www.mysql.com/products/workbench/) (6.3.7 for Ubuntu 16.04)
+* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.1)
+* [MySQL Workbench] (https://www.mysql.com/products/workbench/)
 
 ## Utilities
 * [Google Chrome] (https://www.google.com/chrome/browser/desktop/index.html)
@@ -36,10 +36,10 @@ Note: if no version is specified it means the latest will be installed
     * [sbt] (http://www.scala-sbt.org/)
     * [maven] (https://maven.apache.org/)
 * [docker] (https://www.docker.com/)
-* [docker-compose] (https://docs.docker.com/compose/) (1.7.1)
+* [docker-compose] (https://docs.docker.com/compose/) (1.8.0)
 * [virtualbox] (https://www.virtualbox.org/)
 * [vagrant] (https://www.vagrantup.com/)
-* [kubectl] (https://github.com/kubernetes/kubernetes)
+* [kubectl] (https://github.com/kubernetes/kubernetes) (1.3.4)
 
 ## Custom configuration
 * zsh
