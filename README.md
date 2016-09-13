@@ -15,14 +15,14 @@ Note: if no version is specified it means the latest will be installed
 * [terminator] (https://launchpad.net/terminator/)
 * [guake] (https://github.com/Guake/guake/)
 * [git] (https://git-scm.com/)
-* [hub](https://github.com/github/hub) (2.2.5)
+* [hub](https://github.com/github/hub) (2.2.8)
 * [keepassx] (https://www.keepassx.org/)
 * [httpie] (https://github.com/jkbrzt/httpie)
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3114)
 * [Atom] (https://github.com/atom/atom)
-* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.3)
+* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.4)
 * [MySQL Workbench] (https://www.mysql.com/products/workbench/)
 
 ## Utilities

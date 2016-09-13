@@ -34,15 +34,15 @@ debs:
 targzs:
  hub:
   name: hub
-  url: https://github.com/github/hub/releases/download/v2.2.5/hub-linux-amd64-2.2.5.tgz
+  url: https://github.com/github/hub/releases/download/v2.2.8/hub-linux-amd64-2.2.8.tgz
   target_dir: "{{ home }}"
-  original_dir: hub-linux-amd64-2.2.5
+  original_dir: hub-linux-amd64-2.2.8
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2016.2.3.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2016.2.4.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-162.1812.17
+  original_dir: idea-IC-162.2032.8
   symlinked_dir: ideaIC
 versions:
  docker_compose: 1.8.0
