@@ -20,7 +20,7 @@ Note: if no version is specified it means the latest will be installed
 * [httpie] (https://github.com/jkbrzt/httpie)
 
 ## Editors & IDEs
-* [Sublime Text 3](https://www.sublimetext.com/) (build 3114)
+* [Sublime Text 3](https://www.sublimetext.com/) (build 3124)
 * [Atom] (https://github.com/atom/atom)
 * [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.4)
 * [MySQL Workbench] (https://www.mysql.com/products/workbench/)
@@ -39,7 +39,7 @@ Note: if no version is specified it means the latest will be installed
 * [docker-compose] (https://docs.docker.com/compose/) (1.8.0)
 * [virtualbox] (https://www.virtualbox.org/)
 * [vagrant] (https://www.vagrantup.com/)
-* [kubectl] (https://github.com/kubernetes/kubernetes) (1.3.6)
+* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.0)
 
 ## Custom configuration
 * zsh
