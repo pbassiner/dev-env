@@ -12,6 +12,7 @@
 [alias]
     st = status -sb
     ci = commit
+    cf = commit --fixup
     co = checkout
     br = branch
     pr = pull --rebase
@@ -34,11 +35,16 @@
     lg = !"git lg1"
     lsrh = ls-remote --heads
     lsrt = ls-remote --tags
+    sa = "!sh -c \"git stash apply 'stash@{$1}'\" -"
     sp = "!sh -c \"git stash pop 'stash@{$1}'\" -"
     ss = "!sh -c \"git stash save -u $1\" -"
     sl = stash list
+    please = push --force-with-lease
+    commend = commit --amend --no-edit
 [apply]
     whitespace = nowarn
+[rebase]
+    autosquash = true
 [core]
     editor = vim -X
     excludesfile = ~/.gitignore
