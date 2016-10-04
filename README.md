@@ -15,12 +15,12 @@ Note: if no version is specified it means the latest will be installed
 * [terminator] (https://launchpad.net/terminator/)
 * [guake] (https://github.com/Guake/guake/)
 * [git] (https://git-scm.com/)
-* [hub](https://github.com/github/hub) (2.2.8)
+* [hub](https://github.com/github/hub) (2.2.9)
 * [keepassx] (https://www.keepassx.org/)
 * [httpie] (https://github.com/jkbrzt/httpie)
 
 ## Editors & IDEs
-* [Sublime Text 3](https://www.sublimetext.com/) (build 3124)
+* [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
 * [Atom] (https://github.com/atom/atom)
 * [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.4)
 * [MySQL Workbench] (https://www.mysql.com/products/workbench/)
@@ -36,7 +36,7 @@ Note: if no version is specified it means the latest will be installed
     * [sbt] (http://www.scala-sbt.org/)
     * [maven] (https://maven.apache.org/)
 * [docker] (https://www.docker.com/)
-* [docker-compose] (https://docs.docker.com/compose/) (1.8.0)
+* [docker-compose] (https://docs.docker.com/compose/) (1.8.1)
 * [virtualbox] (https://www.virtualbox.org/)
 * [vagrant] (https://www.vagrantup.com/)
 * [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.0)
