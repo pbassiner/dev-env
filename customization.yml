@@ -22,3 +22,7 @@
 - name: Show startup hidden applications
   become: yes
   shell: sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+- name: Create completions folder
+  file: path={{ home }}/.zsh/completions state=directory
+- name: Copy hub zsh completion file
+  copy: src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion dest={{ home }}/.zsh/completions/_hub

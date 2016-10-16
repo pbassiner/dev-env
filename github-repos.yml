@@ -1,0 +1,4 @@
+---
+- name: Install GitHub repositories
+  shell: git clone git://github.com/{{ item.value.repo }}.git {{ item.value.dest }}
+  with_dict: "{{ github-repos }}"

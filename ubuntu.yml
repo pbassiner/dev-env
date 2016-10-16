@@ -4,7 +4,8 @@
    - include: apt.yml
    - include: deb-packages.yml
    - include: targz-apps.yml
-   - include: binaries.yml
+   - include: executables.yml
+   - include: github-repositories.yml
    - include: java-oracle.yml
    - include: sdkman.yml
    - include: customization.yml

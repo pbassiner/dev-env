@@ -1,83 +1,107 @@
 username: aserralle
 home: /home/{{ username }}
-repositories: # ubuntu 16.04
- docker:
-  repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
-  keyserver: hkp://p80.pool.sks-keyservers.net:80
-  key: 58118E89F3A912897C070ADBF76221572C52609D
- dropbox:
-  repository: deb http://linux.dropbox.com/ubuntu xenial main
-  keyserver: pgp.mit.edu
-  key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+repositories: # ubuntu 16.10
+  docker:
+    repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
+    keyserver: hkp://p80.pool.sks-keyservers.net:80
+    key: 58118E89F3A912897C070ADBF76221572C52609D
+  dropbox:
+    repository: deb http://linux.dropbox.com/ubuntu xenial main
+    keyserver: pgp.mit.edu
+    key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+  spotify:
+    repository: http://repository.spotify.com testing non-free
+    keyserver: hkp://keyserver.ubuntu.com:80
+    key: D2C19886
 ppas:
- - "ppa:teejee2008/ppa"
+  - ppa:teejee2008/ppa
+  - ppa:zeal-developers/ppa
 packages:
- - vim
- - zsh
- - terminator
- - keepassx
- - guake
- - dropbox
- - docker-engine
- - mysql-workbench
- - virtualbox
- - vagrant
- - httpie
- - aptik
- - python
- - python-pip
- - tmux
- - tmate
- - glances
+  - vim
+  - zsh
+  - terminator
+  - keepassx
+  - guake
+  - dropbox
+  - docker-engine
+  - httpie
+  - aptik
+  - python
+  - python-pip
+  - tmux
+  - tmate
+  - glances
+  - tmux
+  - zeal
+rpms:
+  atom:
+    url: https://atom.io/download/rpm
 debs:
- sublimetext:
-  name: Sublime Text 3
-  url: https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
- atom:
-  name: Atom
-  url: https://atom.io/download/deb
-  plugins:
-   - atom-beautify
-   - atom-scalariform
-   - file-icons
-   - language-scala
- chrome:
-  name: Google chrome
-  url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- dbeaber:
-  name: DBeaver
-  url: http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
-targzs:
- hub:
-  name: hub
-  url: https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
-  target_dir: /opt
-  original_dir: hub-linux-amd64-2.2.9
-  symlinked_dir: hub
- intellij:
-  name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2016.3.4.tar.gz
-  target_dir: /opt
-  original_dir: idea-IC-163.12024.16
-  symlinked_dir: ideaIC
- go:
-  name: Go
-  url: https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz
-  target_dir: /usr/local
-  original_dir: go
-  symlinked_dir: go
+  sublimetext:
+    name: Sublime Text 3
+    url: https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
+  atom:
+    name: Atom
+    url: https://atom.io/download/deb
+  chrome:
+     name: Google chrome
+     url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  dbeaber:
+     name: DBeaver
+     url: http://dbeaver.jkiss.org/files/{{ versions.dbeaver }}/dbeaver-ce_{{ versions.dbeaver }}_amd64.deb
+  fastoredis:
+     name: fastoredis
+     url: http://fastoredis.com/files/linux/fastoredis-{{ versions.fastoredis }}-x86_64.deb
 binaries:
- ammonite:
-  name: amm
-  url: https://github.com/lihaoyi/Ammonite/releases/download/0.8.2/2.12-0.8.2
- docker_compose:
-   name: docker-compose
-   url: https://github.com/docker/compose/releases/download/1.11.0/docker-compose-Linux-x86_64
-   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.11.0/contrib/completion/zsh/_docker-compose
- kubectl:
-   name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.5.2/bin/linux/amd64/kubectl
+  ammonite:
+    name: amm
+    url: https://github.com/lihaoyi/Ammonite/releases/downloadn/0.8.2/2.12-0.8.2
+  docker-compose:
+    name: docker-compose
+    url: https://github.com/docker/compose/releases/download/{{ versions.docker_compose }}/docker-compose-Linux-x86_64
+  kubectl:
+    name: kubectl
+    url: https://storage.googleapis.com/kubernetes-release/release/v{{ versions.kubectl }}/bin/linux/amd64/kubectl
+github-repos:
+snaps:
+  - docker
+  - dwarf-fortress
+flatpak:
+  spotify:
+    url: ...
+targzs:
+  hub:
+    name: hub
+    url: https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
+    target_dir: /opt
+    original_dir: hub-linux-amd64-2.2.9
+    symlinked_dir: hub
+  intellij:
+    name: IntelliJ IDEA
+    url: https://download.jetbrains.com/idea/ideaIC-2016.3.4.tar.gz
+    target_dir: /opt
+    original_dir: idea-IC-163.12024.16
+    symlinked_dir: ideaIC
+  go:
+    name: Go
+    url: https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz
+    target_dir: /usr/local
+    original_dir: go
+    symlinked_dir: go
 go-apps:
- - "github.com/yudai/gotty"
+  - "github.com/yudai/gotty"
 python-apps:
- - "http-prompt"
+  - http-prompt
+  - git-sweep
+npms:
+  - diff-so-fancy
+atom-plugins:
+  - atom-beautify
+  - atom-scalariform
+  - file-icons
+  - language-scala
+versions:
+  docker_compose: 1.8.1
+  kubectl: 1.4.0
+  dbeaver: 3.8.1
+  fastoredis: 1.2.0
