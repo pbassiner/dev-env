@@ -6,8 +6,10 @@ wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash
 ```
 # Disclaimer
 This is just for personal convenience. It's not intended to be highly configurable and I'm most likely not following Ansible's conventions and best practices.
+
 # Content (specific for Ubuntu 16.04)
 Note: if no version is specified it means the latest will be installed
+
 ## Dev Tools
 * [vim] (http://www.vim.org/)
 * [zsh](https://github.com/zsh-users/zsh)
@@ -18,18 +20,9 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) (2.2.9)
 * [keepassx] (https://www.keepassx.org/)
 * [httpie] (https://github.com/jkbrzt/httpie)
+* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.3)
 
-## Editors & IDEs
-* [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
-* [Atom] (https://github.com/atom/atom)
-* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.4)
-* [MySQL Workbench] (https://www.mysql.com/products/workbench/)
-
-## Utilities
-* [Google Chrome] (https://www.google.com/chrome/browser/desktop/index.html)
-* [Dropbox] (https://www.dropbox.com/)
-
-## Development environments
+## SDKs & Runtimes
 * Oracle Java 7
 * Oracle Java 8
 * [sdkman] (http://sdkman.io/), which is used to install:
@@ -39,7 +32,16 @@ Note: if no version is specified it means the latest will be installed
 * [docker-compose] (https://docs.docker.com/compose/) (1.8.1)
 * [virtualbox] (https://www.virtualbox.org/)
 * [vagrant] (https://www.vagrantup.com/)
-* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.3)
+
+## Editors & IDEs
+* [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
+* [Atom] (https://github.com/atom/atom)
+* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.4)
+* [MySQL Workbench] (https://www.mysql.com/products/workbench/)
+
+## Other utilities
+* [Google Chrome] (https://www.google.com/chrome/browser/desktop/index.html)
+* [Dropbox] (https://www.dropbox.com/)
 
 ## Custom configuration
 * zsh
