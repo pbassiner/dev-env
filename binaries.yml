@@ -1,0 +1,6 @@
+---
+- include_vars: vars.yml
+- name: Download binary files
+  become: yes
+  get_url: url={{ item.value.url }} dest=/usr/local/bin/{{ item.value.name }} validate_certs=no mode=0755
+  with_dict: "{{ binaries }}"
