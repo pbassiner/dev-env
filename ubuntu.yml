@@ -6,6 +6,7 @@
    - include: targz-apps.yml
    - include: docker-compose.yml
    - include: kubectl.yml
+   - include: ammonite.yml
    - include: java-oracle.yml
    - include: sdkman.yml
    - include: customization.yml

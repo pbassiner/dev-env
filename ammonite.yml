@@ -1,0 +1,5 @@
+---
+- include_vars: vars.yml
+- name: Download ammonite
+  become: yes
+  get_url: url=https://github.com/lihaoyi/Ammonite/releases/download/{{ versions.ammonite }}/{{ versions.ammonite }} dest=/usr/local/bin/amm validate_certs=no mode=0755

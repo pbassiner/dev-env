@@ -45,5 +45,6 @@ targzs:
   original_dir: idea-IC-162.2032.8
   symlinked_dir: ideaIC
 versions:
+ ammonite: 0.7.8
  docker_compose: 1.8.1
  kubectl: 1.4.3
