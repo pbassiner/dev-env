@@ -20,7 +20,7 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) (2.2.9)
 * [keepassx] (https://www.keepassx.org/)
 * [httpie] (https://github.com/jkbrzt/httpie)
-* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.3)
+* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.4)
 * [ammonite] (https://github.com/lihaoyi/Ammonite) (0.7.8)
 
 ## SDKs & Runtimes
