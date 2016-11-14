@@ -1,0 +1,5 @@
+---
+- include_vars: vars.yml
+- name: Install Atom plugins
+  shell: apm install {{ item }}
+  with_items: "{{ debs.atom.plugins }}"

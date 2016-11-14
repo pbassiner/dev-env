@@ -11,38 +11,38 @@ This is just for personal convenience. It's not intended to be highly configurab
 Note: if no version is specified it means the latest will be installed
 
 ## Dev Tools
-* [vim] (http://www.vim.org/)
+* [vim](http://www.vim.org/)
 * [zsh](https://github.com/zsh-users/zsh)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [terminator] (https://launchpad.net/terminator/)
-* [guake] (https://github.com/Guake/guake/)
-* [git] (https://git-scm.com/)
+* [terminator](https://launchpad.net/terminator/)
+* [guake](https://github.com/Guake/guake/)
+* [git](https://git-scm.com/)
 * [hub](https://github.com/github/hub) (2.2.9)
-* [keepassx] (https://www.keepassx.org/)
-* [httpie] (https://github.com/jkbrzt/httpie)
-* [kubectl] (https://github.com/kubernetes/kubernetes) (1.4.5)
-* [ammonite] (https://github.com/lihaoyi/Ammonite) (0.8.0)
+* [keepassx](https://www.keepassx.org/)
+* [httpie](https://github.com/jkbrzt/httpie)
+* [kubectl](https://github.com/kubernetes/kubernetes) (1.4.5)
+* [ammonite](https://github.com/lihaoyi/Ammonite) (0.8.0)
 
 ## SDKs & Runtimes
 * Oracle Java 7
 * Oracle Java 8
-* [sdkman] (http://sdkman.io/), which is used to install:
-    * [sbt] (http://www.scala-sbt.org/)
-    * [maven] (https://maven.apache.org/)
-* [docker] (https://www.docker.com/)
-* [docker-compose] (https://docs.docker.com/compose/) (1.8.1)
-* [virtualbox] (https://www.virtualbox.org/)
-* [vagrant] (https://www.vagrantup.com/)
+* [sdkman](http://sdkman.io/), which is used to install:
+    * [sbt](http://www.scala-sbt.org/)
+    * [maven](https://maven.apache.org/)
+* [docker](https://www.docker.com/)
+* [docker-compose](https://docs.docker.com/compose/) (1.8.1)
+* [virtualbox](https://www.virtualbox.org/)
+* [vagrant](https://www.vagrantup.com/)
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
-* [Atom] (https://github.com/atom/atom)
-* [IntelliJ IDEA] (https://www.jetbrains.com/idea/) (Community 2016.2.5)
-* [MySQL Workbench] (https://www.mysql.com/products/workbench/)
+* [Atom](https://github.com/atom/atom)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2016.2.5)
+* [MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 ## Other utilities
-* [Google Chrome] (https://www.google.com/chrome/browser/desktop/index.html)
-* [Dropbox] (https://www.dropbox.com/)
+* [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+* [Dropbox](https://www.dropbox.com/)
 
 ## Custom configuration
 * zsh
@@ -58,3 +58,7 @@ Note: if no version is specified it means the latest will be installed
     * IntelliJ desktop file for launcher
     * terminator custom config
     * guake autostart
+* Atom plugins
+    * [file-icons](https://github.com/DanBrooker/file-icons)
+    * [language-scala](https://github.com/atom-community/language-scala)
+    * [atom-scalariform](https://github.com/jackhopner/atom-scalariform)
