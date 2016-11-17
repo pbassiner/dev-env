@@ -20,7 +20,7 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) (2.2.9)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) (1.4.5)
+* [kubectl](https://github.com/kubernetes/kubernetes) (1.4.6)
 * [ammonite](https://github.com/lihaoyi/Ammonite) (0.8.0)
 
 ## SDKs & Runtimes
@@ -30,7 +30,7 @@ Note: if no version is specified it means the latest will be installed
     * [sbt](http://www.scala-sbt.org/)
     * [maven](https://maven.apache.org/)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) (1.8.1)
+* [docker-compose](https://docs.docker.com/compose/) (1.9.0)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 

@@ -54,8 +54,8 @@ binaries:
   url: https://github.com/lihaoyi/Ammonite/releases/download/0.8.0/0.8.0
  docker_compose:
    name: docker-compose
-   url: https://github.com/docker/compose/releases/download/1.8.1/docker-compose-Linux-x86_64
-   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.8.1/contrib/completion/zsh/_docker-compose
+   url: https://github.com/docker/compose/releases/download/1.9.0/docker-compose-Linux-x86_64
+   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.9.0/contrib/completion/zsh/_docker-compose
  kubectl:
    name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.4.5/bin/linux/amd64/kubectl
+   url: https://storage.googleapis.com/kubernetes-release/release/v1.4.6/bin/linux/amd64/kubectl
