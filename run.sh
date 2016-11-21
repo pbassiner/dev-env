@@ -1,2 +1,2 @@
-sudo apt-get --assume-yes install ansible
+#!/bin/bash
 ansible-playbook ubuntu.yml -i hosts -vv

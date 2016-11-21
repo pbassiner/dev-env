@@ -1,9 +1,6 @@
 ---
 - include_vars: vars.yml
-- name: Download .deb files
-  get_url: url={{ item.value.url }} dest=/tmp/{{ item.key }}.deb validate_certs=no
-  with_dict: "{{ debs }}"
 - name: Install .deb files
   become: yes
-  apt: deb=/tmp/{{ item.key }}.deb
+  apt: deb={{ item.value.url }}
   with_dict: "{{ debs }}"

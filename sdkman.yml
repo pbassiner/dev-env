@@ -1,7 +1,13 @@
 ---
+- name: Register sdk installation status
+  shell: ls ~/.sdkman
+  failed_when: false
+  register: sdk_installed
 - name: Download sdkman
   get_url: url=https://get.sdkman.io dest=/tmp/sdkman.sh validate_certs=no
+  when: sdk_installed.stdout == ""
 - name: Install sdkman
   script: /tmp/sdkman.sh
-- name: Install JVM development tools using sdkman
+  when: sdk_installed.stdout == ""
+- name: Force sdkman update & install JVM development tools using sdkman
   script: sdkman.sh
