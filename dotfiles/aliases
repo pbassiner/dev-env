@@ -2,3 +2,4 @@ alias git=hub
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias j7="export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
+alias findLatest="find $1 -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head"
