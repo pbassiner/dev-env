@@ -1,9 +1,14 @@
 Development Environment Configuration with Ansible
 ==================================================
 # Run it
-```
+```shell
 wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash
 ```
+For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branch <BRANCH>` (default is `master`):
+```shell
+wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash -b test_branch
+```
+
 # Disclaimer
 This is just for personal convenience. It's not intended to be highly configurable and I'm most likely not following Ansible's conventions and best practices.
 
