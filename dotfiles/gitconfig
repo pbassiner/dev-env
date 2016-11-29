@@ -37,6 +37,7 @@
     sl = stash list
     please = push --force-with-lease
     commend = commit --amend --no-edit
+    cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
 [apply]
     whitespace = nowarn
 [rebase]
