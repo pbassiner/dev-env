@@ -22,11 +22,11 @@ Note: if no version is specified it means the latest will be installed
 * [terminator](https://launchpad.net/terminator/)
 * [guake](https://github.com/Guake/guake/)
 * [git](https://git-scm.com/)
-* [hub](https://github.com/github/hub) (2.2.9)
+* [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.2.9-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) (1.4.6)
-* [ammonite](https://github.com/lihaoyi/Ammonite) (0.8.0)
+* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.4.6-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.8.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7
@@ -35,7 +35,7 @@ Note: if no version is specified it means the latest will be installed
     * [sbt](http://www.scala-sbt.org/)
     * [maven](https://maven.apache.org/)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) (1.9.0)
+* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.9.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 
