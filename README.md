@@ -52,8 +52,9 @@ Note: if no version is specified it means the latest will be installed
 ## Custom configuration
 * zsh
     * Set as default shell
-    * autocompletion for:
+    * Add autocompletion for:
         * hub
+        * sdk
         * docker-compose
 * Symlinks
     * oh-my-zsh custom theme

@@ -6,12 +6,14 @@
 - include: oh-my-zsh.yml
 - name: Create completions folder
   file: path={{ home }}/.zsh/completions state=directory
-- name: Copy hub zsh completion file
-  copy: src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion dest={{ home }}/.zsh/completions/_hub
+- name: Symlink sdkman zsh completion file
+  file: path={{ home }}/.zsh/completions/_sdk src={{ home }}/.dev-env/zsh/completions/sdk.zsh_completion state=link
+- name: Symlink hub zsh completion file
+  file: path={{ home }}/.zsh/completions/_hub src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion state=link
 - name: Download docker-compose zsh completion
   get_url: url={{ binaries.docker_compose.zsh_completion }} dest={{ home }}/.zsh/completions/_docker-compose validate_certs=no
 - name: Symlink oh-my-zsh themes
-  file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/{{ item }} state=link
+  file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/themes/{{ item }} state=link
   with_items:
    - custom.zsh-theme
 - name: Symlink dotfiles
