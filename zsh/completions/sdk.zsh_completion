@@ -17,8 +17,8 @@ commands=(
   'd:set the default candidate version for every shell'
   'current:display current candidate version'
   'c:display current candidate version'
-  'outdated:display outdated candidate version'
-  'o:display outdated candidate version'
+  'upgrade:upgrade outdated candidate version'
+  'ug:upgrade outdated candidate version'
   'version:display the current version of sdk'
   'v:display the current version of sdk'
   'broadcast:display the last broadcast message'
@@ -91,7 +91,7 @@ case $CURRENT in
 
   2)
     case "$words[1]" in
-      install|i|uninstall|rm|list|ls|use|u|default|d|current|c|outdated|o)
+      install|i|uninstall|rm|list|ls|use|u|default|d|current|c|upgrade|ug)
         _describe -t commands "sdk subcommand" candidates
         return
       ;;
