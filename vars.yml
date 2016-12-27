@@ -29,9 +29,10 @@ debs:
   name: Atom
   url: https://atom.io/download/deb
   plugins:
+   - atom-beautify
+   - atom-scalariform
    - file-icons
    - language-scala
-   - atom-scalariform
  chrome:
   name: Google chrome
   url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
