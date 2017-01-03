@@ -1,5 +1,8 @@
 Development Environment Configuration with Ansible
 ==================================================
+
+[![License: MIT](https://img.shields.io/badge/license-MIT License-blue.svg)](https://raw.githubusercontent.com/pbassiner/dev-env/master/LICENSE)
+
 # Run it
 ```shell
 wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash
@@ -69,3 +72,6 @@ Note: if no version is specified it means the latest will be installed
     * [atom-scalariform](https://github.com/jackhopner/atom-scalariform)
     * [file-icons](https://github.com/DanBrooker/file-icons)
     * [language-scala](https://github.com/atom-community/language-scala)
+
+# License
+[MIT License](LICENSE)
