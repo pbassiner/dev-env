@@ -3,4 +3,16 @@ alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
 alias j7="export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
 alias findLatest="find $1 -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head"
-alias checkForUpdates="sudo apt-get update; apt list --upgradable"
+alias checkForUpdates=listUpdatesAndOfferUpgrade
+
+listUpdatesAndOfferUpgrade() {
+  sudo apt-get update
+  apt list --upgradable
+
+  echo "Upgrade them all? (Y/n): "
+  read UPGRADE_ALL
+
+  if [[ -z "$UPGRADE_ALL" || "$UPGRADE_ALL" == "y" || "$UPGRADE_ALL" == "Y" ]]; then
+    sudo apt-get --assume-yes upgrade
+  fi
+}
