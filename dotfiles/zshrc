@@ -85,9 +85,12 @@ export PATH=/home/pbassiner/hub/bin:$PATH
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# hub autocompletion
+# autocompletion files
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
+
+# kubectl autocompletion
+source <(kubectl completion zsh)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/pbassiner/.sdkman"

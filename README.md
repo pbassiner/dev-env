@@ -59,6 +59,7 @@ Note: if no version is specified it means the latest will be installed
         * hub
         * sdk
         * docker-compose
+        * kubectl
 * Symlinks
     * oh-my-zsh custom theme
     * .zshrc
