@@ -1,4 +1,4 @@
-username: pbassiner
+username: aserralle
 home: /home/{{ username }}
 repositories: # ubuntu 16.04
  docker:
@@ -46,20 +46,20 @@ targzs:
  hub:
   name: hub
   url: https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
-  target_dir: "{{ home }}"
+  target_dir: /opt
   original_dir: hub-linux-amd64-2.2.9
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
   url: https://download.jetbrains.com/idea/ideaIC-2016.3.4.tar.gz
-  target_dir: "{{ home }}"
+  target_dir: /opt
   original_dir: idea-IC-163.12024.16
   symlinked_dir: ideaIC
  go:
   name: Go
-  url: https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz
-  target_dir: "{{ home }}"
-  original_dir: ???
+  url: https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz
+  target_dir: /usr/local
+  original_dir: go
   symlinked_dir: go
 binaries:
  ammonite:

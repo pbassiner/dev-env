@@ -3,25 +3,10 @@
 - name: Set zsh as default sh
   become: yes
   shell: "chsh -s $(which zsh) {{ username }}"
-- include: oh-my-zsh.yml
-- name: Create completions folder
-  file: path={{ home }}/.zsh/completions state=directory
 - name: Symlink sdkman zsh completion file
   file: path={{ home }}/.zsh/completions/_sdk src={{ home }}/.dev-env/zsh/completions/sdk.zsh_completion state=link
 - name: Symlink hub zsh completion file
   file: path={{ home }}/.zsh/completions/_hub src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion state=link
-- name: Download docker-compose zsh completion
-  get_url: url={{ binaries.docker_compose.zsh_completion }} dest={{ home }}/.zsh/completions/_docker-compose validate_certs=no
-- name: Symlink oh-my-zsh themes
-  file: path={{ home }}/.oh-my-zsh/themes/{{ item }} src={{ home }}/.dev-env/zsh/themes/{{ item }} state=link
-  with_items:
-   - custom.zsh-theme
-- name: Symlink dotfiles
-  file: path={{ home }}/.{{ item }} src={{ home }}/.dev-env/dotfiles/{{ item }} state=link force=yes
-  with_items:
-   - gitconfig
-   - zshrc
-   - aliases
 - name: Create config folders
   file: path={{ home }}/.config/{{ item }} state=directory
   with_items:
@@ -30,12 +15,6 @@
   file: path={{ home }}/.config/{{ item }} src={{ home }}/.dev-env/config/{{ item }} state=link force=yes
   with_items:
    - terminator/config
-- name: Create applications desktop files folder
-  file: path={{ home }}/.local/share/applications state=directory
-- name: Symlink applications desktop files
-  file: path={{ home }}/.local/share/applications/{{ item }}.desktop src={{ home }}/.dev-env/desktop-files/applications/{{ item }}.desktop state=link force=yes
-  with_items:
-   - jetbrains-idea-ce
 - name: Create autostart desktop files folder
   file: path={{ home }}/.config/autostart state=directory
 - name: Symlink autostart desktop files
@@ -43,3 +22,9 @@
   with_items:
    - guake
 - include: atom-plugins.yml
+- name: Lower swappiness
+  become: yes
+  shell: echo vm.swappiness = 1 >> /etc/sysctl.conf
+- name: Show startup hidden applications
+  become: yes
+  shell: sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop

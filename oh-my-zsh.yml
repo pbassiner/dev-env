@@ -1,8 +1,0 @@
----
-- name: Register Oh My Zsh installation status
-  shell: ls ~/.oh-my-zsh
-  failed_when: false
-  register: ohmyzsh_installed
-- name: Install Oh My Zsh
-  shell: git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-  when: ohmyzsh_installed.stdout == ""
