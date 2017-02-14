@@ -24,6 +24,11 @@ packages:
  - vagrant
  - httpie
  - aptik
+ - python
+ - python-pip
+ - tmux
+ - tmate
+ - glances
 debs:
  sublimetext:
   name: Sublime Text 3
@@ -74,3 +79,5 @@ binaries:
    url: https://storage.googleapis.com/kubernetes-release/release/v1.5.2/bin/linux/amd64/kubectl
 go-apps:
  - "github.com/yudai/gotty"
+python-apps:
+ - "http-prompt"
