@@ -38,7 +38,7 @@ Note: if no version is specified it means the latest will be installed
     * [sbt](http://www.scala-sbt.org/)
     * [maven](https://maven.apache.org/)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.11.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
+* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.11.2-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 
