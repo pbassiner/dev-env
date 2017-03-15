@@ -1,7 +1,7 @@
 Development Environment Configuration with Ansible
 ==================================================
 
-[![License: MIT](https://img.shields.io/badge/license-MIT License-blue.svg)](https://raw.githubusercontent.com/pbassiner/dev-env/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://raw.githubusercontent.com/pbassiner/dev-env/master/LICENSE)
 
 # Run it
 ```shell
