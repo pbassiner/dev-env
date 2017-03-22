@@ -55,6 +55,8 @@ Note: if no version is specified it means the latest will be installed
 ## Custom configuration
 * zsh
     * Set as default shell
+    * Add custom plugins:
+        * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     * Add autocompletion for:
         * hub
         * sdk

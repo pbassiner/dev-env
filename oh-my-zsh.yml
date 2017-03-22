@@ -6,3 +6,10 @@
 - name: Install Oh My Zsh
   shell: git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   when: ohmyzsh_installed.stdout == ""
+- name: Register zsh-autosuggestions installation status
+  shell: ls ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  failed_when: false
+  register: zshautosuggestions_installed
+- name: Install zsh-autosuggestions
+  shell: git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  when: zshautosuggestions_installed.stdout == ""
