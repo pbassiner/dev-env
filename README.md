@@ -71,6 +71,7 @@ Note: if no version is specified it means the latest will be installed
     * terminator custom config
     * guake autostart
 * Atom plugins
+    * [aligner](https://github.com/adrianlee44/atom-aligner)
     * [atom-beautify](https://github.com/Glavin001/atom-beautify)
     * [atom-scalariform](https://github.com/jackhopner/atom-scalariform)
     * [file-icons](https://github.com/DanBrooker/file-icons)

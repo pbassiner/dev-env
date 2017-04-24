@@ -29,6 +29,7 @@ debs:
   name: Atom
   url: https://atom.io/download/deb
   plugins:
+   - aligner
    - atom-beautify
    - atom-scalariform
    - file-icons
