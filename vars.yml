@@ -46,18 +46,18 @@ targzs:
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2017.1.2.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2017.1.3.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-171.4249.39
+  original_dir: idea-IC-171.4424.56
   symlinked_dir: ideaIC
 binaries:
  ammonite:
   name: amm
-  url: https://github.com/lihaoyi/Ammonite/releases/download/0.8.3/2.12-0.8.3
+  url: https://github.com/lihaoyi/Ammonite/releases/download/0.8.5/2.12-0.8.5
  docker_compose:
    name: docker-compose
-   url: https://github.com/docker/compose/releases/download/1.12.0/docker-compose-Linux-x86_64
-   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.12.0/contrib/completion/zsh/_docker-compose
+   url: https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
+   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.13.0/contrib/completion/zsh/_docker-compose
  kubectl:
    name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.6.2/bin/linux/amd64/kubectl
+   url: https://storage.googleapis.com/kubernetes-release/release/v1.6.3/bin/linux/amd64/kubectl
