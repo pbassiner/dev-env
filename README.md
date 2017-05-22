@@ -28,8 +28,8 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.2.9-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.6.3-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
-* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.8.5-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
+* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.6.4-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.9.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7
