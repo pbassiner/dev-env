@@ -1,7 +1,7 @@
 Development Environment Configuration with Ansible
 ==================================================
 
-[![License: MIT](https://img.shields.io/badge/license-MIT License-blue.svg)](https://raw.githubusercontent.com/pbassiner/dev-env/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT%20License-blue.svg)](https://raw.githubusercontent.com/pbassiner/dev-env/master/LICENSE)
 
 # Run it
 ```shell
@@ -28,8 +28,8 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.2.9-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.5.2-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
-* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.8.2-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
+* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.6.4-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.9.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7
@@ -38,14 +38,14 @@ Note: if no version is specified it means the latest will be installed
     * [sbt](http://www.scala-sbt.org/)
     * [maven](https://maven.apache.org/)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.11.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
+* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.13.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
 * [Atom](https://github.com/atom/atom)
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2016.3.4)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.1.3)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 ## Other utilities
@@ -55,6 +55,8 @@ Note: if no version is specified it means the latest will be installed
 ## Custom configuration
 * zsh
     * Set as default shell
+    * Add custom plugins:
+        * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     * Add autocompletion for:
         * hub
         * sdk
@@ -69,6 +71,7 @@ Note: if no version is specified it means the latest will be installed
     * terminator custom config
     * guake autostart
 * Atom plugins
+    * [aligner](https://github.com/adrianlee44/atom-aligner)
     * [atom-beautify](https://github.com/Glavin001/atom-beautify)
     * [atom-scalariform](https://github.com/jackhopner/atom-scalariform)
     * [file-icons](https://github.com/DanBrooker/file-icons)

@@ -35,6 +35,7 @@ packages:
   - zeal
 rpms:
   atom:
+    name: atom
     url: https://atom.io/download/rpm
 debs:
   sublimetext:
@@ -44,21 +45,21 @@ debs:
     name: Atom
     url: https://atom.io/download/deb
   chrome:
-     name: Google chrome
-     url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    name: Google chrome
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   dbeaber:
-     name: DBeaver
-     url: http://dbeaver.jkiss.org/files/{{ versions.dbeaver }}/dbeaver-ce_{{ versions.dbeaver }}_amd64.deb
+    name: DBeaver
+    url: http://dbeaver.jkiss.org/files/{{ versions.dbeaver }}/dbeaver-ce_{{ versions.dbeaver }}_amd64.deb
   fastoredis:
-     name: fastoredis
-     url: http://fastoredis.com/files/linux/fastoredis-{{ versions.fastoredis }}-x86_64.deb
+    name: fastoredis
+    url: http://fastoredis.com/files/linux/fastoredis-{{ versions.fastoredis }}-x86_64.deb
 binaries:
   ammonite:
     name: amm
-    url: https://github.com/lihaoyi/Ammonite/releases/downloadn/0.8.2/2.12-0.8.2
+    url: https://github.com/lihaoyi/Ammonite/releases/download/0.9.0/2.12-0.9.0
   docker-compose:
     name: docker-compose
-    url: https://github.com/docker/compose/releases/download/{{ versions.docker_compose }}/docker-compose-Linux-x86_64
+    url: https://github.com/docker/compose/releases/download/{{ versions.docker-compose }}/docker-compose-Linux-x86_64
   kubectl:
     name: kubectl
     url: https://storage.googleapis.com/kubernetes-release/release/v{{ versions.kubectl }}/bin/linux/amd64/kubectl
@@ -78,9 +79,9 @@ targzs:
     symlinked_dir: hub
   intellij:
     name: IntelliJ IDEA
-    url: https://download.jetbrains.com/idea/ideaIC-2016.3.4.tar.gz
-    target_dir: /opt
-    original_dir: idea-IC-163.12024.16
+    url: https://download.jetbrains.com/idea/ideaIC-2017.1.3.tar.gz
+    target_dir: "{{ home }}"
+    original_dir: idea-IC-171.4424.56
     symlinked_dir: ideaIC
   go:
     name: Go
@@ -101,7 +102,7 @@ atom-plugins:
   - file-icons
   - language-scala
 versions:
-  docker_compose: 1.8.1
-  kubectl: 1.4.0
+  docker-compose: 1.13.0
+  kubectl: 1.6.4
   dbeaver: 3.8.1
   fastoredis: 1.2.0
