@@ -29,7 +29,7 @@ Note: if no version is specified it means the latest will be installed
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
 * [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.6.4-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
-* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v0.9.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.0.0--RC6-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7
@@ -45,7 +45,7 @@ Note: if no version is specified it means the latest will be installed
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
 * [Atom](https://github.com/atom/atom)
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.1.3)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.1.4)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 
 ## Other utilities
