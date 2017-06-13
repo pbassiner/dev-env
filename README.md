@@ -47,6 +47,7 @@ Note: if no version is specified it means the latest will be installed
 * [Atom](https://github.com/atom/atom)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.1.4)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
+* [Typora](https://typora.io/)
 
 ## Other utilities
 * [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
