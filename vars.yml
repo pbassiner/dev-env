@@ -58,11 +58,11 @@ targzs:
 binaries:
  ammonite:
   name: amm
-  url: https://github.com/lihaoyi/Ammonite/releases/download/1.0.0-RC6/2.12-1.0.0-RC6
+  url: https://github.com/lihaoyi/Ammonite/releases/download/1.0.0/2.12-1.0.0
  docker_compose:
    name: docker-compose
-   url: https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64
-   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.13.0/contrib/completion/zsh/_docker-compose
+   url: https://github.com/docker/compose/releases/download/1.14.0/docker-compose-Linux-x86_64
+   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.14.0/contrib/completion/zsh/_docker-compose
  kubectl:
    name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.6.4/bin/linux/amd64/kubectl
+   url: https://storage.googleapis.com/kubernetes-release/release/v1.7.0/bin/linux/amd64/kubectl

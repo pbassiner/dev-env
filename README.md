@@ -28,17 +28,18 @@ Note: if no version is specified it means the latest will be installed
 * [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.2.9-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.6.4-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
-* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.0.0--RC6-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
+* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.7.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.0.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7
+  * This requires the binaries to be present in `/var/cache/oracle-jdk7-installer/jdk-7u80-linux-x64.tar.gz` (see [webupd8 post about Java 6 & 7 being pulled off Oracle's website](http://www.webupd8.org/2017/06/why-oracle-java-7-and-6-installers-no.html))
 * Oracle Java 8
 * [sdkman](http://sdkman.io/), which is used to install:
     * [sbt](http://www.scala-sbt.org/)
     * [maven](https://maven.apache.org/)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.13.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
+* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.14.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 
