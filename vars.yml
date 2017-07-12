@@ -51,9 +51,9 @@ targzs:
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2017.1.4.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2017.1.5.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-171.4694.23
+  original_dir: idea-IC-171.4694.70
   symlinked_dir: ideaIC
 binaries:
  ammonite:
