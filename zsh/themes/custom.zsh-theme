@@ -31,17 +31,8 @@ RESET_COLOR=$reset_color
 # ✡ ✔ ✖ ✚ ✱ ✤ ✦ ❤ ➜ ➟ ➼ ✂ ✎ ✐ ⨀ ⨁ ⨂ ⨍ ⨎ ⨏ ⨷ ⩚ ⩛ ⩡ ⩱ ⩲ ⩵  ⩶ ⨠
 # ⬅ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬒ ⬓ ⬔ ⬕ ⬖ ⬗ ⬘ ⬙ ⬟  ⬤ 〒 ǀ ǁ ǂ ĭ Ť Ŧ   ➭
 
-# Determine if we are using a gemset.
-function rvm_gemset() {
-    GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
-    if [[ -n $GEMSET ]]; then
-        echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
-    fi
-}
-
 CRUNCH_BRACKET_COLOR="%{$fg[white]%}"
 CRUNCH_TIME_COLOR="%{$fg[yellow]%}"
-CRUNCH_RVM_COLOR="%{$fg[magenta]%}"
 CRUNCH_DIR_COLOR="%{$fg[cyan]%}"
 CRUNCH_GIT_BRANCH_COLOR="%{$fg[green]%}"
 CRUNCH_GIT_CLEAN_COLOR="%{$fg[green]%}"
@@ -49,14 +40,6 @@ CRUNCH_GIT_DIRTY_COLOR="%{$fg[red]%}"
 
 # Our elements:
 local CRUNCH_TIME_="$CRUNCH_BRACKET_COLOR{$CRUNCH_TIME_COLOR%T$CRUNCH_BRACKET_COLOR}%{$reset_color%}"
-if [ -e ~/.rvm/bin/rvm-prompt ]; then
-      CRUNCH_RVM_="$CRUNCH_BRACKET_COLOR"["$CRUNCH_RVM_COLOR\${\$(~/.rvm/bin/rvm-prompt i v g)#ruby-}$CRUNCH_BRACKET_COLOR"]"%{$reset_color%}"
-   else
-   if which rbenv &> /dev/null; then
-      CRUNCH_RVM_="$CRUNCH_BRACKET_COLOR"["$CRUNCH_RVM_COLOR\${\$(rbenv version | sed -e 's/ (set.*$//' -e 's/^ruby-//')}$CRUNCH_BRACKET_COLOR"]"%{$reset_color%}"
-   fi
-fi
-
 
 # if superuser make the username green
 if [ $UID -eq 0 ]; then NCOLOR="yellow"; else NCOLOR="red"; fi
@@ -74,9 +57,7 @@ local pwd="%{$fg_bold[blue]%}%30<...<%~%<<%{$reset_color%}"
 # The prompt
 setopt prompt_subst
 #PROMPT='$CRUNCH_TIME_${user}@${host}${pwd}$(git_branch_string)%{$fg[white]%}%(!.#.»)%{$reset_color%} '
-PROMPT='${user}@${host}${pwd}$(git_branch_string)%{$fg[white]%}%(!.#.»)%{$reset_color%} '
-# Add this at the start of RPROMPT to include rvm info showing ruby-version@gemset-name
-# %{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}
+PROMPT='${user}@${host}${pwd}$(git_branch_string)$(kubecontext_string)%{$fg[white]%}%(!.#.»)%{$reset_color%} '
 
 # display exitcode on the right when >0
 local return_code="%(?..%{$fg[red]%}%? ↵ %{$reset_color%})"
@@ -333,4 +314,19 @@ git_prompt_string() {
 git_branch_string() {
   local git_where="$(git_branch)"
   [ -n "$git_where" ] && echo "$(parse_git_branch $git_where)"
+}
+
+kubecontext() {
+  (kubectl config current-context) 2> /dev/null
+}
+
+kubecontext_string() {
+  local PROMPT=""
+  if [[ $(kubectl config current-context) == *"pro"* ]]; then
+    PROMPT="%{$fg_bold[red]%}"
+  else
+    PROMPT="%{$fg_bold[green]%}"
+  fi
+
+  echo "$PROMPT($(kubecontext))"
 }
