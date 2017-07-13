@@ -55,8 +55,12 @@ Note: if no version is specified it means the latest will be installed
 * [Dropbox](https://www.dropbox.com/)
 
 ## Custom configuration
+* Fonts
+    * [powerline](https://github.com/powerline/powerline)
+    * [monoid](https://github.com/larsenwork/monoid)
 * zsh
     * Set as default shell
+    * [Powerlevel9k](https://github.com/bhilburn/powerlevel9k) theme
     * Add custom plugins:
         * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     * Add autocompletion for:

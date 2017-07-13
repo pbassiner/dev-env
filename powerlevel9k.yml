@@ -1,0 +1,10 @@
+---
+- name: Install custom fonts
+  script: fonts.sh
+- name: Register Powelevel9k installation status
+  shell: ls ~/.oh-my-zsh/custom/themes/powerlevel9k
+  failed_when: false
+  register: powerlevel9k_installed
+- name: Install Powelevel9k
+  shell: git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+  when: powerlevel9k_installed.stdout == ""
