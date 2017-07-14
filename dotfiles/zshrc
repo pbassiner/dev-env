@@ -9,6 +9,11 @@ export PATH=~/hub/bin:$PATH
 source ~/.aliases
 source ~/.nq_aliases
 
+# Font maps
+for file in ~/.local/share/fonts/*.sh; do
+    source "$file"
+done
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 

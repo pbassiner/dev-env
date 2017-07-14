@@ -1,6 +1,4 @@
 ---
-- name: Install custom fonts
-  script: fonts.sh
 - name: Register Powelevel9k installation status
   shell: ls ~/.oh-my-zsh/custom/themes/powerlevel9k
   failed_when: false
