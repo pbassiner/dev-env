@@ -5,6 +5,7 @@ fi
 
 wget -O ~/.local/share/fonts/PowerlineSymbols.otf https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget -O ~/.local/share/fonts/Monoisome-Regular.ttf https://github.com/larsenwork/monoid/raw/master/Monoisome/Monoisome-Regular.ttf
+# Consider using https://github.com/gabrielelana/awesome-terminal-fonts instead of Monoisome
 fc-cache -vf ~/.local/share/fonts/
 
 if [ ! -d "~/.config/fontconfig/conf.d/" ]; then
