@@ -35,9 +35,8 @@ Note: if no version is specified it means the latest will be installed
 * Oracle Java 7
   * This requires the binaries to be present in `/var/cache/oracle-jdk7-installer/jdk-7u80-linux-x64.tar.gz` (see [webupd8 post about Java 6 & 7 being pulled off Oracle's website](http://www.webupd8.org/2017/06/why-oracle-java-7-and-6-installers-no.html))
 * Oracle Java 8
-* [sdkman](http://sdkman.io/), which is used to install:
-    * [sbt](http://www.scala-sbt.org/)
-    * [maven](https://maven.apache.org/)
+* [sbt](http://www.scala-sbt.org/)
+* [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.0-blue.svg)
 * [docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.14.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
@@ -65,7 +64,6 @@ Note: if no version is specified it means the latest will be installed
         * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     * Add autocompletion for:
         * hub
-        * sdk
         * docker-compose
         * kubectl
 * Symlinks

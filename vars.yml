@@ -1,6 +1,10 @@
 username: pbassiner
 home: /home/{{ username }}
 repositories: # ubuntu 16.04
+ sbt:
+  repository: deb https://dl.bintray.com/sbt/debian /
+  keyserver: hkp://keyserver.ubuntu.com:80
+  key: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
  docker:
   repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
   keyserver: hkp://p80.pool.sks-keyservers.net:80
@@ -19,13 +23,14 @@ packages:
  - terminator
  - keepassx
  - guake
- - dropbox
+ - sbt
  - docker-engine
  - mysql-workbench
  - virtualbox
  - vagrant
  - httpie
  - typora
+ - dropbox
 debs:
  sublimetext:
   name: Sublime Text 3
@@ -43,6 +48,12 @@ debs:
   name: Google chrome
   url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 targzs:
+ maven:
+  name: maven
+  url: http://apache.uvigo.es/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+  target_dir: "{{ home }}"
+  original_dir: apache-maven-3.5.0
+  symlinked_dir: maven
  hub:
   name: hub
   url: https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
