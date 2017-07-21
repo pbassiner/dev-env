@@ -9,8 +9,6 @@
 - include: powerlevel9k.yml
 - name: Create completions folder
   file: path={{ home }}/.zsh/completions state=directory
-- name: Symlink sdkman zsh completion file
-  file: path={{ home }}/.zsh/completions/_sdk src={{ home }}/.dev-env/zsh/completions/sdk.zsh_completion state=link
 - name: Symlink hub zsh completion file
   file: path={{ home }}/.zsh/completions/_hub src={{ home }}/{{ targzs.hub.symlinked_dir }}/etc/hub.zsh_completion state=link
 - name: Download docker-compose zsh completion

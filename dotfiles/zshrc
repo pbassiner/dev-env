@@ -4,6 +4,7 @@ export TERM="xterm-256color"
 
 #PATH
 export PATH=~/hub/bin:$PATH
+export PATH=~/maven/bin:$PATH
 
 # Aliases
 source ~/.aliases
@@ -33,7 +34,3 @@ autoload -U compinit && compinit
 
 # kubectl autocompletion
 source <(kubectl completion zsh)
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR=~/.sdkman
-[[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
