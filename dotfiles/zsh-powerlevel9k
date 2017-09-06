@@ -27,7 +27,7 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(docker_machine aws root_indicator dir_writable context dir vcs vcs_upstream_check)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs kubecontext)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs customkubecontext)
 
 function prompt_vcs_upstream_check() {
     local ahead behind branch_name
@@ -51,11 +51,11 @@ function prompt_vcs_upstream_check() {
     fi
 }
 
-POWERLEVEL9K_KUBECONTEXT_ENABLED=true
+POWERLEVEL9K_CUSTOM_KUBECONTEXT_ENABLED=true
 
-# Kubernetes Current Context
-prompt_kubecontext() {
-  if [[ "$POWERLEVEL9K_KUBECONTEXT_ENABLED" == true ]]; then
+# Kubernetes Custom Current Context
+prompt_customkubecontext() {
+  if [[ "$POWERLEVEL9K_CUSTOM_KUBECONTEXT_ENABLED" == true ]]; then
     local kubectl_version=$(kubectl version --client 2>/dev/null)
 
     if [[ -n "$kubectl_version" ]]; then
