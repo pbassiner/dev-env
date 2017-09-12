@@ -53,6 +53,7 @@ Note: if no version is specified it means the latest will be installed
 ## Other utilities
 * [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 * [Dropbox](https://www.dropbox.com/)
+* [Spotify](https://www.spotify.com)
 
 ## Custom configuration
 * Fonts

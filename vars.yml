@@ -17,6 +17,10 @@ repositories: # ubuntu 16.04
   repository: deb https://typora.io ./linux/
   keyserver: keyserver.ubuntu.com
   key: BA300B7755AFCFAE
+ spotify:
+  repository: deb http://repository.spotify.com stable non-free
+  keyserver: hkp://keyserver.ubuntu.com:80
+  key: BBEBDCB318AD50EC6865090613B00F1FD2C19886
 packages:
  - vim
  - zsh
@@ -31,6 +35,7 @@ packages:
  - httpie
  - typora
  - dropbox
+ - spotify-client
 debs:
  sublimetext:
   name: Sublime Text 3
