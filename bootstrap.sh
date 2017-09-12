@@ -3,6 +3,7 @@ set -e
 
 # DEFAULTS
 BRANCH="master"
+ANSIBLE_ARGS=""
 
 # Use -gt 1 to consume two arguments per pass in the loop (e.g. each
 # argument has a corresponding value to go with it).
@@ -19,12 +20,20 @@ case $key in
     BRANCH="$2"
     shift # past argument
     ;;
+    -j7|--j7-from-downloaded-binaries)
+    J7_FROM_DOWNLOADED_BINARIES="$2"
+    shift # past argument
+    ;;
     *)
             # unknown option
     ;;
 esac
 shift # past argument or value
 done
+
+if [ -n "$J7_FROM_DOWNLOADED_BINARIES" ]; then
+  ANSIBLE_ARGS="-e j7_from_downloaded_binaries=true"
+fi
 
 # BOOTSTRAP
 
@@ -54,4 +63,4 @@ cd .dev-env
 git checkout ${BRANCH}
 
 # Run Ansible playbook
-ansible-playbook ubuntu.yml -i hosts -vv
+ansible-playbook ubuntu.yml -i hosts -vv ${ANSIBLE_ARGS}
