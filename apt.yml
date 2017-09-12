@@ -4,6 +4,12 @@
   become: yes
   apt_key: keyserver={{ item.value.keyserver }} id={{ item.value.key }}
   with_dict: "{{ repositories }}"
+  when: item.value.key is defined
+- name: Add apt signing keys
+  become: yes
+  apt_key: url={{ item.value.key_url }} state=present
+  with_dict: "{{ repositories }}"
+  when: item.value.key_url is defined
 - name: Add apt repositories
   become: yes
   apt_repository: repo={{ item.value.repository }}

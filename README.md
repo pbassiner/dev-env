@@ -44,7 +44,7 @@ Note: if no version is specified it means the latest will be installed
 * [vagrant](https://www.vagrantup.com/)
 
 ## Editors & IDEs
-* [Sublime Text 3](https://www.sublimetext.com/) (build 3126)
+* [Sublime Text](https://www.sublimetext.com/)
 * [Atom](https://github.com/atom/atom)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.2.3)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
