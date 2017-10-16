@@ -44,7 +44,7 @@ Note: if no version is specified it means the latest will be installed
 * [vagrant](https://www.vagrantup.com/)
 
 ## Editors & IDEs
-* [Sublime Text](https://www.sublimetext.com/)
+* [Sublime Text 3](https://www.sublimetext.com/)
 * [Atom](https://github.com/atom/atom)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.2.5)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
@@ -76,6 +76,7 @@ Note: if no version is specified it means the latest will be installed
     * IntelliJ desktop file for launcher
     * terminator custom config
     * guake autostart
+    * Sublime Text 3 config
 * Atom plugins
     * [aligner](https://github.com/adrianlee44/atom-aligner)
     * [atom-beautify](https://github.com/Glavin001/atom-beautify)
