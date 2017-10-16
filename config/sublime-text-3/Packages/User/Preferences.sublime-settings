@@ -4,6 +4,6 @@
 		"Markdown",
 		"Vintage"
 	],
-	"theme": "Default.sublime-theme",
-	"save_on_focus_lost": true
+	"save_on_focus_lost": true,
+	"theme": "Default.sublime-theme"
 }
