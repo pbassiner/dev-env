@@ -32,9 +32,12 @@
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     lg = !"git lg1"
-    history = log --
-    full-history = log --full-history --
-    grep-content = log -S
+    lg-history = log --follow --
+    lg-full-history = log --full-history --
+    lg-history-diff = log -p --
+    lg-grep-commit = "!sh -c \"git log -i --grep="$1"\" -"
+    lg-grep-content = log -i -S
+    lg-author = "!sh -c \"git log --author="$1" --no-merges\" -"
     lsrh = ls-remote --heads
     lsrt = ls-remote --tags
     cleanup = "!git fetch --all --prune; git branch --merged origin/master | grep -v \"\\*\" | grep -v \"\\  master\" | xargs -n 1 git branch -d"
