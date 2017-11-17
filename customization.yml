@@ -49,4 +49,3 @@
   file: path={{ home }}/.config/autostart/{{ item }}.desktop src={{ home }}/.dev-env/desktop-files/autostart/{{ item }}.desktop state=link force=yes
   with_items:
    - guake
-- include: atom-plugins.yml

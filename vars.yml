@@ -44,16 +44,7 @@ packages:
  - typora
  - dropbox
  - spotify-client
-debs:
- atom:
-  name: Atom
-  url: https://atom.io/download/deb
-  plugins:
-   - aligner
-   - atom-beautify
-   - atom-scalariform
-   - file-icons
-   - language-scala
+debs: {}
 targzs:
  maven:
   name: maven
