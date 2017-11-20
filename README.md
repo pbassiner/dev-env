@@ -37,7 +37,7 @@ Note: if no version is specified it means the latest will be installed
   * To install Java 7 from the downloaded binaries, run `bootstrap.sh` including `-j7|--j7-from-downloaded-binaries true`
 * Oracle Java 8
 * [sbt](http://www.scala-sbt.org/)
-* [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.0-blue.svg)
+* [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.2-blue.svg)
 * [docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.16.1-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
@@ -45,7 +45,6 @@ Note: if no version is specified it means the latest will be installed
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/)
-* [Atom](https://github.com/atom/atom)
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.2.6)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 * [Typora](https://typora.io/)
@@ -77,12 +76,6 @@ Note: if no version is specified it means the latest will be installed
     * terminator custom config
     * guake autostart
     * Sublime Text 3 config
-* Atom plugins
-    * [aligner](https://github.com/adrianlee44/atom-aligner)
-    * [atom-beautify](https://github.com/Glavin001/atom-beautify)
-    * [atom-scalariform](https://github.com/jackhopner/atom-scalariform)
-    * [file-icons](https://github.com/DanBrooker/file-icons)
-    * [language-scala](https://github.com/atom-community/language-scala)
 
 # License
 [MIT License](LICENSE)

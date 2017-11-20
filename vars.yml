@@ -12,21 +12,13 @@ repositories: # ubuntu 16.04
  chrome:
   repository: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
- dropbox:
-  repository: deb http://linux.dropbox.com/ubuntu xenial main
-  keyserver: pgp.mit.edu
-  key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
- typora:
-  repository: deb https://typora.io ./linux/
-  keyserver: keyserver.ubuntu.com
-  key: BA300B7755AFCFAE
  sublimetext:
   repository: deb https://download.sublimetext.com/ apt/stable/
   key_url: https://download.sublimetext.com/sublimehq-pub.gpg
  spotify:
   repository: deb http://repository.spotify.com stable non-free
   keyserver: hkp://keyserver.ubuntu.com:80
-  key: BBEBDCB318AD50EC6865090613B00F1FD2C19886
+  key: 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 packages:
  - vim
  - zsh
@@ -41,25 +33,15 @@ packages:
  - httpie
  - google-chrome-stable
  - sublime-text
- - typora
- - dropbox
+ - nautilus-dropbox
  - spotify-client
-debs:
- atom:
-  name: Atom
-  url: https://atom.io/download/deb
-  plugins:
-   - aligner
-   - atom-beautify
-   - atom-scalariform
-   - file-icons
-   - language-scala
+debs: {}
 targzs:
  maven:
   name: maven
-  url: http://apache.uvigo.es/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+  url: http://apache.uvigo.es/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
   target_dir: "{{ home }}"
-  original_dir: apache-maven-3.5.0
+  original_dir: apache-maven-3.5.2
   symlinked_dir: maven
  hub:
   name: hub
@@ -73,6 +55,12 @@ targzs:
   target_dir: "{{ home }}"
   original_dir: idea-IC-172.4574.11
   symlinked_dir: ideaIC
+ typora:
+  name: typora
+  url: https://typora.io/linux/Typora-linux-x64.tar.gz
+  target_dir: "{{ home }}"
+  original_dir: Typora-linux-x64
+  symlinked_dir: typora
 binaries:
  ammonite:
   name: amm
