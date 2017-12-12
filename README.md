@@ -45,7 +45,7 @@ Note: if no version is specified it means the latest will be installed
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/)
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.3)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2017.3.1)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 * [Typora](https://typora.io/)
 
