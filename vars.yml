@@ -51,9 +51,9 @@ targzs:
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2017.3.1.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2017.3.2.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-173.3942.27
+  original_dir: idea-IC-173.4127.27
   symlinked_dir: ideaIC
  typora:
   name: typora
