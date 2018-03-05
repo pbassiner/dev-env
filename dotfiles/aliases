@@ -1,6 +1,7 @@
 alias git=hub
 alias docker="sudo docker"
 alias docker-compose="sudo docker-compose"
+alias docker-rmi-untagged="docker images | awk '{if(match(\$1,\"<none>\")){print \"sudo docker rmi \" \$3 \";\" | \"/bin/bash\"}}'"
 alias j7="export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
 alias findLatest="find $1 -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head"
 alias checkForUpdates=listUpdatesAndOfferUpgrade
