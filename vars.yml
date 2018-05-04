@@ -1,6 +1,8 @@
 username: aserralle
 home: /home/{{ username }}
-repositories: # ubuntu 16.10
+
+# debian
+repositories:
   docker:
     repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
     keyserver: hkp://p80.pool.sks-keyservers.net:80
@@ -16,27 +18,6 @@ repositories: # ubuntu 16.10
 ppas:
   - ppa:teejee2008/ppa
   - ppa:zeal-developers/ppa
-packages:
-  - vim
-  - zsh
-  - terminator
-  - keepassx
-  - guake
-  - dropbox
-  - docker-engine
-  - httpie
-  - aptik
-  - python
-  - python-pip
-  - tmux
-  - tmate
-  - glances
-  - tmux
-  - zeal
-rpms:
-  atom:
-    name: atom
-    url: https://atom.io/download/rpm
 debs:
   sublimetext:
     name: Sublime Text 3
@@ -53,6 +34,111 @@ debs:
   fastoredis:
     name: fastoredis
     url: http://fastoredis.com/files/linux/fastoredis-{{ versions.fastoredis }}-x86_64.deb
+brew-taps:
+  - caskroom/cask
+
+packages:
+  # - ansible
+  # - git
+  - git-extras
+  - vim
+  - zsh
+  - unrar
+  - terminator
+  - keepassx
+  - guake
+  - dropbox
+  - docker-engine
+  - httpie
+  - aptik
+  - tmux
+  - tmate
+  - glances
+  - zeal
+  - graphviz
+  - htop
+  - npm
+  - python
+  - python-pip
+  - http
+  - sublimetext
+  - nerdfonts
+  - aws-cli
+  - kubectl
+  - pyenv
+  - rbenv
+  - etcher
+  - rclone
+  - curl
+  - file
+  - atop
+  - make
+  - mmake
+  - stow
+  - netdata
+  - brew
+rpms:
+  atom:
+    name: atom
+    url: https://atom.io/download/rpm
+
+
+snaps:
+  - docker
+  - helm
+  - dwarf-fortress
+  - simplenote
+  - gitter-desktop
+  - slack-term
+  - q
+  - jq
+  - tldr
+
+flatpak:
+  spotify:
+    url: ...
+appimages:
+
+
+bpkg:
+  - gitwatch
+  - mc
+  - xclip
+cargo: # rust
+  - exa
+brew:
+  - zsh
+brew-cask:
+  - iterm2
+linuxbrew:
+  - fzf
+go-apps:
+  - github.com/yudai/gotty
+  - github.com/wallix/awless
+  - github.com/muesli/beehive
+python-apps:
+  - http-prompt
+  - git-sweep
+  - markdown
+  - ctop
+  - thefuck
+  - pipdeptree
+  - pip-review
+npm-apps:
+  - diff-so-fancy
+gems:
+  - tmuxinator
+  - mdless
+docker-containers:
+  - francescou/docker-compose-ui
+  - v2tec/watchtower
+docker-compose:
+  - portainer
+
+
+# programs with selfupdate should be installed this way
+github-repos:
+  - linuxbrew
 binaries:
   ammonite:
     name: amm
@@ -63,13 +149,6 @@ binaries:
   kubectl:
     name: kubectl
     url: https://storage.googleapis.com/kubernetes-release/release/v{{ versions.kubectl }}/bin/linux/amd64/kubectl
-github-repos:
-snaps:
-  - docker
-  - dwarf-fortress
-flatpak:
-  spotify:
-    url: ...
 targzs:
   hub:
     name: hub
@@ -89,18 +168,23 @@ targzs:
     target_dir: /usr/local
     original_dir: go
     symlinked_dir: go
-go-apps:
-  - "github.com/yudai/gotty"
-python-apps:
-  - http-prompt
-  - git-sweep
-npms:
-  - diff-so-fancy
+tarbzs:
+  firefox-nightly:
+    url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US
+zips:
+  rclone:
+    name: rclone
+    url: https://downloads.rclone.org/rclone-current-linux-amd64.zip
+
+
 atom-plugins:
+  - sync-settings
   - atom-beautify
   - atom-scalariform
   - file-icons
   - language-scala
+
+
 versions:
   docker-compose: 1.13.0
   kubectl: 1.6.4
