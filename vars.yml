@@ -39,9 +39,9 @@ debs: {}
 targzs:
  maven:
   name: maven
-  url: http://apache.uvigo.es/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+  url: http://ftp.cixug.es/apache/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
   target_dir: "{{ home }}"
-  original_dir: apache-maven-3.5.2
+  original_dir: apache-maven-3.5.3
   symlinked_dir: maven
  hub:
   name: hub
