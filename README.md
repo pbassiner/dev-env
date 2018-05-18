@@ -15,7 +15,7 @@ wget -qO- https://raw.github.com/pbassiner/dev-env/master/bootstrap.sh | bash -s
 # Disclaimer
 This is just for personal convenience. It's not intended to be highly configurable and I'm most likely not following Ansible's conventions and best practices.
 
-# Content (specific for Ubuntu 16.04)
+# Content
 Note: if no version is specified it means the latest will be installed
 
 ## Dev Tools

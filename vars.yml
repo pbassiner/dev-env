@@ -1,6 +1,6 @@
 username: pbassiner
 home: /home/{{ username }}
-repositories: # ubuntu 16.04
+repositories:
  sbt:
   repository: deb https://dl.bintray.com/sbt/debian /
   keyserver: hkp://keyserver.ubuntu.com:80
