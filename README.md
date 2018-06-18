@@ -25,7 +25,7 @@ Note: if no version is specified it means the latest will be installed
 * [terminator](https://launchpad.net/terminator/)
 * [guake](https://github.com/Guake/guake/)
 * [git](https://git-scm.com/)
-* [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.2.9-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
+* [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.4.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
 * [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.10.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
