@@ -18,7 +18,7 @@ repositories: # ubuntu 16.04
  spotify:
   repository: deb http://repository.spotify.com stable non-free
   keyserver: hkp://keyserver.ubuntu.com:80
-  key: 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+  key: 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 packages:
  - vim
  - zsh
