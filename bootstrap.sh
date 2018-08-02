@@ -20,20 +20,12 @@ case $key in
     BRANCH="$2"
     shift # past argument
     ;;
-    -j7|--j7-from-downloaded-binaries)
-    J7_FROM_DOWNLOADED_BINARIES="$2"
-    shift # past argument
-    ;;
     *)
             # unknown option
     ;;
 esac
 shift # past argument or value
 done
-
-if [ -n "$J7_FROM_DOWNLOADED_BINARIES" ]; then
-  ANSIBLE_ARGS="-e j7_from_downloaded_binaries=true"
-fi
 
 # BOOTSTRAP
 

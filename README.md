@@ -32,9 +32,6 @@ Note: if no version is specified it means the latest will be installed
 * [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.1.2-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
-* Oracle Java 7 (installation is disabled by default)
-  * This requires the binaries to be present in `/var/cache/oracle-jdk7-installer/jdk-7u80-linux-x64.tar.gz` (see [webupd8 post about Java 6 & 7 being pulled off Oracle's website](http://www.webupd8.org/2017/06/why-oracle-java-7-and-6-installers-no.html))
-  * To install Java 7 from the downloaded binaries, run `bootstrap.sh` including `-j7|--j7-from-downloaded-binaries true`
 * Oracle Java 8
 * [sbt](http://www.scala-sbt.org/)
 * [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.3-blue.svg)
