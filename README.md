@@ -25,11 +25,11 @@ Note: if no version is specified it means the latest will be installed
 * [terminator](https://launchpad.net/terminator/)
 * [guake](https://github.com/Guake/guake/)
 * [git](https://git-scm.com/)
-* [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.4.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
+* [hub](https://github.com/github/hub) ![Installed](https://img.shields.io/badge/current\-v2.5.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/github/hub.svg?label=latest)](https://github.com/github/hub/releases/latest)
 * [keepassx](https://www.keepassx.org/)
 * [httpie](https://github.com/jkbrzt/httpie)
-* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.10.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
-* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.1.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
+* [kubectl](https://github.com/kubernetes/kubernetes) ![Installed](https://img.shields.io/badge/current\-v1.10.6-blue.svg) [![GitHub release](https://img.shields.io/github/release/kubernetes/kubernetes.svg?label=latest)](https://github.com/kubernetes/kubernetes/releases/latest)
+* [ammonite](https://github.com/lihaoyi/Ammonite) ![Installed](https://img.shields.io/badge/current\-v1.1.2-blue.svg) [![GitHub release](https://img.shields.io/github/release/lihaoyi/Ammonite.svg?label=latest)](https://github.com/lihaoyi/Ammonite/releases/latest)
 
 ## SDKs & Runtimes
 * Oracle Java 7 (installation is disabled by default)
@@ -39,13 +39,13 @@ Note: if no version is specified it means the latest will be installed
 * [sbt](http://www.scala-sbt.org/)
 * [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.3-blue.svg)
 * [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.20.1-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
+* [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.22.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)
 * [vagrant](https://www.vagrantup.com/)
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/)
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2018.1)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2018.2)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 * [Typora](https://typora.io/)
 

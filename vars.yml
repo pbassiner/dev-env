@@ -45,15 +45,15 @@ targzs:
   symlinked_dir: maven
  hub:
   name: hub
-  url: https://github.com/github/hub/releases/download/v2.4.0/hub-linux-amd64-2.4.0.tgz
+  url: https://github.com/github/hub/releases/download/v2.5.0/hub-linux-amd64-2.5.0.tgz
   target_dir: "{{ home }}"
-  original_dir: hub-linux-amd64-2.4.0
+  original_dir: hub-linux-amd64-2.5.0
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2018.1.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2018.2.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-181.4203.550
+  original_dir: idea-IC-182.3684.101
   symlinked_dir: ideaIC
  typora:
   name: typora
@@ -64,11 +64,11 @@ targzs:
 binaries:
  ammonite:
   name: amm
-  url: https://github.com/lihaoyi/Ammonite/releases/download/1.1.0/2.12-1.1.0
+  url: https://github.com/lihaoyi/Ammonite/releases/download/1.1.2/2.12-1.1.2
  docker_compose:
    name: docker-compose
-   url: https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64
-   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.20.1/contrib/completion/zsh/_docker-compose
+   url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-Linux-x86_64
+   zsh_completion: https://raw.githubusercontent.com/docker/compose/1.22.0/contrib/completion/zsh/_docker-compose
  kubectl:
    name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64/kubectl
+   url: https://storage.googleapis.com/kubernetes-release/release/v1.10.6/bin/linux/amd64/kubectl
