@@ -30,10 +30,12 @@ packages:
  - virtualbox
  - vagrant
  - httpie
+ - jq
  - google-chrome-stable
  - sublime-text
  - nautilus-dropbox
  - spotify-client
+ - meld
 debs: {}
 targzs:
  maven:
@@ -54,6 +56,12 @@ targzs:
   target_dir: "{{ home }}"
   original_dir: idea-IC-182.3684.101
   symlinked_dir: ideaIC
+ pycharm:
+  name: PyCharm
+  url: https://download.jetbrains.com/python/pycharm-community-2018.2.tar.gz
+  target_dir: "{{ home }}"
+  original_dir: pycharm-community-2018.2
+  symlinked_dir: pycharmCE
  typora:
   name: typora
   url: https://typora.io/linux/Typora-linux-x64.tar.gz
