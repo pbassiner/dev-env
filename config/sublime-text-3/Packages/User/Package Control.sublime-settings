@@ -6,9 +6,13 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"FileDiffs",
 		"Gist",
 		"GitGutter",
+		"JSON Reindent",
+		"LiveReload",
 		"MarkdownEditing",
+		"MarkdownPreview",
 		"Package Control",
 		"SideBarTools"
 	]

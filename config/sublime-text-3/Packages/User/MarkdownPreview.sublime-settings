@@ -1,0 +1,4 @@
+{
+	"enable_autoreload": true,
+	"browser": "/usr/bin/google-chrome"
+}
