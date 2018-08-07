@@ -70,6 +70,7 @@ targzs:
   target_dir: "{{ home }}"
   original_dir: Typora-linux-x64
   symlinked_dir: typora
+  force_reinstall: true
 binaries:
  ammonite:
   name: amm
