@@ -1,0 +1,6 @@
+---
+- include_vars: vars.yml
+- name: Create sublime-text-3 Installed Packages folder
+  file: path="{{ home }}/.config/sublime-text-3/Installed Packages" state=directory
+- name: Install sublime-text-3 Package Control
+  get_url: url=https://packagecontrol.io/Package%20Control.sublime-package dest="{{ home }}/.config/sublime-text-3/Installed Packages/Package Control.sublime-package" validate_certs=no
