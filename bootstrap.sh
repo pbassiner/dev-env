@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+if [ ! "$HOME" == "$PWD" ]; then
+  echo "This script is intended to be run from the user's home path: $HOME"
+  exit 1
+fi
+
+
 # DEFAULTS
 BRANCH="master"
 ANSIBLE_ARGS=""
