@@ -6,4 +6,5 @@
    - include: deb-packages.yml
    - include: targz-apps.yml
    - include: binaries.yml
+   - include: pip.yml
    - include: customization.yml

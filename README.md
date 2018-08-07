@@ -35,6 +35,9 @@ Note: if no version is specified it means the latest will be installed
 * Oracle Java 8
 * [sbt](http://www.scala-sbt.org/)
 * [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.3-blue.svg)
+* [python](https://www.python.org/) ![Installed](https://img.shields.io/badge/current\-v3.6-blue.svg)
+* [pip](https://pip.pypa.io)
+* [pipenv](https://docs.pipenv.org/)
 * [docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/) ![Installed](https://img.shields.io/badge/current\-v1.22.0-blue.svg) [![GitHub release](https://img.shields.io/github/release/docker/compose.svg?label=latest)](https://github.com/docker/compose/releases/latest)
 * [virtualbox](https://www.virtualbox.org/)

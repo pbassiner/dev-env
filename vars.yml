@@ -25,6 +25,8 @@ packages:
  - keepassx
  - guake
  - sbt
+ - python3.6
+ - python3-pip
  - docker-ce
  - mysql-workbench
  - virtualbox
@@ -79,3 +81,5 @@ binaries:
  kubectl:
    name: kubectl
    url: https://storage.googleapis.com/kubernetes-release/release/v1.10.6/bin/linux/amd64/kubectl
+pip:
+ - pipenv
