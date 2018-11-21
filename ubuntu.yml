@@ -6,6 +6,7 @@
    - include: deb-packages.yml
    - include: targz-apps.yml
    - include: binaries.yml
+   - include: docker.yml
    - include: pip.yml
    - include: sublime.yml
    - include: customization.yml
