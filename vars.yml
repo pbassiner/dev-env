@@ -38,7 +38,10 @@ packages:
  - nautilus-dropbox
  - spotify-client
  - meld
-debs: {}
+debs:
+ dbeaver:
+  name: DBeaver
+  url: https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 targzs:
  maven:
   name: maven
