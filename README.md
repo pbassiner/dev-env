@@ -36,7 +36,7 @@ Note: if no version is specified it means the latest will be installed
 ## SDKs & Runtimes
 * Oracle Java 8
 * [sbt](http://www.scala-sbt.org/)
-* [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.5.3-blue.svg)
+* [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.6.0-blue.svg)
 * [python](https://www.python.org/) ![Installed](https://img.shields.io/badge/current\-v3.6-blue.svg)
 * [pip](https://pip.pypa.io)
 * [pipenv](https://docs.pipenv.org/)
