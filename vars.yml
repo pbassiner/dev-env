@@ -1,122 +1,125 @@
 username: aserralle
 home: /home/{{ username }}
 
-# debian
-repositories:
-  docker:
-    repository: deb https://apt.dockerproject.org/repo ubuntu-xenial main
-    keyserver: hkp://p80.pool.sks-keyservers.net:80
-    key: 58118E89F3A912897C070ADBF76221572C52609D
-  dropbox:
-    repository: deb http://linux.dropbox.com/ubuntu xenial main
-    keyserver: pgp.mit.edu
-    key: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-  spotify:
-    repository: http://repository.spotify.com testing non-free
-    keyserver: hkp://keyserver.ubuntu.com:80
-    key: D2C19886
-ppas:
-  - ppa:teejee2008/ppa
-  - ppa:zeal-developers/ppa
-debs:
-  sublimetext:
-    name: Sublime Text 3
-    url: https://download.sublimetext.com/sublime-text_build-3126_amd64.deb
-  atom:
-    name: Atom
-    url: https://atom.io/download/deb
-  chrome:
-    name: Google chrome
-    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  dbeaber:
-    name: DBeaver
-    url: http://dbeaver.jkiss.org/files/{{ versions.dbeaver }}/dbeaver-ce_{{ versions.dbeaver }}_amd64.deb
-  fastoredis:
-    name: fastoredis
-    url: http://fastoredis.com/files/linux/fastoredis-{{ versions.fastoredis }}-x86_64.deb
-brew-taps:
-  - caskroom/cask
+# tmate vs gotty vs showterm vs termshare
+# asciinema <- recorder of terminal
 
-packages:
-  # - ansible
-  # - git
-  - git-extras
+# what about sublime config
+# what about intellij config
+# what about atom config
+
+pacman:
+  - snapd
+  - flatpak
+  - docker
+  - docker-compose
+  - nodejs
+  - npm
+  - python
+  - python-pip
+  - ruby
+  - hub
+  - go
+  - rust
+  - keepassxc
   - vim
-  - zsh
+  - neovim
+  - virtualbox
   - unrar
   - terminator
-  - keepassx
-  - guake
-  - dropbox
-  - docker-engine
   - httpie
-  - aptik
   - tmux
-  - tmate
   - glances
   - zeal
   - graphviz
   - htop
-  - npm
   - python
   - python-pip
-  - http
-  - sublimetext
-  - nerdfonts
-  - aws-cli
-  - kubectl
-  - pyenv
-  - rbenv
   - etcher
   - rclone
   - curl
   - file
   - atop
+  - maven
+  - visualvm
   - make
-  - mmake
+  - netdata
+  - cmake
+  - extra-cmake-modules
+  - strace
+  - sbt
+  - ksshaskpass
+  - appmenu-gtk-module
+  - appmenu-qt4
+aur:
+  - git-extras
+  - jdk8
+  - jdk
+  - jre
+  - aptik
+  - tmate
+  - http
+  - nerdfonts
+  - npm
   - stow
   - netdata
-  - brew
-rpms:
-  atom:
-    name: atom
-    url: https://atom.io/download/rpm
-
-
-snaps:
-  - docker
+  - plasma-hud
+linuxbrew:
+  - gcc
+  - chruby
+  - ruby-install
+  - kubectx
+  - fzf
+  - neofetch
+  - kompose
+  - landscaper
+  # - yudai/gotty/gotty
+  # - getantibody/tap/antibody
+snap:
+  # - docker # snap doesn't create the docker user & group, so it requires sudo
   - helm
-  - dwarf-fortress
-  - simplenote
-  - gitter-desktop
+  - aws-cli
+  - spotify
+  - glances
   - slack-term
+  - slack
+  - gitter-desktop
   - q
   - jq
   - tldr
-
+  - terraform
+  - altair
+  - syncthing
+  - rclone
+  - dwarf-fortress
+  - simplenote
+  - typora-alanzanattadev
+  # - antibody
+snap-classic:
+  - kubectl
+  - powershell
+  - sublime-text
+  - vscode
 flatpak:
-  spotify:
-    url: ...
-appimages:
-
-
+  - com.dropbox.Client
+  - com.axosoft.GitKraken
+  - io.atom.Atom
+  - io.dbeaver.DBeaverCommunity
+appimage:
+  - stacer
 bpkg:
   - gitwatch
   - mc
   - xclip
-cargo: # rust
+cargo:
   - exa
-brew:
-  - zsh
-brew-cask:
-  - iterm2
-linuxbrew:
-  - fzf
-go-apps:
-  - github.com/yudai/gotty
+  - shellharden
+go:
   - github.com/wallix/awless
   - github.com/muesli/beehive
-python-apps:
+pip:
+  - awscli
+  - virtualenv
   - http-prompt
   - git-sweep
   - markdown
@@ -124,69 +127,58 @@ python-apps:
   - thefuck
   - pipdeptree
   - pip-review
-npm-apps:
+npm:
+  - jfrog-cli-go
   - diff-so-fancy
-gems:
+  - api-spec-converter
+  - graphqurl
+  - matrix-rain
+gem:
   - tmuxinator
   - mdless
-docker-containers:
-  - francescou/docker-compose-ui
-  - v2tec/watchtower
-docker-compose:
-  - portainer
-
-
-# programs with selfupdate should be installed this way
-github-repos:
-  - linuxbrew
+  - travis
+#docker-containers:
+#  - francescou/docker-compose-ui
+#  - v2tec/watchtower
+#docker-compose:
+#  - docker volume create portainer_data
+#  - docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+#github-repos: []
+manual:
+  linuxbrew:
+    sudo: false
+    commands:
+      - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  npm-no-sudo:
+    sudo: false
+    commands:
+      - wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh
 binaries:
   ammonite:
     name: amm
-    url: https://github.com/lihaoyi/Ammonite/releases/download/0.9.0/2.12-0.9.0
-  docker-compose:
-    name: docker-compose
-    url: https://github.com/docker/compose/releases/download/{{ versions.docker-compose }}/docker-compose-Linux-x86_64
-  kubectl:
-    name: kubectl
-    url: https://storage.googleapis.com/kubernetes-release/release/v{{ versions.kubectl }}/bin/linux/amd64/kubectl
-targzs:
-  hub:
-    name: hub
-    url: https://github.com/github/hub/releases/download/v2.2.9/hub-linux-amd64-2.2.9.tgz
-    target_dir: /opt
-    original_dir: hub-linux-amd64-2.2.9
-    symlinked_dir: hub
+    url: https://github.com/lihaoyi/Ammonite/releases/download/1.6.0/2.12-1.6.0
+  sbt-extras:
+    name: sbt
+    url: https://git.io/sbt
+folder:
   intellij:
     name: IntelliJ IDEA
-    url: https://download.jetbrains.com/idea/ideaIC-2017.1.3.tar.gz
-    target_dir: "{{ home }}"
-    original_dir: idea-IC-171.4424.56
+    url: https://download.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz
+    target_dir: /opt
+    original_dir: idea-IC-183.4886.37
     symlinked_dir: ideaIC
-  go:
-    name: Go
-    url: https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz
-    target_dir: /usr/local
-    original_dir: go
-    symlinked_dir: go
-tarbzs:
-  firefox-nightly:
-    url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US
-zips:
-  rclone:
-    name: rclone
-    url: https://downloads.rclone.org/rclone-current-linux-amd64.zip
-
-
-atom-plugins:
-  - sync-settings
-  - atom-beautify
-  - atom-scalariform
-  - file-icons
-  - language-scala
-
-
-versions:
-  docker-compose: 1.13.0
-  kubectl: 1.6.4
-  dbeaver: 3.8.1
-  fastoredis: 1.2.0
+    type: targz
+  pycharm:
+    name: PyCharm
+    url: https://download.jetbrains.com/python/pycharm-community-2018.3.2.tar.gz
+    target_dir: /opt
+    original_dir: pycharm-community-2018.3.2
+    symlinked_dir: pycharmCE
+    type: targz
+  dbeaver:
+    name: Dbeaver
+    url: https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz
+    target_dir: /opt
+    original_dir: dbeaver
+    symlinked_dir: dbeaver
+    type: targz

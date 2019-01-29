@@ -1,6 +1,0 @@
----
-- include_vars: vars.yml
-- name: Install python apps
-  become: yes
-  shell: "pip install {{ item.value.url }}"
-  with_dict: "{{ python-apps }}"

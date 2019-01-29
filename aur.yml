@@ -1,0 +1,5 @@
+--- # global vs local?
+- include_vars: vars.yml
+- name: Build AUR packages
+  shell: pamac build {{ item.value }}
+  with_dict: "{{ aur }}"

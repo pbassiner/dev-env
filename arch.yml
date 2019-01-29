@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  tasks:
+   - include: pacman.yml
+   - include: aur.yml
+   - include: binaries.yml
+   - include: folders.yml
+
+   - include: commands.yml
+   - include: customization.yml
+
+   - include: snap.yml
+   - include: flatpak.yml
+   - include: brew.yml
+   - include: pip.yml
+   - include: go.yml
+   - include: npm.yml
+   - include: gem.yml
+
+   - include: docker.yml

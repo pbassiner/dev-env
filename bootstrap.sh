@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # DEFAULTS
 BRANCH="master"
@@ -28,30 +28,15 @@ done
 
 # BOOTSTRAP
 
-# Add apt repositories
-if ! grep -q "ansible/ansible" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-  sudo apt-add-repository ppa:ansible/ansible
-fi
-if ! grep -q "git-core/ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
-  sudo apt-add-repository ppa:git-core/ppa
-fi
+sudo pacman -S git --noconfirm
+sudo pacman -S ansible --noconfirm
 
-# Upgrade packages
-sudo apt-get update
-sudo apt-get --assume-yes upgrade
-
-# Install Ansible & Git
-sudo apt-get --assume-yes install ansible
-sudo apt-get --assume-yes install git
-
-# Clone dev-env repo if not already present
 if [ ! -d ".dev-env" ]; then
-  git clone https://github.com/aserralle/dev-env.git .dev-env
+  git clone https://github.com/aserrallerios/dev-env.git .dev-env
 fi
 
-# Checkout specified branch
 cd .dev-env
 git checkout ${BRANCH}
+git pull
 
-# Run Ansible playbook
-ansible-playbook ubuntu.yml -i hosts -vv
+ansible-playbook arch.yml -i hosts -vv --ask-sudo-pass

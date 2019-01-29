@@ -1,0 +1,11 @@
+---
+- name: Pacman update cache & upgrade
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+- include_vars: vars.yml
+- name: Install pacman packages
+  become: yes
+  pacman:
+    name: "{{ pacman }}"

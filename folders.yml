@@ -1,0 +1,19 @@
+---
+- include_vars: vars.yml
+- name: Check .tar.gz already at latest
+  stat:
+    path: "{{ item.value.target_dir }}/{{ item.value.original_dir }}"
+  with_dict:  "{{ targzs }}"
+  register: check_targz_status
+- name: Download .tar.gz files
+  get_url: url={{ item.item.value.url }} dest=/tmp/{{ item.item.key }}.tar.gz validate_certs=no
+  with_items: "{{ check_targz_status.results }}"
+  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+- name: Extract .tar.gz files
+  unarchive: src=/tmp/{{ item.item.key }}.tar.gz dest={{ item.item.value.target_dir }}
+  with_items: "{{ check_targz_status.results }}"
+  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+- name: Symlink extracted folders
+  file: path={{ item.item.value.target_dir }}/{{ item.item.value.symlinked_dir }} src={{ item.item.value.target_dir }}/{{ item.item.value.original_dir }} state=link
+  with_items: "{{ check_targz_status.results }}"
+  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
