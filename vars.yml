@@ -48,6 +48,8 @@ pacman:
   - extra-cmake-modules
   - strace
   - sbt
+  - stow
+  - netdata
   - ksshaskpass
   - appmenu-gtk-module
   - appmenu-qt4
@@ -58,12 +60,9 @@ aur:
   - jre
   - aptik
   - tmate
-  - http
-  - nerdfonts
-  - npm
-  - stow
-  - netdata
-  - plasma-hud
+  - nerd-fonts-complete
+  - plasma-hud-git
+  # - http
 linuxbrew:
   - gcc
   - chruby
@@ -73,6 +72,7 @@ linuxbrew:
   - neofetch
   - kompose
   - landscaper
+  - jfrog-cli-go
   # - yudai/gotty/gotty
   # - getantibody/tap/antibody
 snap:
@@ -116,7 +116,7 @@ cargo:
   - shellharden
 go:
   - github.com/wallix/awless
-  - github.com/muesli/beehive
+  # - github.com/muesli/beehive
 pip:
   - awscli
   - virtualenv
@@ -128,7 +128,6 @@ pip:
   - pipdeptree
   - pip-review
 npm:
-  - jfrog-cli-go
   - diff-so-fancy
   - api-spec-converter
   - graphqurl
@@ -145,15 +144,19 @@ gem:
 #  - docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 #github-repos: []
 manual:
+  docker:
+    sudo: yes
+    commands:
+      - systemctl enable --now docker
   linuxbrew:
-    sudo: false
+    sudo: no
     commands:
       - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   npm-no-sudo:
-    sudo: false
+    sudo: no
     commands:
       - wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh
-binaries:
+binary:
   ammonite:
     name: amm
     url: https://github.com/lihaoyi/Ammonite/releases/download/1.6.0/2.12-1.6.0

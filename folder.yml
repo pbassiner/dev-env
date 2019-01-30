@@ -3,7 +3,7 @@
 - name: Check .tar.gz already at latest
   stat:
     path: "{{ item.value.target_dir }}/{{ item.value.original_dir }}"
-  with_dict:  "{{ targzs }}"
+  with_dict:  "{{ folder }}"
   register: check_targz_status
 - name: Download .tar.gz files
   get_url: url={{ item.item.value.url }} dest=/tmp/{{ item.item.key }}.tar.gz validate_certs=no

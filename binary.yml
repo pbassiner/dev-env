@@ -3,4 +3,4 @@
 - name: Download binary files
   become: yes
   get_url: url={{ item.value.url }} dest=/usr/local/bin/{{ item.value.name }} validate_certs=no mode=0755 force=yes
-  with_dict: "{{ binaries }}"
+  with_dict: "{{ binary }}"

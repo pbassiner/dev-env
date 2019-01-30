@@ -1,0 +1,7 @@
+---
+- include_vars: vars.yml
+- name: Execute commands manually
+  with_dict: {{ manual }}
+  become: {{ item.value.sudo }}
+  loop: {{ item.value.commands }}
+  shell: {{ item }}

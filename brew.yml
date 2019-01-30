@@ -1,0 +1,9 @@
+---
+- name: Update Homebrew
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+- include_vars: vars.yml
+- name: Install Homebrew apps
+  homebrew:
+    name: "{{ brew }}"

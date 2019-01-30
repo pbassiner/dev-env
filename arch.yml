@@ -2,11 +2,11 @@
 - hosts: localhost
   tasks:
    - include: pacman.yml
-   - include: aur.yml
-   - include: binaries.yml
-   - include: folders.yml
+   # - include: aur.yml
+   - include: binary.yml
+   - include: folder.yml
 
-   - include: commands.yml
+   - include: manual.yml
    - include: customization.yml
 
    - include: snap.yml

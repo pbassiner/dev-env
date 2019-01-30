@@ -28,8 +28,8 @@ done
 
 # BOOTSTRAP
 
-sudo pacman -S git --noconfirm
-sudo pacman -S ansible --noconfirm
+sudo pacman -S git --noconfirm --needed
+sudo pacman -S ansible --noconfirm --needed
 
 if [ ! -d ".dev-env" ]; then
   git clone https://github.com/aserrallerios/dev-env.git .dev-env

@@ -1,5 +1,5 @@
 ---
 - include_vars: vars.yml
 - name: Install go apps
-  shell: "go get {{ item.value.url }}"
-  with_dict: "{{ go-apps }}"
+  shell: "go get {{ item }}"
+  loop: "{{ go }}"

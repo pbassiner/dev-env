@@ -1,6 +1,7 @@
 ---
 - include_vars: vars.yml
 - name: Install pip packages
+  become: yes
   pip:
     name: "{{ pip }}"
     executable: pip
