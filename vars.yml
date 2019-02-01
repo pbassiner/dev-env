@@ -144,16 +144,13 @@ gem:
 #  - docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 #github-repos: []
 manual:
-  docker:
-    sudo: yes
+  - sudo: yes
     commands:
       - systemctl enable --now docker
-  linuxbrew:
-    sudo: no
+  - sudo: no
     commands:
       - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  npm-no-sudo:
-    sudo: no
+  - sudo: no
     commands:
       - wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh
 binary:
