@@ -1,12 +1,20 @@
 ---
 - include_vars: vars.yml
+#- name: Install snap packages
+#  become: yes
+#  snap:
+#    name: "{{ snap }}"
+#- name: Install snap packages (classic)
+#  become: yes
+#  with_dict: "{{ snap-classic }}"
+#  snap:
+#    name: "{{ item.value }}"
+#    classic: yes
 - name: Install snap packages
   become: yes
-  snap:
-    name: "{{ snap }}"
+  loop: "{{ snap }}"
+  shell:  "snap install {{ item }}"
 - name: Install snap packages (classic)
   become: yes
-  with_dict: "{{ snap-classic }}"
-  snap:
-    name: "{{ item.value }}"
-    classic: yes
+  loop: "{{ snap-classic }}"
+  shell:  "snap install {{ item }} --classic"

@@ -39,4 +39,4 @@ cd .dev-env
 git checkout ${BRANCH}
 git pull
 
-ansible-playbook arch.yml -i hosts -vv --ask-sudo-pass
+ansible-playbook arch.yml -i hosts --ask-sudo-pass

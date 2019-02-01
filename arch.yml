@@ -7,7 +7,6 @@
    - include: folder.yml
 
    - include: manual.yml
-   - include: customization.yml
 
    - include: snap.yml
    - include: flatpak.yml
@@ -16,5 +15,3 @@
    - include: go.yml
    - include: npm.yml
    - include: gem.yml
-
-   - include: docker.yml

@@ -129,7 +129,7 @@ pip:
   - pip-review
 npm:
   - diff-so-fancy
-  - api-spec-converter
+  # - api-spec-converter
   - graphqurl
   - matrix-rain
 gem:
@@ -140,19 +140,33 @@ gem:
 #  - francescou/docker-compose-ui
 #  - v2tec/watchtower
 #docker-compose:
-#  - docker volume create portainer_data
-#  - docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 #github-repos: []
-manual:
+manual: # This commands need to be idempotent
   - sudo: yes
     commands:
-      - systemctl enable --now docker
+      - "chsh -s $(which zsh) {{ username }}"
+  - sudo: yes
+    commands:
+      - "systemctl enable --now snapd.socket"
+  - sudo: yes
+    commands:
+      - "systemctl enable --now docker"
+      - "usermod -aG docker {{ username }}"
+  #- sudo: no
+  #  commands:
+  #    - "docker volume create portainer_data"
+  #    - "docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer"
+  #- sudo: no
+  #  commands:
+  #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   - sudo: no
     commands:
-      - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  - sudo: no
-    commands:
-      - wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh
+      - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
+sysctl:
+  - key: vm.swappiness
+    value: 30
+  - key: fs.inotify.max_user_watches
+    value: 524288
 binary:
   ammonite:
     name: amm

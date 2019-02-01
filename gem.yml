@@ -1,0 +1,7 @@
+---
+- include_vars: vars.yml
+- name: Install gems
+  gem:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ gems }}"
