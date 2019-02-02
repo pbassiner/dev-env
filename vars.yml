@@ -77,8 +77,6 @@ linuxbrew:
   # - getantibody/tap/antibody
 snap:
   # - docker # snap doesn't create the docker user & group, so it requires sudo
-  - helm
-  - aws-cli
   - spotify
   - glances
   - slack-term
@@ -96,6 +94,8 @@ snap:
   - typora-alanzanattadev
   # - antibody
 snap-classic:
+  - helm
+  - aws-cli
   - kubectl
   - powershell
   - sublime-text
@@ -178,21 +178,19 @@ folder:
   intellij:
     name: IntelliJ IDEA
     url: https://download.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz
-    target_dir: /opt
+    target_dir: "{{ home }}"
     original_dir: idea-IC-183.4886.37
     symlinked_dir: ideaIC
-    type: targz
   pycharm:
     name: PyCharm
     url: https://download.jetbrains.com/python/pycharm-community-2018.3.2.tar.gz
-    target_dir: /opt
+    target_dir: "{{ home }}"
     original_dir: pycharm-community-2018.3.2
     symlinked_dir: pycharmCE
-    type: targz
   dbeaver:
     name: Dbeaver
     url: https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz
-    target_dir: /opt
+    target_dir: "{{ home }}"
     original_dir: dbeaver
     symlinked_dir: dbeaver
     type: targz
