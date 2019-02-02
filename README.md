@@ -10,11 +10,11 @@ Either log into Github and get an access token or log into Dropbox and open Keep
 # Run it
 
 ```shell
-wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+GITHUB_TOKEN=...; wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash
 ```
 For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branch <BRANCH>` (default is `master`):
 ```shell
-wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
+GITHUB_TOKEN=...; wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
 ```
 
 # Disclaimer
@@ -26,13 +26,12 @@ Only tested on Manjaro Linux. May work on any Arch Linux as well.
 # What to do after running installation
 
 1. Log into Dropbox
-2. Run `sensible.dotfiles` installer with the token saved in Dropbox -> KeepassXC
-3. Configure your Terminal emulators with the desired fonts (this can be automated)
-4. Add desiredd scripts to system autostart
-5. Tweak desktop & desktop shortcuts (install KDE addons)
-6. Sync into Firefox
-7. Enable package management on Sublime Text & install Sync plugin
-8. Configure other apps (IntelliJ, Atom, etc.)
+2. Configure your Terminal emulators with the desired fonts (this can be automated)
+3. Add desiredd scripts to system autostart
+4. Tweak desktop & desktop shortcuts (install KDE addons)
+5. Sync into Firefox
+6. Enable package management on Sublime Text & install Sync plugin
+7. Configure other apps (IntelliJ, Atom, etc.)
 
 # License
 

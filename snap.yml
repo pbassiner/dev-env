@@ -16,5 +16,5 @@
   shell:  "snap install {{ item }}"
 - name: Install snap packages (classic)
   become: yes
-  loop: "{{ snap-classic }}"
+  loop: "{{ snapclassic }}"
   shell:  "snap install {{ item }} --classic"

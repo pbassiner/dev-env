@@ -4,4 +4,4 @@
   gem:
     name: "{{ item }}"
     state: latest
-  loop: "{{ gems }}"
+  loop: "{{ gem }}"

@@ -80,7 +80,6 @@ snap:
   - spotify
   - glances
   - slack-term
-  - slack
   - gitter-desktop
   - q
   - jq
@@ -93,13 +92,14 @@ snap:
   - simplenote
   - typora-alanzanattadev
   # - antibody
-snap-classic:
+snapclassic:
   - helm
   - aws-cli
   - kubectl
-  - powershell
+  - slack
   - sublime-text
   - vscode
+  - powershell
 flatpak:
   - com.dropbox.Client
   - com.axosoft.GitKraken
@@ -148,6 +148,7 @@ manual: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "systemctl enable --now snapd.socket"
+      - "ln -s /var/lib/snapd/snap /snap"
   - sudo: yes
     commands:
       - "systemctl enable --now docker"
@@ -159,9 +160,13 @@ manual: # This commands need to be idempotent
   #- sudo: no
   #  commands:
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  #- sudo: no
+  #  commands:
+  #    - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
   - sudo: no
     commands:
-      - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
+      - "wget -qO- https://raw.github.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
+      - "sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://api.github.com/repos/aserrallerios/sensible.dotfiles/contents/bootstrap.sh)\""
 sysctl:
   - key: vm.swappiness
     value: 30
@@ -178,19 +183,20 @@ folder:
   intellij:
     name: IntelliJ IDEA
     url: https://download.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz
-    target_dir: "{{ home }}"
+    target_dir: /opt
     original_dir: idea-IC-183.4886.37
     symlinked_dir: ideaIC
   pycharm:
     name: PyCharm
     url: https://download.jetbrains.com/python/pycharm-community-2018.3.2.tar.gz
-    target_dir: "{{ home }}"
+    target_dir: /opt
     original_dir: pycharm-community-2018.3.2
     symlinked_dir: pycharmCE
   dbeaver:
     name: Dbeaver
     url: https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz
-    target_dir: "{{ home }}"
+    target_dir: /opt
     original_dir: dbeaver
-    symlinked_dir: dbeaver
+    symlinked_dir: dbeaver-ce
+    force_reinstall: yes
     type: targz

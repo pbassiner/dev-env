@@ -5,13 +5,12 @@
    # - include: aur.yml
    - include: binary.yml
    - include: folder.yml
-
    - include: manual.yml
-
-   - include: snap.yml
+   - include: sysctl.yml
    - include: flatpak.yml
    - include: brew.yml
    - include: pip.yml
    - include: go.yml
    - include: npm.yml
    - include: gem.yml
+   - include: snap.yml

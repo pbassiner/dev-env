@@ -1,8 +1,10 @@
 ---
 - include_vars: vars.yml
-- name: Execute commands manually
+- name: Execute commands manually from Home
   become: "{{ item[0].sudo }}"
   shell: "{{ item[1] }}"
+  args:
+    chdir: "{{ home }}"
   with_subelements:
     - "{{ manual }}"
     - commands
