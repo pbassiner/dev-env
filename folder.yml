@@ -1,20 +1,24 @@
 ---
 - include_vars: vars.yml
+- name: Create apps directory
+  file:
+    path: "{{ home }}/apps"
+    state: directory
 - name: Check .tar.gz already at latest
   stat:
     path: "{{ home }}/apps/{{ item.value.original_dir }}"
-  with_dict:  "{{ folder }}"
+  loop:  "{{ folder }}"
   register: check_targz_status
 - name: Download .tar.gz files
-  get_url: url={{ item.item.value.url }} dest=/tmp/{{ item.item.key }}.tar.gz validate_certs=no
+  get_url: url={{ item.item.value.url }} dest=/tmp validate_certs=no
   with_items: "{{ check_targz_status.results }}"
   when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+  register: downloads
 - name: Extract .tar.gz files
-  unarchive: src=/tmp/{{ item.item.key }}.tar.gz dest={{ home }}/apps
-  with_items: "{{ check_targz_status.results }}"
-  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+  unarchive: src={{ item.dest }} dest={{ home }}/apps
+  loop: "{{ downloads.results }}"
+  when: not item.skipped|default (true)
 - name: Symlink extracted folders
   become: yes
-  file: path={{ item.item.value.target_dir }}/{{ item.item.value.symlinked_dir }} src={{ home }}/apps/{{ item.item.value.original_dir }} state=link
-  with_items: "{{ check_targz_status.results }}"
-  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+  file: path=/opt/{{ item.item.item.value.symlinked_dir }} src={{ home }}/apps/{{ item.item.item.value.original_dir }} state=link
+  loop: "{{ downloads.results }}"
