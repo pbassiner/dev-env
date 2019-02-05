@@ -1,8 +1,9 @@
 ---
 - include_vars: vars.yml
-  become: yes
 - name: Set kernel parameters
+  become: yes
   loop: "{{ sysctl }}"
   sysctl:
     name: "{{ item.key }}"
     value: "{{ item.value }}"
+    sysctl_file: "/etc/sysctl.d/99-user_custom.conf"
