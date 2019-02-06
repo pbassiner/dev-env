@@ -1,5 +1,4 @@
 ---
-- include_vars: vars.yml
 - name: Install npm packages
   become: yes
   loop: "{{ npm }}"

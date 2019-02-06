@@ -1,5 +1,4 @@
 ---
-- include_vars: vars.yml
 #- name: Install snap packages
 #  become: yes
 #  snap:

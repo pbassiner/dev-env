@@ -7,6 +7,8 @@ Development Environment Configuration with Ansible
 
 Either log into Github and get an access token or log into Dropbox and open KeepassXC database to get a Github token.
 
+The Github token is used in the `sensible.dotfiles` installation.
+
 # Run it
 
 ```shell

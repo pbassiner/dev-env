@@ -4,7 +4,6 @@
   pacman:
     update_cache: yes
     upgrade: yes
-- include_vars: vars.yml
 - name: Install pacman packages # Add --needed flag when possible to avoid reinstall already present packages
   become: yes
   pacman:

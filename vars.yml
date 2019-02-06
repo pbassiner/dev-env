@@ -4,10 +4,6 @@ home: /home/{{ username }}
 # tmate vs gotty vs showterm vs termshare
 # asciinema <- recorder of terminal
 
-# what about sublime config
-# what about intellij config
-# what about atom config
-
 pacman:
   - snapd
   - flatpak
@@ -50,7 +46,10 @@ pacman:
   - sbt
   - stow
   - netdata
+  - etcher
+  - pamac
   - ksshaskpass
+  - pulseaudio-equalizer
   - appmenu-gtk-module
   - appmenu-qt4
 aur:
@@ -62,8 +61,10 @@ aur:
   - tmate
   - nerd-fonts-complete
   - plasma-hud-git
+  - find-the-command
+  - firefox-nightly
   # - http
-linuxbrew:
+linuxbrew: # do this shit
   - gcc
   - chruby
   - ruby-install
@@ -98,20 +99,20 @@ snapclassic:
   - kubectl
   - slack
   - sublime-text
-  - vscode
   - powershell
 flatpak:
   - com.dropbox.Client
   - com.axosoft.GitKraken
   - io.atom.Atom
   - io.dbeaver.DBeaverCommunity
-appimage:
+  - com.visualstudio.code.oss
+appimage: # do this shit
   - stacer
 bpkg:
   - gitwatch
   - mc
   - xclip
-cargo:
+cargo: # do this shit
   - exa
   - shellharden
 go:
@@ -156,13 +157,16 @@ manual: # This commands need to be idempotent
     commands:
       - "wget -qO- https://raw.github.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
       - "sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://api.github.com/repos/aserrallerios/sensible.dotfiles/contents/bootstrap.sh)\""
+  ## execute manually, execute using docker task or use docker compose
   #- sudo: no
   #  commands:
   #    - "docker volume create portainer_data"
   #    - "docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer"
+  ## look for a solution
   #- sudo: no
   #  commands:
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  ## move to zsh repo
   #- sudo: no
   #  commands:
   #    - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"

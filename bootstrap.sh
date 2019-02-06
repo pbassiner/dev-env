@@ -31,6 +31,8 @@ done
 sudo pacman -S git --noconfirm --needed
 sudo pacman -S ansible --noconfirm --needed
 
+git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+
 if [ ! -d ".dev-env" ]; then
   git clone https://github.com/aserrallerios/dev-env.git .dev-env
 fi

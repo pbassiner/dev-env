@@ -1,6 +1,4 @@
---- # global vs local?
-- include_vars: vars.yml
+---
 - name: Build AUR packages
-  become: yes
-  shell: pamac build {{ item }}
+  aur: name={{ item }}
   loop: "{{ aur }}"

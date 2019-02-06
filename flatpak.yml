@@ -1,5 +1,4 @@
 ---
-- include_vars: vars.yml
 - name: Install Flatpak apps
   become: yes
   loop: "{{ flatpak }}"

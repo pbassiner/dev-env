@@ -1,16 +1,21 @@
 ---
 - hosts: localhost
+  vars_files:
+    - vars.yml
   tasks:
-   - include: pacman.yml
-   # - include: aur.yml
-   - include: binary.yml
-   - include: folder.yml
-   - include: manual.yml
-   - include: sysctl.yml
-   - include: flatpak.yml
-   - include: brew.yml
-   - include: pip.yml
-   - include: go.yml
-   - include: npm.yml
-   - include: gem.yml
-   - include: snap.yml
+    - include: pacman.yml
+    - include: aur.yml
+    - include: binary.yml
+    - include: folder.yml
+    - include: manual.yml
+    - include: sysctl.yml
+    - include: flatpak.yml
+    #- include: brew.yml
+    #- include: appimage.yml
+    #- include: cargo.yml
+    #- include: bpkg.yml
+    - include: pip.yml
+    - include: go.yml
+    - include: npm.yml
+    - include: gem.yml
+    - include: snap.yml
