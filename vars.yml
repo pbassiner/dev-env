@@ -74,6 +74,7 @@ linuxbrew: # do this shit
   - kompose
   - landscaper
   - jfrog-cli-go
+  - exa
   # - yudai/gotty/gotty
   # - getantibody/tap/antibody
 snap:
@@ -97,6 +98,7 @@ snapclassic:
   - helm
   - aws-cli
   - kubectl
+  - vscode
   - slack
   - sublime-text
   - powershell
@@ -105,15 +107,15 @@ flatpak:
   - com.axosoft.GitKraken
   - io.atom.Atom
   - io.dbeaver.DBeaverCommunity
-  - com.visualstudio.code.oss
-appimage: # do this shit
+  # - com.visualstudio.code.oss
+appimage:
   - stacer
+  - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
 bpkg:
   - gitwatch
   - mc
   - xclip
-cargo: # do this shit
-  - exa
+cargo:
   - shellharden
 go:
   - github.com/wallix/awless

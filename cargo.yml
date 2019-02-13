@@ -1,0 +1,4 @@
+---
+- name: Install cargo app
+  loop: "{{ cargo }}"
+  shell:  "cargo install {{ item }}"
