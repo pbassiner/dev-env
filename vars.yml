@@ -109,7 +109,7 @@ flatpak:
   - io.dbeaver.DBeaverCommunity
   # - com.visualstudio.code.oss
 appimage:
-  - stacer
+  - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
   - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
 bpkg:
   - gitwatch
