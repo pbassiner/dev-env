@@ -16,7 +16,7 @@
 - name: Extract .tar.gz files
   unarchive: src={{ item.dest }} dest={{ home }}/apps
   loop: "{{ downloads.results }}"
-  when: not item.skipped|default (true)
+  when: not item.skipped|default (false)
 - name: Symlink extracted folders
   become: yes
   file: path=/opt/{{ item.item.item.symlinked_dir }} src={{ home }}/apps/{{ item.item.item.original_dir }} state=link

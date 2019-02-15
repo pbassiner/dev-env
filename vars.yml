@@ -14,23 +14,21 @@ pacman:
   - python
   - python-pip
   - ruby
-  - hub
   - go
   - rust
   - keepassxc
   - vim
   - neovim
+  - tmux
+  - hub
   - virtualbox
   - unrar
   - terminator
   - httpie
-  - tmux
   - glances
   - zeal
   - graphviz
   - htop
-  - python
-  - python-pip
   - etcher
   - rclone
   - curl
@@ -45,8 +43,6 @@ pacman:
   - strace
   - sbt
   - stow
-  - netdata
-  - etcher
   - pamac
   - ksshaskpass
   - pulseaudio-equalizer
