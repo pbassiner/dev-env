@@ -26,10 +26,23 @@ esac
 shift # past argument or value
 done
 
-# BOOTSTRAP
+# Determine OS
+
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+# Install requirements
 
 sudo pacman -S git --noconfirm --needed
 sudo pacman -S ansible --noconfirm --needed
+
+# Bootstrap
 
 git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
 

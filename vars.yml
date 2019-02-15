@@ -73,6 +73,7 @@ linuxbrew: # do this shit
   - exa
   # - yudai/gotty/gotty
   # - getantibody/tap/antibody
+cask: []
 snap:
   # - docker # snap doesn't create the docker user & group, so it requires sudo
   - spotify
@@ -189,4 +190,6 @@ folder:
     original_dir: dbeaver
     symlinked_dir: dbeaver-ce
     force_reinstall: yes
-    type: targz
+  - url: https://kubernetic.s3.amazonaws.com/Kubernetic-2.2.0.tar.gz
+    original_dir: Kubernetic-2.2.0.tar.gz
+    symlinked_dir: kubernetic
