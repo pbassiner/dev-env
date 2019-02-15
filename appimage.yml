@@ -4,9 +4,9 @@
     path: "{{ home }}/appimages"
     state: directory
 - name: Install appimage apps
-  get_url: url={{ item.value.url }} dest={{ home }}/appimages/ validate_certs=no mode=0755
+  get_url: url={{ item }} dest={{ home }}/appimages/ validate_certs=no mode=0755
   loop: "{{ appimage }}"
   register: downloads
-- name: Symlink appimage apps
-  file: path={{ home }}/bin/ src={{ item.dest }} state=link
-  loop: "{{ downloads.results }}"
+#- name: Symlink appimage apps
+#  file: path={{ home }}/bin/ src={{ item.dest }} state=link
+#  loop: "{{ downloads.results }}"

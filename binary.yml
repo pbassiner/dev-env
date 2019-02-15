@@ -1,5 +1,5 @@
 --- # global vs local?
 - name: Download binary files
   become: yes
-  get_url: url={{ item.value.url }} dest=/usr/local/bin/{{ item.value.name }} validate_certs=no mode=0755 force=yes
+  get_url: url={{ item.url }} dest=/usr/local/bin/{{ item.name }} validate_certs=no mode=0755 force=yes
   loop: "{{ binary }}"

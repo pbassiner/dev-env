@@ -5,13 +5,13 @@
     state: directory
 - name: Check .tar.gz already at latest
   stat:
-    path: "{{ home }}/apps/{{ item.value.original_dir }}"
+    path: "{{ home }}/apps/{{ item.original_dir }}"
   loop:  "{{ folder }}"
   register: check_targz_status
 - name: Download .tar.gz files
-  get_url: url={{ item.item.value.url }} dest=/tmp validate_certs=no
+  get_url: url={{ item.item.url }} dest=/tmp validate_certs=no
   with_items: "{{ check_targz_status.results }}"
-  when: not item.stat.exists or item.item.value.force_reinstall|default (false)
+  when: not item.stat.exists or item.item.force_reinstall|default (false)
   register: downloads
 - name: Extract .tar.gz files
   unarchive: src={{ item.dest }} dest={{ home }}/apps
@@ -19,5 +19,5 @@
   when: not item.skipped|default (true)
 - name: Symlink extracted folders
   become: yes
-  file: path=/opt/{{ item.item.item.value.symlinked_dir }} src={{ home }}/apps/{{ item.item.item.value.original_dir }} state=link
+  file: path=/opt/{{ item.item.item.symlinked_dir }} src={{ home }}/apps/{{ item.item.item.original_dir }} state=link
   loop: "{{ downloads.results }}"
