@@ -150,7 +150,7 @@ manual: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "systemctl enable --now snapd.socket"
-      - "ln -s /var/lib/snapd/snap /snap"
+      - "ln -sf /var/lib/snapd/snap /snap"
   - sudo: yes
     commands:
       - "systemctl enable --now docker"
