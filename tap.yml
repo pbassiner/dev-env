@@ -1,0 +1,4 @@
+---
+- name: Add brew taps
+  homebrew_tap:
+    name: "{{ tap }}"

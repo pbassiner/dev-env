@@ -10,6 +10,7 @@
     - include: manual.yml
     - include: sysctl.yml
     - include: flatpak.yml
+    - include: snap.yml
     #- include: brew.yml
     #- include: bpkg.yml
     - include: appimage.yml
@@ -18,4 +19,3 @@
     - include: go.yml
     - include: npm.yml
     - include: gem.yml
-    - include: snap.yml

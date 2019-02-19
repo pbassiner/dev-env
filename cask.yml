@@ -1,0 +1,7 @@
+---
+- name: Update Homebrew casks
+  homebrew_cask:
+    upgrade_all: yes
+- name: Install Homebrew cask apps
+  homebrew_cask:
+    name: "{{ cask }}"

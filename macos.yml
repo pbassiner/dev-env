@@ -3,11 +3,12 @@
   vars_files:
     - vars.yml
   tasks:
+    - include: tap.yml
     - include: brew.yml
     - include: cask.yml
     - include: binary.yml
     - include: folder.yml
-    - include: manual.yml
+    #- include: manual.yml
     #- include: sysctl.yml
     #- include: bpkg.yml
     - include: cargo.yml

@@ -36,16 +36,47 @@ case "${unameOut}" in
     MINGW*)     machine=MinGw;;
     *)          machine="UNKNOWN:${unameOut}"
 esac
+case $(uname -m) in
+x86_64)
+    BITS=64
+    ;;
+i*86)
+    BITS=32
+    ;;
+*)
+    BITS=?
+    ;;
+esac
 
 # Install requirements
 
-sudo pacman -S git --noconfirm --needed
-sudo pacman -S ansible --noconfirm --needed
+case $machine in
+    Linux)
+        case "$(lsb_release -ds 2>/dev/null || cat /etc/*release 2>/dev/null | head -n1 || uname -om)" in
+            Manjaro*|Arch*)
+                sudo pacman -S git --noconfirm --needed
+                sudo pacman -S ansible --noconfirm --needed
+                TEMPLATE=arch.yml
+                ;;
+        esac
+        ;;
+    Mac)
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        brew install git
+        brew install ansible
+        TEMPLATE=macos.yml
+        ;;
+    Cygwin)            exit 1;;
+    MinGw)             exit 1;;
+    UNKNOWN*)          exit 1
+esac
+
 
 # Bootstrap
 
-git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
-
+if [ ! -d "~/.ansible/plugins/modules/aur" ]; then
+    git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+fi
 if [ ! -d ".dev-env" ]; then
   git clone https://github.com/aserrallerios/dev-env.git .dev-env
 fi
@@ -54,4 +85,4 @@ cd .dev-env
 git checkout ${BRANCH}
 git pull
 
-./run.sh
+./run.sh $TEMPLATE

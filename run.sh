@@ -1,4 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-ansible-playbook arch.yml -i hosts --ask-sudo-pass
+TEMPLATE=$1
+
+ansible-playbook $TEMPLATE -i hosts --ask-sudo-pass

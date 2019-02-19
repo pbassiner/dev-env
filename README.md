@@ -12,11 +12,11 @@ The Github token is used in the `sensible.dotfiles` installation.
 # Run it
 
 ```shell
-GITHUB_TOKEN=...; wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
 ```
 For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branch <BRANCH>` (default is `master`):
 ```shell
-GITHUB_TOKEN=...; wget -qO- https://raw.github.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
+GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
 ```
 
 # Disclaimer

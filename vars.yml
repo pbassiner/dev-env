@@ -60,7 +60,9 @@ aur:
   - find-the-command
   - firefox-nightly
   # - http
-linuxbrew: # do this shit
+tap:
+  - caskroom/fonts
+brew: # do this shit
   - gcc
   - chruby
   - ruby-install
@@ -73,7 +75,9 @@ linuxbrew: # do this shit
   - exa
   # - yudai/gotty/gotty
   # - getantibody/tap/antibody
-cask: []
+cask:
+  - spotify
+  - font-hack-nerd-font
 snap:
   # - docker # snap doesn't create the docker user & group, so it requires sudo
   - spotify
@@ -84,12 +88,13 @@ snap:
   - jq
   - tldr
   - terraform
-  - altair
   - syncthing
   - rclone
   - dwarf-fortress
   - simplenote
   - typora-alanzanattadev
+  - altair
+  - insomnia
   # - antibody
 snapclassic:
   - helm
@@ -108,6 +113,7 @@ flatpak:
 appimage:
   - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
   - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
+  - https://github.com/prisma/graphql-playground/releases/download/v1.8.9/graphql-playground-electron-1.8.9-x86_64.AppImage
 bpkg:
   - gitwatch
   - mc
@@ -127,6 +133,7 @@ pip:
   - thefuck
   - pipdeptree
   - pip-review
+  - yq
 npm:
   - diff-so-fancy
   # - api-spec-converter
@@ -180,7 +187,10 @@ binary:
   - name: sbt
     url: https://git.io/sbt
 folder:
-  - url: https://download.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz
+  - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz
+    original_dir: jetbrains-toolbox-1.13.4801
+    symlinked_dir: jetbrains-toolbox
+  - url: https://download.jetbrains.com/idea/ideaIU-2018.3.4-no-jdk.tar.gz
     original_dir: idea-IC-183.4886.37
     symlinked_dir: ideaIC
   - url: https://download.jetbrains.com/python/pycharm-community-2018.3.2.tar.gz
@@ -193,3 +203,4 @@ folder:
   - url: https://kubernetic.s3.amazonaws.com/Kubernetic-2.2.0.tar.gz
     original_dir: Kubernetic-2.2.0.tar.gz
     symlinked_dir: kubernetic
+  # - url: https://github.com/careteditor/releases-beta/releases/download/4.0.0-rc22/caret-beta.zip
