@@ -19,7 +19,6 @@ pacman:
   - unrar
   - terminator
   - httpie
-  - glances
   - zeal
   - graphviz
   - htop
@@ -47,7 +46,6 @@ aur:
   - jdk8
   - jdk
   - jre
-  - aptik
   - tmate
   - nerd-fonts-complete
   - plasma-hud-git

@@ -1,29 +1,35 @@
 brew:
-  - snapd
-  - flatpak
-  - docker
-  - docker-compose
+  - keepassxc
   - nodejs
   - npm
   - python
   - python-pip
   - ruby
+  - ruby-install
+  - chruby
   - go
   - rust
-  - keepassxc
+  - hub
+  - unrar
+  - helm
+  - kubectx
+  - kompose
+  - docker-compose
+  - q
+  - jq
+  - tldr
+  - exa
+  - aws-cli
+  - kubectl
   - vim
   - neovim
+  - terraform
   - tmux
-  - hub
-  - virtualbox
-  - unrar
   - terminator
   - httpie
   - glances
-  - zeal
   - graphviz
   - htop
-  - etcher
   - rclone
   - curl
   - file
@@ -37,60 +43,46 @@ brew:
   - strace
   - sbt
   - stow
-  - pamac
-  - ksshaskpass
   - pulseaudio-equalizer
   - gcc
-  - chruby
-  - ruby-install
-  - kubectx
   - fzf
   - neofetch
-  - kompose
   - landscaper
   - jfrog-cli-go
-  - exa
-  - spotify
-  - glances
   - slack-term
-  - gitter-desktop
-  - q
-  - jq
-  - tldr
-  - terraform
   - syncthing
   - rclone
   - dwarf-fortress
-  - simplenote
   - typora-alanzanattadev
-  - helm
-  - aws-cli
-  - kubectl
   - powershell
   - git-extras
-  - jdk8
-  - jdk
-  - jre
+  - find-the-command
+  - tmate
 tap:
   - caskroom/fonts
 cask:
-  - com.dropbox.Client
-  - com.axosoft.GitKraken
-  - io.atom.Atom
-  - io.dbeaver.DBeaverCommunity
+  - docker
+  - dropbox
+  - gitkraken
+  - dash
+  - atom
+  - dbeaver-community
   - spotify
+  - virtualbox
   - font-hack-nerd-font
-  - vscode
+  - visual-studio-code
   - slack
-  - sublime-text
-  - altair
+  - postman
+  - sublime
+  - altair-graphql-client
+  - gitter
   - insomnia
-  - stacer
-  - aptik
-  - tmate
-  - find-the-command
-  - firefox-nightly
   - code-notes
   - graphql-playground
   - kubernetic
-  - careteditor
+  - caret
+  - oracle-jdk
+  - balenaetcher
+  - evernote
+dmgs:
+  - https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
