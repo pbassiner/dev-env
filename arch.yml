@@ -2,6 +2,7 @@
 - hosts: localhost
   vars_files:
     - vars.yml
+    - vars.linux.yml
   tasks:
     - include: pacman.yml
     - include: aur.yml

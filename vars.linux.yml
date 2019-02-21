@@ -1,0 +1,135 @@
+pacman:
+  - snapd
+  - flatpak
+  - docker
+  - docker-compose
+  - nodejs
+  - npm
+  - python
+  - python-pip
+  - ruby
+  - go
+  - rust
+  - keepassxc
+  - vim
+  - neovim
+  - tmux
+  - hub
+  - virtualbox
+  - unrar
+  - terminator
+  - httpie
+  - glances
+  - zeal
+  - graphviz
+  - htop
+  - etcher
+  - rclone
+  - curl
+  - file
+  - atop
+  - maven
+  - visualvm
+  - make
+  - netdata
+  - cmake
+  - extra-cmake-modules
+  - strace
+  - sbt
+  - stow
+  - pamac
+  - ksshaskpass
+  - pulseaudio-equalizer
+  - appmenu-gtk-module
+  - appmenu-qt4
+aur:
+  - git-extras
+  - jdk8
+  - jdk
+  - jre
+  - aptik
+  - tmate
+  - nerd-fonts-complete
+  - plasma-hud-git
+  - find-the-command
+  - firefox-nightly
+  # - http
+tap: []
+brew: # do this shit
+  - gcc
+  - chruby
+  - ruby-install
+  - kubectx
+  - fzf
+  - neofetch
+  - kompose
+  - landscaper
+  - jfrog-cli-go
+  - exa
+  # - yudai/gotty/gotty
+snap:
+  # - docker # snap doesn't create the docker user & group, so it requires sudo
+  - spotify
+  - glances
+  - slack-term
+  - gitter-desktop
+  - q
+  - jq
+  - tldr
+  - terraform
+  - syncthing
+  - rclone
+  - dwarf-fortress
+  - simplenote
+  - typora-alanzanattadev
+  - altair
+  - insomnia
+snapclassic:
+  - helm
+  - aws-cli
+  - kubectl
+  - vscode
+  - slack
+  - sublime-text
+  - powershell
+flatpak:
+  - com.dropbox.Client
+  - com.axosoft.GitKraken
+  - io.atom.Atom
+  - io.dbeaver.DBeaverCommunity
+  # - com.visualstudio.code.oss
+appimage:
+  - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
+  - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
+  - https://github.com/prisma/graphql-playground/releases/download/v1.8.9/graphql-playground-electron-1.8.9-x86_64.AppImage
+manual: # This commands need to be idempotent
+  - sudo: yes
+    commands:
+      - "systemctl enable --now snapd.socket"
+      - "ln -sf /var/lib/snapd/snap /snap"
+  - sudo: yes
+    commands:
+      - "systemctl enable --now docker"
+      - "usermod -aG docker {{ username }}"
+  ## look for a solution
+  #- sudo: no
+  #  commands:
+  #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+folder:
+  - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz
+    original_dir: jetbrains-toolbox-1.13.4801
+    symlinked_dir: jetbrains-toolbox
+  - url: https://download.jetbrains.com/idea/ideaIU-2018.3.4-no-jdk.tar.gz
+    original_dir: idea-IC-183.4886.37
+    symlinked_dir: ideaIC
+  - url: https://download.jetbrains.com/python/pycharm-community-2018.3.2.tar.gz
+    original_dir: pycharm-community-2018.3.2
+    symlinked_dir: pycharmCE
+  - url: https://dbeaver.io/files/dbeaver-ce-latest-linux.gtk.x86_64.tar.gz
+    original_dir: dbeaver
+    symlinked_dir: dbeaver-ce
+    force_reinstall: yes
+  - url: https://kubernetic.s3.amazonaws.com/Kubernetic-2.2.0.tar.gz
+    original_dir: Kubernetic-2.2.0.tar.gz
+    symlinked_dir: kubernetic
+  # - url: https://github.com/careteditor/releases-beta/releases/download/4.0.0-rc22/caret-beta.zip
