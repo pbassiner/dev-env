@@ -48,9 +48,12 @@ aur:
   - jre
   - tmate
   - nerd-fonts-complete
-  - plasma-hud-git
   - find-the-command
   - firefox-nightly
+  - plasma-hud-git
+  - plasma5-applets-window-buttons
+  - plasma5-applets-window-appmenu
+  - plasma5-applets-window-title
   # - http
 tap: []
 brew: # do this shit
