@@ -54,6 +54,9 @@ aur:
   - plasma5-applets-window-buttons
   - plasma5-applets-window-appmenu
   - plasma5-applets-window-title
+  - ctop
+  - pulseeffects
+  - rclone-browser
   # - http
 tap: []
 brew: # do this shit
@@ -85,6 +88,7 @@ snap:
   - typora-alanzanattadev
   - altair
   - insomnia
+  - postman
 snapclassic:
   - helm
   - aws-cli

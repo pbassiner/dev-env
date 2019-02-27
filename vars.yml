@@ -43,8 +43,8 @@ manual: # This commands need to be idempotent
       - "chsh -s $(which zsh) {{ username }}"
   - sudo: no
     commands:
-      - "wget -qO- https://raw.github.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
-      - "sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://api.github.com/repos/aserrallerios/sensible.dotfiles/contents/bootstrap.sh)\""
+      - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
+      - "sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
   ## execute manually, execute using docker task or use docker compose
   #- sudo: no
   #  commands:
