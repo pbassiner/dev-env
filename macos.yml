@@ -4,6 +4,7 @@
     - vars.yml
     - vars.macos.yml
   tasks:
+    - include: dmg.yml
     - include: tap.yml
     - include: brew.yml
     - include: cask.yml

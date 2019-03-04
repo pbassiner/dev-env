@@ -84,5 +84,5 @@ cask:
   - oracle-jdk
   - balenaetcher
   - evernote
-dmgs:
+dmg:
   - https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US

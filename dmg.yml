@@ -1,0 +1,9 @@
+---
+- hosts: Install dmg apps
+  become: yes
+  vars:
+    app_url: "{{ item }}"
+    installer_type: app
+    install_method: dmg
+    download_file_type: dmg
+  loop: "{{ dmg }}"
