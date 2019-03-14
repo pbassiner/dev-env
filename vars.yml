@@ -1,5 +1,5 @@
-username: aserralle
-home: /home/{{ username }}
+username: "{{ lookup('env','USER') }}"
+home: "{{ lookup('env','HOME') }}"
 
 # tmate vs gotty vs showterm vs termshare
 # asciinema <- recorder of terminal
@@ -24,11 +24,13 @@ pip:
   - pipdeptree
   - pip-review
   - yq
+  - organize-tool
 npm:
   - diff-so-fancy
-  # - api-spec-converter
   - graphqurl
   - matrix-rain
+  - organize-cli
+  # - api-spec-converter
 gem:
   - tmuxinator
   - mdless
@@ -37,7 +39,7 @@ gem:
 #  - francescou/docker-compose-ui
 #  - v2tec/watchtower
 #github-repos: []
-manual: # This commands need to be idempotent
+manual_common: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "chsh -s $(which zsh) {{ username }}"
@@ -54,11 +56,7 @@ manual: # This commands need to be idempotent
   #- sudo: no
   #  commands:
   #    - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
-sysctl:
-  - key: vm.swappiness
-    value: 30
-  - key: fs.inotify.max_user_watches
-    value: 524288
+manual: "{{ common_manual }}"
 binary:
   - name: amm
     url: https://github.com/lihaoyi/Ammonite/releases/download/1.6.0/2.12-1.6.0

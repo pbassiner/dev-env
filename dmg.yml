@@ -1,5 +1,5 @@
 ---
-- hosts: Install dmg apps
+- name: Install dmg apps
   become: yes
   vars:
     app_url: "{{ item }}"

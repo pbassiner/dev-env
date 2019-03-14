@@ -107,7 +107,7 @@ appimage:
   - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
   - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
   - https://github.com/prisma/graphql-playground/releases/download/v1.8.9/graphql-playground-electron-1.8.9-x86_64.AppImage
-manual: # This commands need to be idempotent
+manual_linux: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "systemctl enable --now snapd.socket"
@@ -120,6 +120,7 @@ manual: # This commands need to be idempotent
   #- sudo: no
   #  commands:
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+manual: {{ manual_common + manual_linux }}
 folder:
   - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz
     original_dir: jetbrains-toolbox-1.13.4801
@@ -138,3 +139,8 @@ folder:
     original_dir: Kubernetic-2.2.0.tar.gz
     symlinked_dir: kubernetic
   # - url: https://github.com/careteditor/releases-beta/releases/download/4.0.0-rc22/caret-beta.zip
+sysctl:
+  - key: vm.swappiness
+    value: 30
+  - key: fs.inotify.max_user_watches
+    value: 524288

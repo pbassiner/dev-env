@@ -29,7 +29,7 @@ Only tested on Manjaro Linux. May work on any Arch Linux as well.
 
 1. Log into Dropbox
 2. Configure your Terminal emulators with the desired fonts (this can be automated)
-3. Add desiredd scripts to system autostart
+3. Add desiredd scripts to system autostart (this can be automated)
 4. Tweak desktop & desktop shortcuts (install KDE addons)
 5. Sync into Firefox
 6. Enable package management on Sublime Text & install Sync plugin

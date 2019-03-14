@@ -84,5 +84,13 @@ cask:
   - oracle-jdk
   - balenaetcher
   - evernote
+manual_macos: # This commands need to be idempotent
+  - sudo: no
+    commands:
+      - "$ curl https://bootstrap.pypa.io/get-pip.py > /tmp/get-pip.py"
+  - sudo: yes
+    commands:
+      - "python /tmp/get-pip.py"
+manual: {{ manual_common + manual_macos }}
 dmg:
   - https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
