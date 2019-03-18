@@ -1,4 +1,5 @@
 pacman:
+  - keepassxc
   - snapd
   - flatpak
   - docker
@@ -10,7 +11,6 @@ pacman:
   - ruby
   - go
   - rust
-  - keepassxc
   - vim
   - neovim
   - tmux
@@ -41,6 +41,7 @@ pacman:
   - pulseaudio-equalizer
   - appmenu-gtk-module
   - appmenu-qt4
+  - ktouch
 aur:
   - git-extras
   - jdk8
@@ -89,11 +90,11 @@ snap:
   - altair
   - insomnia
   - postman
+  - tusk
 snapclassic:
   - helm
   - aws-cli
   - kubectl
-  - vscode
   - slack
   - sublime-text
   - powershell
@@ -101,8 +102,8 @@ flatpak:
   - com.dropbox.Client
   - com.axosoft.GitKraken
   - io.atom.Atom
+  - com.visualstudio.code
   - io.dbeaver.DBeaverCommunity
-  # - com.visualstudio.code.oss
 appimage:
   - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
   - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
