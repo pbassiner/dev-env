@@ -60,9 +60,11 @@ brew:
   - tmate
 tap:
   - caskroom/fonts
+  - derailed/k9s
 cask:
-  - docker
   - dropbox
+  - docker
+  - k9s
   - gitkraken
   - dash
   - atom
@@ -93,4 +95,5 @@ manual_macos: # This commands need to be idempotent
       - "python /tmp/get-pip.py"
 manual: {{ manual_common + manual_macos }}
 dmg:
-  - https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
+  - url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
+    name: firefox-nightly

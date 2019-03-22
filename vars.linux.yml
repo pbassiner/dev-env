@@ -12,6 +12,7 @@ pacman:
   - go
   - rust
   - vim
+  - yay
   - neovim
   - tmux
   - hub
@@ -74,8 +75,9 @@ brew: # do this shit
   # - yudai/gotty/gotty
 snap:
   # - docker # snap doesn't create the docker user & group, so it requires sudo
-  - spotify
+  - microk8s
   - glances
+  - spotify
   - slack-term
   - gitter-desktop
   - q
@@ -123,6 +125,7 @@ manual_linux: # This commands need to be idempotent
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 manual: {{ manual_common + manual_linux }}
 folder:
+  # k9s
   - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz
     original_dir: jetbrains-toolbox-1.13.4801
     symlinked_dir: jetbrains-toolbox

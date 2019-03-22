@@ -4,7 +4,8 @@
     - vars.yml
     - vars.macos.yml
   tasks:
-    - include: dmg.yml
+    - include: dmg.yml appName={{ item.name }} dmgURL={{ item.url }}
+      loop: "{{ dmg }}"
     - include: tap.yml
     - include: brew.yml
     - include: cask.yml
