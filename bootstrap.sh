@@ -64,6 +64,7 @@ case $machine in
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         brew install git
         brew install ansible
+        brew install wget
         TEMPLATE=macos.yml
         ;;
     Cygwin)            exit 1;;
@@ -75,7 +76,7 @@ esac
 # Bootstrap
 
 if [ ! -d ~/.ansible/plugins/modules/aur ]; then
-    git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+  git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
 fi
 if [ ! -d ~/.dev-env ]; then
   git clone https://github.com/aserrallerios/dev-env.git ~/.dev-env
