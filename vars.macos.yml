@@ -1,5 +1,4 @@
 brew:
-  - keepassxc
   - nodejs
   - npm
   - python
@@ -62,6 +61,7 @@ tap:
   - caskroom/fonts
   - derailed/k9s
 cask:
+  - keepassxc
   - dropbox
   - docker
   - k9s

@@ -4,7 +4,6 @@
 # https://github.com/tensult/mac-setup-playbooks/tree/master/roles/installer/tasks
 # https://github.com/sandstorm/macosx-with-ansible/blob/master/tasks/dmg-install.yml
 ---
-- name: Install dmg apps
 - local_action: stat path=/Applications/{{ appName }}.app
   register: app_exists
 - command: mkdir -p ./tmp/
