@@ -123,7 +123,7 @@ manual_linux: # This commands need to be idempotent
   #- sudo: no
   #  commands:
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-manual: {{ manual_common + manual_linux }}
+manual: "{{ manual_common + manual_linux }}"
 folder:
   # k9s
   - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz

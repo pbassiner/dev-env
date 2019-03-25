@@ -74,14 +74,14 @@ esac
 
 # Bootstrap
 
-if [ ! -d "~/.ansible/plugins/modules/aur" ]; then
+if [ ! -d ~/.ansible/plugins/modules/aur ]; then
     git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
 fi
-if [ ! -d ".dev-env" ]; then
-  git clone https://github.com/aserrallerios/dev-env.git .dev-env
+if [ ! -d ~/.dev-env ]; then
+  git clone https://github.com/aserrallerios/dev-env.git ~/.dev-env
 fi
 
-cd .dev-env
+cd ~/.dev-env
 git checkout ${BRANCH}
 git pull
 

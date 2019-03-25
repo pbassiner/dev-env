@@ -93,7 +93,7 @@ manual_macos: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "python /tmp/get-pip.py"
-manual: {{ manual_common + manual_macos }}
+manual: "{{ manual_common + manual_macos }}"
 dmg:
   - url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
     name: firefox-nightly
