@@ -9,15 +9,15 @@ brew:
   - rust
   - hub
   - unrar
-  - helm
   - kubectx
+  - kubernetes-helm
   - kompose
   - docker-compose
   - q
   - jq
   - tldr
   - exa
-  - aws-cli
+  - awscli
   - kubectl
   - vim
   - neovim
@@ -30,19 +30,9 @@ brew:
   - htop
   - rclone
   - curl
-  - file
-  - atop
-  - maven
-  - visualvm
   - make
   - netdata
-  - cmake
-  - extra-cmake-modules
-  - strace
-  - sbt
   - stow
-  - pulseaudio-equalizer
-  - gcc
   - fzf
   - neofetch
   - landscaper
@@ -50,16 +40,22 @@ brew:
   - slack-term
   - syncthing
   - rclone
-  - dwarf-fortress
-  - typora-alanzanattadev
-  - powershell
   - git-extras
-  - find-the-command
   - tmate
+  - jenv
+  # - maven
+  # - visualvm
+  # - strace
+  # - file
+  # - atop
+  # - typora-alanzanattadev
+  # - powershell
+  # - find-the-command
 tap:
   - caskroom/fonts
   - derailed/k9s
 cask:
+  - java
   - keepassxc
   - dropbox
   - docker
@@ -94,5 +90,9 @@ manual_macos: # This commands need to be idempotent
       - "python3 /tmp/get-pip.py"
 manual: "{{ manual_common + manual_macos }}"
 dmg:
+  - url: https://iterm2.com/downloads/stable/latest
+    name: iTerm
+    type: zip
   - url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
-    name: "Firefox Nightly"
+    name: FirefoxNightly
+    type: dmg

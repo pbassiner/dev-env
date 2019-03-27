@@ -19,6 +19,20 @@ For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branc
 GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
 ```
 
+## Alternative
+
+If you don't have `wget` installed and have `git` instead:
+
+```shell
+git clone https://github.com/aserrallerios/dev-env /tmp/.dev-env && GITHUB_TOKEN=...; /tmp/.dev-env/master/bootstrap.sh
+```
+
+Or `curl`:
+
+```shell
+GITHUB_TOKEN=...; curl https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+```
+
 # Disclaimer
 
 This is just for personal convenience. It's not intended to be highly configurable and I'm most likely not following Ansible's conventions and best practices.
