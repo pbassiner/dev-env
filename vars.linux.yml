@@ -75,9 +75,9 @@ brew: # do this shit
   # - yudai/gotty/gotty
 snap:
   # - docker # snap doesn't create the docker user & group, so it requires sudo
-  - microk8s
+  - microk8s # install libselinux if error https://github.com/ubuntu/microk8s/pull/365
+  - k9s
   - glances
-  - spotify
   - slack-term
   - gitter-desktop
   - q
@@ -86,13 +86,14 @@ snap:
   - terraform
   - syncthing
   - rclone
-  - dwarf-fortress
   - simplenote
   - typora-alanzanattadev
   - altair
   - insomnia
   - postman
   - tusk
+  - spotify
+  # - dwarf-fortress
 snapclassic:
   - helm
   - aws-cli
@@ -125,7 +126,6 @@ manual_linux: # This commands need to be idempotent
   #    - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 manual: "{{ manual_common + manual_linux }}"
 folder:
-  # k9s
   - url: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.13.4801.tar.gz
     original_dir: jetbrains-toolbox-1.13.4801
     symlinked_dir: jetbrains-toolbox
