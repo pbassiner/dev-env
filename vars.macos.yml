@@ -53,9 +53,11 @@ brew:
   # - find-the-command
 tap:
   - caskroom/fonts
+  - caskroom/versions
   - derailed/k9s
 cask:
   - java
+  - java8
   - keepassxc
   - dropbox
   - docker
@@ -72,10 +74,10 @@ cask:
   - postman
   - sublime
   - altair-graphql-client
-  - gitter
-  - insomnia
-  - code-notes
   - graphql-playground
+  - insomnia
+  - gitter
+  - code-notes
   - kubernetic
   - caret
   - oracle-jdk
