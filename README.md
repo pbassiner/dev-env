@@ -46,8 +46,43 @@ Only tested on Manjaro Linux. May work on any Arch Linux as well.
 3. Add desiredd scripts to system autostart (this can be automated)
 4. Tweak desktop & desktop shortcuts (install KDE addons)
 5. Sync into Firefox
-6. Enable package management on Sublime Text & install Sync plugin
-7. Configure other apps (IntelliJ, Atom, etc.)
+7. Configure apps (IntelliJ, Sublime, VSCode, Atom, etc.)
+
+## In MacOS
+
+1. Log into odrive desktop client
+2. Set up Java:
+    ```sh
+    /usr/libexec/java_home -V
+    jenv add /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+    ```
+# TODO
+
+## MACOS
+
+* Auto add ssh keys
+* Fix iTerm install
+* Add iTerm config
+* Add iTerm_shell_integration.zsh
+* Add/change global shortcuts
+* Customize keyboard
+
+## Global
+
+* Test idempotency
+* Fix `sensible.dotfiles` installation
+* submodules??
+* tmate vs gotty vs showterm vs termshare
+* add hyper terminal https://hyper.is/
+* termui
+* scala: coursier + ammoniteREPL https://github.com/milessabin/shapeless#try-shapeless-with-an-ammonite-instant-repl
+* python env tool (virtualenv, pyenv?)
+* pip
+* npm
+* node env tool
+[ ] gotty
+[ ] glances
+
 
 # License
 

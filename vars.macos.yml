@@ -98,3 +98,12 @@ dmg:
   - url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
     name: FirefoxNightly
     type: dmg
+  - url: https://www.jetbrains.com/idea/download/download-thanks.html?platform=macJDK11&code=IIC
+    name: IntelliJIDEA
+    type: dmg
+  - url: https://www.odrive.com/downloaddesktop?platform=mac
+    name: odrive
+    type: dmg
+  - url: https://tunnelblick.net/release/Tunnelblick_3.7.8_build_5180.dmg
+    name: Tunnelblick
+    type: dmg

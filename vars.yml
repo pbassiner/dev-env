@@ -1,9 +1,6 @@
 username: "{{ lookup('env','USER') }}"
 home: "{{ lookup('env','HOME') }}"
 
-# tmate vs gotty vs showterm vs termshare
-# asciinema <- recorder of terminal
-
 bpkg:
   - gitwatch
   - mc
@@ -25,6 +22,7 @@ pip:
   - pip-review
   - yq
   - organize-tool
+  - asciinema
 npm:
   - diff-so-fancy
   - graphqurl
