@@ -83,6 +83,12 @@ cask:
   - oracle-jdk
   - balenaetcher
   - evernote
+  - cheatsheet
+  - launchbar
+  - usage
+  - quicksilver
+  - daisydisk
+  - openemu
 manual_macos: # This commands need to be idempotent
   - sudo: no
     commands:
