@@ -89,6 +89,7 @@ cask:
   - quicksilver
   - daisydisk
   - openemu
+  - spectacle
 manual_macos: # This commands need to be idempotent
   - sudo: no
     commands:

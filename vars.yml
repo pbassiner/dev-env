@@ -12,6 +12,7 @@ go:
   # - github.com/muesli/beehive
 pip:
   - awscli
+  - awslogs
   - virtualenv
   - http-prompt
   - git-sweep
@@ -28,6 +29,7 @@ npm:
   - graphqurl
   - matrix-rain
   - organize-cli
+  - serverless
   # - api-spec-converter
 gem:
   - tmuxinator
