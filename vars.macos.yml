@@ -31,6 +31,7 @@ brew:
   - rclone
   - curl
   - make
+  - watch
   - netdata
   - stow
   - fzf
@@ -90,6 +91,11 @@ cask:
   - daisydisk
   - openemu
   - spectacle
+  - keyboard-maestro
+  - key-codes
+  - xmind-zen
+  - pgadmin4
+  - chromium
 manual_macos: # This commands need to be idempotent
   - sudo: no
     commands:
