@@ -84,6 +84,6 @@ binaries:
    zsh_completion: https://raw.githubusercontent.com/docker/compose/1.22.0/contrib/completion/zsh/_docker-compose
  kubectl:
    name: kubectl
-   url: https://storage.googleapis.com/kubernetes-release/release/v1.10.6/bin/linux/amd64/kubectl
+   url: https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl
 pip:
  - pipenv
