@@ -24,6 +24,7 @@ packages:
  - terminator
  - keepassx
  - guake
+ - openjdk-8-jdk
  - sbt
  - python3.6
  - python3-pip

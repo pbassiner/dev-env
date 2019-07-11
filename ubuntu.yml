@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   tasks:
-   - include: java-oracle.yml
    - include: apt.yml
    - include: deb-packages.yml
    - include: targz-apps.yml
