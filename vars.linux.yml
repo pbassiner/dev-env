@@ -1,3 +1,4 @@
+# - hyper?
 pacman:
   - keepassxc
   - snapd
@@ -27,6 +28,7 @@ pacman:
   - rclone
   - curl
   - file
+  - shellcheck
   - atop
   - maven
   - visualvm
@@ -36,6 +38,7 @@ pacman:
   - extra-cmake-modules
   - strace
   - sbt
+  - yarn
   - stow
   - pamac
   - ksshaskpass
@@ -43,6 +46,7 @@ pacman:
   - appmenu-gtk-module
   - appmenu-qt4
   - ktouch
+  - mc # midnight-commander, try to use snaps
 aur:
   - git-extras
   - jdk8
@@ -61,7 +65,7 @@ aur:
   - rclone-browser
   # - http
 tap: []
-brew: # do this shit
+brew:
   - gcc
   - chruby
   - ruby-install
@@ -101,16 +105,21 @@ snapclassic:
   - slack
   - sublime-text
   - powershell
+  - lsd
 flatpak:
   - com.dropbox.Client
   - com.axosoft.GitKraken
   - io.atom.Atom
   - com.visualstudio.code
   - io.dbeaver.DBeaverCommunity
+  - net.xmind.ZEN
 appimage:
   - https://github.com/oguzhaninan/Stacer/releases/download/v1.0.9/Stacer-x86_64.AppImage
   - https://github.com/lauthieb/code-notes/releases/download/1.2.1/code-notes-1.2.1-x86_64.AppImage
   - https://github.com/prisma/graphql-playground/releases/download/v1.8.9/graphql-playground-electron-1.8.9-x86_64.AppImage
+docker_images:
+  - wagoodman/dive
+  - astefanutti/kubebox
 manual_linux: # This commands need to be idempotent
   - sudo: yes
     commands:

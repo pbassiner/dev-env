@@ -33,6 +33,7 @@ npm:
   # - api-spec-converter
 gem:
   - tmuxinator
+  - bundler
   - mdless
   - travis
 #docker-compose:

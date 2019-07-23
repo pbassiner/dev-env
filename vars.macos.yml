@@ -11,6 +11,7 @@ brew:
   - unrar
   - kubectx
   - kubernetes-helm
+  - maven
   - kompose
   - docker-compose
   - q
@@ -44,7 +45,13 @@ brew:
   - git-extras
   - tmate
   - jenv
-  # - maven
+  - lsd
+  - yarn
+  - k9s
+  - shellcheck
+  - mc # midnight-commander
+  - lazydocker
+  - travis # the gem version fails to build/install
   # - visualvm
   # - strace
   # - file
@@ -56,13 +63,13 @@ tap:
   - caskroom/fonts
   - caskroom/versions
   - derailed/k9s
+  - jesseduffield/lazydocker
 cask:
   - java
   - java8
   - keepassxc
   - dropbox
   - docker
-  - k9s
   - gitkraken
   - dash
   - atom
@@ -96,6 +103,7 @@ cask:
   - xmind-zen
   - pgadmin4
   - chromium
+  - hyper
 manual_macos: # This commands need to be idempotent
   - sudo: no
     commands:
