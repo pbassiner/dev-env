@@ -30,6 +30,7 @@ npm:
   - matrix-rain
   - organize-cli
   - serverless
+  - graphql
   # - api-spec-converter
 gem:
   - tmuxinator
@@ -39,6 +40,7 @@ gem:
 #docker-compose:
 #  - francescou/docker-compose-ui
 #  - v2tec/watchtower
+#  - astefanutti/kubebox # docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox
 #github-repos: []
 manual_common: # This commands need to be idempotent
   - sudo: yes

@@ -43,6 +43,7 @@ brew:
   - syncthing
   - rclone
   - git-extras
+  - gnu-sed
   - tmate
   - jenv
   - lsd
