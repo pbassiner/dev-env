@@ -47,8 +47,8 @@ Note: if no version is specified it means the latest will be installed
 
 ## Editors & IDEs
 * [Sublime Text 3](https://www.sublimetext.com/)
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2019.2)
-* [PyCharm](https://www.jetbrains.com/pycharm/) (Community 2019.2)
+* [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community 2019.2.2)
+* [PyCharm](https://www.jetbrains.com/pycharm/) (Community 2019.2.2)
 * [DBeaver](https://dbeaver.io/)
 * [MySQL Workbench](https://www.mysql.com/products/workbench/)
 * [Typora](https://typora.io/)
