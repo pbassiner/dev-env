@@ -58,15 +58,15 @@ targzs:
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
-  url: https://download.jetbrains.com/idea/ideaIC-2019.2.2.tar.gz
+  url: https://download.jetbrains.com/idea/ideaIC-2019.2.3.tar.gz
   target_dir: "{{ home }}"
-  original_dir: idea-IC-192.6603.28
+  original_dir: idea-IC-192.6817.14
   symlinked_dir: ideaIC
  pycharm:
   name: PyCharm
-  url: https://download.jetbrains.com/python/pycharm-community-2019.2.2.tar.gz
+  url: https://download.jetbrains.com/python/pycharm-community-2019.2.3.tar.gz
   target_dir: "{{ home }}"
-  original_dir: pycharm-community-2019.2.2
+  original_dir: pycharm-community-2019.2.3
   symlinked_dir: pycharmCE
  typora:
   name: typora
