@@ -34,7 +34,7 @@ Note: if no version is specified it means the latest will be installed
 * [Meld](http://meldmerge.org/)
 
 ## SDKs & Runtimes
-* OpenJDK 8
+* OpenJDK 8 & 11
 * [sbt](http://www.scala-sbt.org/)
 * [maven](https://maven.apache.org/) ![Installed](https://img.shields.io/badge/current\-v3.6.0-blue.svg)
 * [python](https://www.python.org/) ![Installed](https://img.shields.io/badge/current\-v3.6-blue.svg)

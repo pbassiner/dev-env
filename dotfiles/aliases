@@ -2,6 +2,8 @@ alias git=hub
 alias docker-compose="sudo docker-compose"
 alias docker-rmi-untagged="docker images | awk '{if(match(\$1,\"<none>\")){print \"docker rmi \" \$3 \";\" | \"/bin/bash\"}}'"
 alias j7="export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
+alias j8="export JAVA_HOME=/usr/lib/jvm/java-8-oracle"
+alias j11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
 
 findLatest() {
   find "$1" -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head
