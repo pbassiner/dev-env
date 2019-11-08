@@ -51,9 +51,9 @@ targzs:
   symlinked_dir: maven
  hub:
   name: hub
-  url: https://github.com/github/hub/releases/download/v2.12.2/hub-linux-amd64-2.12.2.tgz
+  url: https://github.com/github/hub/releases/download/v2.13.0/hub-linux-amd64-2.13.0.tgz
   target_dir: "{{ home }}"
-  original_dir: hub-linux-amd64-2.12.2
+  original_dir: hub-linux-amd64-2.13.0
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
