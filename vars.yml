@@ -51,9 +51,9 @@ targzs:
   symlinked_dir: maven
  hub:
   name: hub
-  url: https://github.com/github/hub/releases/download/v2.13.0/hub-linux-amd64-2.13.0.tgz
+  url: https://github.com/github/hub/releases/download/v2.14.1/hub-linux-amd64-2.14.1.tgz
   target_dir: "{{ home }}"
-  original_dir: hub-linux-amd64-2.13.0
+  original_dir: hub-linux-amd64-2.14.1
   symlinked_dir: hub
  intellij:
   name: IntelliJ IDEA
@@ -77,7 +77,7 @@ targzs:
 binaries:
  ammonite:
   name: amm
-  url: https://github.com/lihaoyi/Ammonite/releases/download/1.6.0/2.12-1.6.0
+  url: https://github.com/lihaoyi/Ammonite/releases/download/2.0.4/2.13-2.0.4
  docker_compose:
    name: docker-compose
    url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-Linux-x86_64
