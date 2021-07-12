@@ -3,9 +3,12 @@
 	"ignored_packages":
 	[
 		"Markdown",
-		"Vintage"
+		"Vintage",
 	],
 	"save_on_focus_lost": true,
 	"spell_check": true,
-	"theme": "Default.sublime-theme"
+	"theme": "auto",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"dark_theme": "Default Dark.sublime-theme",
+	"light_theme": "Default.sublime-theme",
 }
