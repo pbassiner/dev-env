@@ -1,110 +1,168 @@
 brew:
-  - nodejs
-  - npm
-  - python
-  - ruby
-  - ruby-install
-  - chruby
-  - go
-  - rust
-  - hub
-  - unrar
-  - kubectx
-  - kubernetes-helm
-  - maven
-  - kompose
-  - docker-compose
-  - q
-  - jq
-  - tldr
-  - exa
+  - ansible
+  - asdf
+  - autossh
   - awscli
-  - kubectl
-  - vim
-  - neovim
-  - terraform
-  - tmux
-  - terminator
-  - httpie
-  - glances
-  - graphviz
-  - htop
-  - rclone
+  - bison
+  - bpytop
+  - chruby
+  - coursier/formulas/coursier
   - curl
-  - make
-  - watch
-  - netdata
-  - stow
-  - fzf
-  - neofetch
-  - landscaper
-  - jfrog-cli-go
-  - slack-term
-  - syncthing
-  - rclone
+  - derailed/k9s/k9s
+  - dos2unix
+  - exa
+  - figlet
+  - git
   - git-extras
+  - glances
   - gnu-sed
-  - tmate
+  - gnupg
+  - go
+  - graphviz
+  - helm
+  - htop
+  - httpie
+  - hub
+  - iperf
+  - iperf3
+  - isl
   - jenv
-  - lsd
-  - yarn
-  - k9s
-  - shellcheck
-  - mc # midnight-commander
+  - jfrog-cli
+  - jmeter
+  - jq
+  - kcat
+  - knqyf263/pet/pet
+  - kompose
+  - kubectx
   - lazydocker
-  - travis # the gem version fails to build/install
-  # - visualvm
-  # - strace
-  # - file
-  # - atop
-  # - typora-alanzanattadev
-  # - powershell
-  # - find-the-command
+  - lazygit
+  - lsd
+  - make
+  - maven
+  - midnight-commander
+  - minikube
+  - navi
+  - ncdu
+  - neofetch
+  - neovim
+  - netdata
+  - node
+  - openjdk@11
+  - out-of-cheese-error/the-way/the-way
+  - paulp/extras/sbtx
+  - pipenv
+  - pyenv
+  - q
+  - rclone
+  - ripgrep
+  - ruby-install
+  - rust
+  - shellcheck
+  - stern
+  - stow
+  - telnet
+  - terraform
+  - tldr
+  - tmate
+  - tmux
+  - todo-txt
+  - travis
+  - vim
+  - virtuslab/scala-cli/scala-cli
+  - watch
+  - websocat
+  - wget
+  - yarn
 tap:
-  - caskroom/fonts
-  - caskroom/versions
+  - coursier/formulas
   - derailed/k9s
+  - graalvm/tap
+  - homebrew/cask
+  - homebrew/cask-versions
+  - homebrew/core
   - jesseduffield/lazydocker
+  - knqyf263/pet
+  - mistertea/et
+  - out-of-cheese-error/the-way
+  - paulp/extras
+  - scalacenter/bloop
+  - virtuslab/scala-cli
 cask:
-  - java
-  - java8
-  - keepassxc
-  - dropbox
-  - docker
-  - gitkraken
-  - dash
-  - atom
-  - dbeaver-community
-  - spotify
-  - virtualbox
-  - font-hack-nerd-font
-  - visual-studio-code
-  - slack
-  - postman
-  - sublime
+  - adobe-acrobat-reader
+  - adobe-creative-cloud
+  - alacritty
   - altair-graphql-client
+  - apptivate
+  - atom
+  - balenaetcher
+  - calibre
+  - caret
+  - cheatsheet
+  - code-notes
+  - cool-retro-term
+  - cryptomator
+  - cyberduck
+  - daisydisk
+  - dash
+  - dbeaver-community
+  - deluge
+  - disk-inventory-x
+  - docker
+  - dropbox
+  - epic-games
+  - evernote
+  - firefox
+  - font-firacode-nerd-font
+  - font-firacode-nerd-font-mono
+  - font-hack-nerd-font
+  - font-sourcecodepro-nerd-font-mono
+  - font-ubuntumono-nerd-font
+  - gitkraken
+  - gitter
+  - google-chrome
   - graphql-playground
   - insomnia
-  - gitter
-  - code-notes
-  - kubernetic
-  - caret
-  - oracle-jdk
-  - balenaetcher
-  - evernote
-  - cheatsheet
-  - launchbar
-  - usage
-  - quicksilver
-  - daisydisk
-  - openemu
-  - spectacle
-  - keyboard-maestro
+  - java
+  - java11
+  - java8
+  - jdk-mission-control
+  - keepassxc
   - key-codes
-  - xmind-zen
+  - keyboard-maestro
+  - kubernetic
+  - launchbar
+  - lens
+  - lepton
+  - miro
+  - mountain-duck
+  - nextcloud
+  - notion
+  - openemu
+  - oracle-jdk
+  - osxfuse
   - pgadmin4
-  - chromium
-  - hyper
+  - plex
+  - postman
+  - quicksilver
+  - rar
+  - retroarch
+  - send-to-kindle
+  - slack
+  - spark
+  - spectacle
+  - spotify
+  - station
+  - steam
+  - sublime
+  - syncthing
+  - tiles
+  - tweeten
+  - typora
+  - usage
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - xmind-zen
 manual_macos: # This commands need to be idempotent
   - sudo: no
     commands:
@@ -135,3 +193,110 @@ dmg:
   - url: https://pqrs.org/osx/karabiner/files/Karabiner-Elements-12.2.0.dmg
     name: Karabiner
     type: dmg
+# apps:
+# Spark
+# Logi Options
+# LAN_SpeedTest
+# Visual Studio Code
+# RetroArch
+# VLC
+# Send to Kindle
+# Uninstall Send to Kindle
+# Send to Kindle
+# XMind
+# FirefoxNightly
+# Nextcloud
+# KeyboardCleanTool
+# Enjoyable
+# Altair GraphQL Client
+# OpenVPN Connect
+# Plex
+# Steam
+# Syncthing
+# Origin
+# cool-retro-term
+# Google Chrome
+# Karabiner-Elements
+# Karabiner-EventViewer
+# Tweeten
+# Numbers
+# ClickShare_for_MacOSX
+# Code Notes
+# Disk Inventory X
+# Dropbox
+# Deluge
+# Cryptomator
+# LaunchBar
+# Telegram
+# Parsec
+# Notion
+# Xcode
+# Kubernetic
+# Adobe Creative Cloud
+# Cyberduck
+# Moonlight
+# Spotify
+# iMovie
+# Dash
+# DBeaver
+# DaisyDisk
+# Spectacle
+# GeForceNOW
+# Docker
+# Obsidian
+# balenaEtcher
+# Adobe Acrobat Reader DC
+# Lens
+# Mountain Duck
+# Safari
+# Miro
+# Tiles
+# Kindle
+# Shadow
+# Adobe Creative Cloud
+# Logi Bolt Uninstaller
+# Adobe Creative Cloud Experience
+# Adobe Installers
+# Adobe Sync
+# LogiMgr Uninstaller
+# Adobe Application Manager
+# Utilities
+# calibre
+# Keynote
+# pgAdmin 4
+# Epic Games Launcher
+# Quicksilver
+# Karabiner-VirtualHIDDevice-Manager
+# GOG Galaxy
+# Pages
+# GarageBand
+# odrive
+# Steam.old
+# Tunnelblick
+# VirtualBox
+# Insomnia
+# Station
+# Atom
+# JDK Mission Control
+# GraphQL Playground
+# IntelliJ IDEA CE
+# Caret
+# iTerm
+# GitKraken
+# CheatSheet
+# Apptivate
+# KeePassXC
+# Typora
+# Alacritty
+# Postman
+# Key Codes
+# ControllerMate
+# Usage
+# Logi Bolt
+# OpenEmu
+# Evernote
+# Keyboard Maestro
+# Sublime
+# Slack
+# Gitter
+# Lepton

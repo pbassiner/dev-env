@@ -7,6 +7,7 @@ bpkg:
   - xclip
 cargo:
   - shellharden
+  - difft
 go:
   - github.com/wallix/awless
   # - github.com/muesli/beehive
@@ -24,6 +25,9 @@ pip:
   - yq
   - organize-tool
   - asciinema
+  - stormssh
+  - keep
+  - glances[all]
 npm:
   - diff-so-fancy
   - graphqurl
@@ -31,16 +35,28 @@ npm:
   - organize-cli
   - serverless
   - graphql
+  - graphqurl
+  - kubelive
+  - aws-amplify/cli
+  - npm-check-updates
   # - api-spec-converter
 gem:
   - tmuxinator
   - bundler
+  - bundle
   - mdless
   - travis
+  - thor
+  - rake
+  - ri
+  - erubis
+  - irb
+  - racc
 #docker-compose:
 #  - francescou/docker-compose-ui
 #  - v2tec/watchtower
 #  - astefanutti/kubebox # docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox
+#  - portainer?
 #github-repos: []
 manual_common: # This commands need to be idempotent
   - sudo: yes
@@ -49,6 +65,7 @@ manual_common: # This commands need to be idempotent
   - sudo: no
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
+      # - "git clone https://github.com/hozza/tmux-hints.git /tmp/tmux-hints && cd /tmp/tmux-hints/ && chmod +x ./tmux-hints.sh && ./tmux-hints.sh"
       - "export GITHUB_TOKEN={{ lookup('env','GITHUB_TOKEN') }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
   ## execute manually, execute using docker task or use docker compose
   #- sudo: no
@@ -61,7 +78,6 @@ manual_common: # This commands need to be idempotent
   #    - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
 manual: "{{ common_manual }}"
 binary:
-  - name: amm
-    url: https://github.com/lihaoyi/Ammonite/releases/download/1.6.0/2.12-1.6.0
-  - name: sbt
-    url: https://git.io/sbt
+  - name: cs
+    gzip: yes # this is not implemented yet, btw
+    url: https://github.com/coursier/launchers/raw/master/cs-x86_64-apple-darwin.gz

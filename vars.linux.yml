@@ -63,6 +63,7 @@ aur:
   - ctop
   - pulseeffects
   - rclone-browser
+  - pet-bin
   # - http
 tap: []
 brew:
