@@ -19,6 +19,7 @@ brew:
   - gnupg
   - go
   - graphviz
+  - gromgit/fuse/sshfs-mac
   - helm
   - htop
   - httpie
@@ -55,6 +56,7 @@ brew:
   - q
   - rclone
   - ripgrep
+  - rsync
   - ruby-install
   - rust
   - shellcheck
@@ -66,6 +68,7 @@ brew:
   - tmate
   - tmux
   - todo-txt
+  - tor
   - travis
   - vim
   - virtuslab/scala-cli/scala-cli
@@ -92,6 +95,7 @@ cask:
   - adobe-creative-cloud
   - alacritty
   - altair-graphql-client
+  - amorphousdiskmark
   - apptivate
   - atom
   - balenaetcher
@@ -133,6 +137,7 @@ cask:
   - launchbar
   - lens
   - lepton
+  - macfuse
   - miro
   - mountain-duck
   - nextcloud
@@ -193,110 +198,109 @@ dmg:
   - url: https://pqrs.org/osx/karabiner/files/Karabiner-Elements-12.2.0.dmg
     name: Karabiner
     type: dmg
-# apps:
-# Spark
-# Logi Options
-# LAN_SpeedTest
-# Visual Studio Code
-# RetroArch
-# VLC
-# Send to Kindle
-# Uninstall Send to Kindle
-# Send to Kindle
-# XMind
-# FirefoxNightly
-# Nextcloud
-# KeyboardCleanTool
-# Enjoyable
-# Altair GraphQL Client
-# OpenVPN Connect
-# Plex
-# Steam
-# Syncthing
-# Origin
-# cool-retro-term
-# Google Chrome
-# Karabiner-Elements
-# Karabiner-EventViewer
-# Tweeten
-# Numbers
-# ClickShare_for_MacOSX
-# Code Notes
-# Disk Inventory X
-# Dropbox
-# Deluge
-# Cryptomator
-# LaunchBar
-# Telegram
-# Parsec
-# Notion
-# Xcode
-# Kubernetic
-# Adobe Creative Cloud
-# Cyberduck
-# Moonlight
-# Spotify
-# iMovie
-# Dash
-# DBeaver
-# DaisyDisk
-# Spectacle
-# GeForceNOW
-# Docker
-# Obsidian
-# balenaEtcher
-# Adobe Acrobat Reader DC
-# Lens
-# Mountain Duck
-# Safari
-# Miro
-# Tiles
-# Kindle
-# Shadow
-# Adobe Creative Cloud
-# Logi Bolt Uninstaller
-# Adobe Creative Cloud Experience
-# Adobe Installers
-# Adobe Sync
-# LogiMgr Uninstaller
-# Adobe Application Manager
-# Utilities
-# calibre
-# Keynote
-# pgAdmin 4
-# Epic Games Launcher
-# Quicksilver
-# Karabiner-VirtualHIDDevice-Manager
-# GOG Galaxy
-# Pages
-# GarageBand
-# odrive
-# Steam.old
-# Tunnelblick
-# VirtualBox
-# Insomnia
-# Station
-# Atom
-# JDK Mission Control
-# GraphQL Playground
-# IntelliJ IDEA CE
-# Caret
-# iTerm
-# GitKraken
-# CheatSheet
-# Apptivate
-# KeePassXC
-# Typora
-# Alacritty
-# Postman
-# Key Codes
-# ControllerMate
-# Usage
-# Logi Bolt
-# OpenEmu
-# Evernote
-# Keyboard Maestro
-# Sublime
-# Slack
-# Gitter
-# Lepton
+  # - Spark
+  # - Logi Options
+  # - LAN_SpeedTest
+  # - Visual Studio Code
+  # - RetroArch
+  # - VLC
+  # - Send to Kindle
+  # - Uninstall Send to Kindle
+  # - Send to Kindle
+  # - XMind
+  # - FirefoxNightly
+  # - Nextcloud
+  # - KeyboardCleanTool
+  # - Enjoyable
+  # - Altair GraphQL Client
+  # - OpenVPN Connect
+  # - Plex
+  # - Steam
+  # - Syncthing
+  # - Origin
+  # - cool-retro-term
+  # - Google Chrome
+  # - Karabiner-Elements
+  # - Karabiner-EventViewer
+  # - Tweeten
+  # - Numbers
+  # - ClickShare_for_MacOSX
+  # - Code Notes
+  # - Disk Inventory X
+  # - Dropbox
+  # - Deluge
+  # - Cryptomator
+  # - LaunchBar
+  # - Telegram
+  # - Parsec
+  # - Notion
+  # - Xcode
+  # - Kubernetic
+  # - Adobe Creative Cloud
+  # - Cyberduck
+  # - Moonlight
+  # - Spotify
+  # - iMovie
+  # - Dash
+  # - DBeaver
+  # - DaisyDisk
+  # - Spectacle
+  # - GeForceNOW
+  # - Docker
+  # - Obsidian
+  # - balenaEtcher
+  # - Adobe Acrobat Reader DC
+  # - Lens
+  # - Mountain Duck
+  # - Safari
+  # - Miro
+  # - Tiles
+  # - Kindle
+  # - Shadow
+  # - Adobe Creative Cloud
+  # - Logi Bolt Uninstaller
+  # - Adobe Creative Cloud Experience
+  # - Adobe Installers
+  # - Adobe Sync
+  # - LogiMgr Uninstaller
+  # - Adobe Application Manager
+  # - Utilities
+  # - calibre
+  # - Keynote
+  # - pgAdmin 4
+  # - Epic Games Launcher
+  # - Quicksilver
+  # - Karabiner-VirtualHIDDevice-Manager
+  # - GOG Galaxy
+  # - Pages
+  # - GarageBand
+  # - odrive
+  # - Steam.old
+  # - Tunnelblick
+  # - VirtualBox
+  # - Insomnia
+  # - Station
+  # - Atom
+  # - JDK Mission Control
+  # - GraphQL Playground
+  # - IntelliJ IDEA CE
+  # - Caret
+  # - iTerm
+  # - GitKraken
+  # - CheatSheet
+  # - Apptivate
+  # - KeePassXC
+  # - Typora
+  # - Alacritty
+  # - Postman
+  # - Key Codes
+  # - ControllerMate
+  # - Usage
+  # - Logi Bolt
+  # - OpenEmu
+  # - Evernote
+  # - Keyboard Maestro
+  # - Sublime
+  # - Slack
+  # - Gitter
+  # - Lepton
