@@ -119,8 +119,9 @@ cask:
   - firefox
   - font-fira-code-nerd-font
   - font-hack-nerd-font
-  - font-sourcecodepro-nerd-font-mono
-  - font-ubuntumono-nerd-font
+  - font-sauce-code-pro-nerd-font
+  - font-ubuntu-mono-nerd-font
+  - font-ubuntu-nerd-font
   - gitkraken
   - gitter
   - google-chrome
