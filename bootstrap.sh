@@ -61,7 +61,7 @@ case $machine in
         esac
         ;;
     Mac)
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        INTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         brew install git
         brew install ansible
         brew install wget
