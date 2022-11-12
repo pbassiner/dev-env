@@ -57,6 +57,11 @@ manual_common: # This commands should to be idempotent
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
       - "export GITHUB_TOKEN={{ lookup('env','GITHUB_TOKEN') }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
+  - sudo: no
+    commands:
+      - curl https://sh.rustup.rs -sSf | sh -s -- -y
+      - pyenv install 3.10.8
+      - pyenv global 3.10.8
   - sudo: yes
     commands:
       - "chsh -s $(which zsh) {{ username }}"
