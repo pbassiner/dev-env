@@ -14,6 +14,7 @@ brew:
   - figlet
   - git
   - git-extras
+  - gh
   - glances
   - gnu-sed
   - gnupg
