@@ -9,8 +9,7 @@ cargo:
   - shellharden
   - difft
 go:
-  - github.com/wallix/awless
-  # - github.com/muesli/beehive
+  - github.com/wallix/awless@latest
 pip:
   - awscli
   - awslogs
