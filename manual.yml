@@ -1,6 +1,7 @@
 ---
-- name: Execute commands manually from Home
-  become: "{{ item[0].sudo }}"
+- name: Execute commands as the user from Home
+  become: yes
+  become_user: "{{ 'root' if item[0].sudo else username }}"
   shell: "{{ item[1] }}"
   args:
     chdir: "{{ home }}"
