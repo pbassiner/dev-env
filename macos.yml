@@ -4,19 +4,17 @@
     - vars.yml
     - vars.macos.yml
   tasks:
-    - include: dmg.yml appName={{ item.name }} dmgURL={{ item.url }} fileType={{ item.type }}
+    - import_tasks: dmg.yml appName={{ item.name }} dmgURL={{ item.url }} fileType={{ item.type }}
       loop: "{{ dmg }}"
-    - include: tap.yml
-    - include: brew.yml
-    - include: cask.yml
-    - include: binary.yml
-    - include: manual.yml
-    - include: cargo.yml
-    - include: pip.yml
-    - include: go.yml
-    - include: npm.yml
-    - include: gem.yml
-    #- include: jenv.yml
-    #- include: bpkg.yml
-    # https://github.com/caarlos0/dotfiles/search?q=Darwin&unscoped_q=Darwin
-    # https://github.com/caarlos0/dotfiles/blob/9fea871fd50bb825d1fb9ecf44876ab96cda809c/macos/set-defaults.sh
+    - import_tasks: tap.yml
+    - import_tasks: brew.yml
+    - import_tasks: cask.yml
+    - import_tasks: binary.yml
+    - import_tasks: manual.yml
+    - import_tasks: cargo.yml
+    - import_tasks: pip.yml
+    - import_tasks: go.yml
+    - import_tasks: npm.yml
+    - import_tasks: gem.yml
+    #- import_tasks: jenv.yml
+    #- import_tasks: bpkg.yml
