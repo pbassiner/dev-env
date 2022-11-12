@@ -13,16 +13,16 @@ The Github token is used in the `sensible.dotfiles` installation.
 
 ```shell
 # with wget
-GITHUB_TOKEN=... wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+export GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
 # with curl
-GITHUB_TOKEN=... curl https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+export GITHUB_TOKEN=...; curl https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
 # with git
-git clone https://github.com/aserrallerios/dev-env /tmp/.dev-env && GITHUB_TOKEN=... /tmp/.dev-env/master/bootstrap.sh
+git clone https://github.com/aserrallerios/dev-env /tmp/.dev-env && export GITHUB_TOKEN=...; /tmp/.dev-env/master/bootstrap.sh
 ```
 
 For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branch <BRANCH>` (default is `master`):
 ```shell
-GITHUB_TOKEN=... wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
+export GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
 ```
 
 # Disclaimer
