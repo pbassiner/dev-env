@@ -1,4 +1,4 @@
 ---
 - name: Install go apps
-  shell: "go get {{ item }}"
+  shell: "go install {{ item }}"
   loop: "{{ go }}"
