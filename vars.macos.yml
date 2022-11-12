@@ -153,6 +153,7 @@ cask:
   - rar
   - retroarch
   - send-to-kindle
+  - kindle
   - slack
   - spark
   - spectacle
@@ -169,6 +170,7 @@ cask:
   - visual-studio-code
   - vlc
   - xmind-zen
+  - keyboardcleantool
 manual_macos: [] # This commands need to be idempotent
 manual: "{{ manual_common + manual_macos }}"
 dmg:
@@ -190,109 +192,22 @@ dmg:
   - url: https://pqrs.org/osx/karabiner/files/Karabiner-Elements-12.2.0.dmg
     name: Karabiner
     type: dmg
-  # - Spark
-  # - Logi Options
-  # - LAN_SpeedTest
-  # - Visual Studio Code
-  # - RetroArch
-  # - VLC
-  # - Send to Kindle
-  # - Uninstall Send to Kindle
-  # - Send to Kindle
-  # - XMind
-  # - FirefoxNightly
-  # - Nextcloud
-  # - KeyboardCleanTool
-  # - Enjoyable
-  # - Altair GraphQL Client
-  # - OpenVPN Connect
-  # - Plex
-  # - Steam
-  # - Syncthing
-  # - Origin
-  # - cool-retro-term
-  # - Google Chrome
-  # - Karabiner-Elements
-  # - Karabiner-EventViewer
-  # - Tweeten
-  # - Numbers
-  # - ClickShare_for_MacOSX
-  # - Code Notes
-  # - Disk Inventory X
-  # - Dropbox
-  # - Deluge
-  # - Cryptomator
-  # - LaunchBar
-  # - Telegram
-  # - Parsec
-  # - Notion
-  # - Xcode
-  # - Kubernetic
-  # - Adobe Creative Cloud
-  # - Cyberduck
-  # - Moonlight
-  # - Spotify
-  # - iMovie
-  # - Dash
-  # - DBeaver
-  # - DaisyDisk
-  # - Spectacle
-  # - GeForceNOW
-  # - Docker
-  # - Obsidian
-  # - balenaEtcher
-  # - Adobe Acrobat Reader DC
-  # - Lens
-  # - Mountain Duck
-  # - Safari
-  # - Miro
-  # - Tiles
-  # - Kindle
-  # - Shadow
-  # - Adobe Creative Cloud
-  # - Logi Bolt Uninstaller
-  # - Adobe Creative Cloud Experience
-  # - Adobe Installers
-  # - Adobe Sync
-  # - LogiMgr Uninstaller
-  # - Adobe Application Manager
-  # - Utilities
-  # - calibre
-  # - Keynote
-  # - pgAdmin 4
-  # - Epic Games Launcher
-  # - Quicksilver
-  # - Karabiner-VirtualHIDDevice-Manager
-  # - GOG Galaxy
-  # - Pages
-  # - GarageBand
-  # - odrive
-  # - Steam.old
-  # - Tunnelblick
-  # - VirtualBox
-  # - Insomnia
-  # - Station
-  # - Atom
-  # - JDK Mission Control
-  # - GraphQL Playground
-  # - IntelliJ IDEA CE
-  # - Caret
-  # - iTerm
-  # - GitKraken
-  # - CheatSheet
-  # - Apptivate
-  # - KeePassXC
-  # - Typora
-  # - Alacritty
-  # - Postman
-  # - Key Codes
-  # - ControllerMate
-  # - Usage
-  # - Logi Bolt
-  # - OpenEmu
-  # - Evernote
-  # - Keyboard Maestro
-  # - Sublime
-  # - Slack
-  # - Gitter
-  # - Lepton
+## Apps to add
+# - Adobe Creative Cloud
+# - Adobe Acrobat Reader DC
+# - Logi Options
+# - Logi Bolt
+# - Enjoyable
+# - OpenVPN Connect
+# - Numbers
+# - Parsec
+# - Moonlight
+# - iMovie
+# - Obsidian
+# - Keynote
+# - Shadow
+# - GOG Galaxy
+# - Pages
+# - GarageBand
+# - ControllerMate
+  
