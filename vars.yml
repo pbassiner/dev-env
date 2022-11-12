@@ -52,13 +52,7 @@ gem:
   - erubis
   - irb
   - racc
-#docker-compose:
-#  - francescou/docker-compose-ui
-#  - v2tec/watchtower
-#  - astefanutti/kubebox # docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox
-#  - portainer?
-#github-repos: []
-manual_common: # This commands need to be idempotent
+manual_common: # This commands should to be idempotent
   - sudo: no
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
@@ -66,10 +60,13 @@ manual_common: # This commands need to be idempotent
   - sudo: yes
     commands:
       - "chsh -s $(which zsh) {{ username }}"
-
 manual: "{{ common_manual }}"
-
 binary:
   - name: cs
     gzip: yes # this is not implemented yet, btw
     url: https://github.com/coursier/launchers/raw/master/cs-x86_64-apple-darwin.gz
+# docker-compose:
+#  - francescou/docker-compose-ui
+#  - v2tec/watchtower
+#  - astefanutti/kubebox # docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox
+#  - portainer?
