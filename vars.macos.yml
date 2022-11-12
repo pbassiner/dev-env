@@ -172,12 +172,13 @@ cask:
   - vlc
   - xmind-zen
   - keyboardcleantool
+  - iterm2
+  - expressions
+  - copyclip
+
 manual_macos: [] # This commands need to be idempotent
 manual: "{{ manual_common + manual_macos }}"
 dmg:
-  - url: https://iterm2.com/downloads/stable/latest
-    name: iTerm
-    type: zip
   - url: https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=osx&lang=en-US
     name: FirefoxNightly
     type: dmg
