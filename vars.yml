@@ -59,24 +59,16 @@ gem:
 #  - portainer?
 #github-repos: []
 manual_common: # This commands need to be idempotent
-  - sudo: yes
-    commands:
-      - "chsh -s $(which zsh) {{ username }}"
   - sudo: no
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
-      # - "git clone https://github.com/hozza/tmux-hints.git /tmp/tmux-hints && cd /tmp/tmux-hints/ && chmod +x ./tmux-hints.sh && ./tmux-hints.sh"
       - "export GITHUB_TOKEN={{ lookup('env','GITHUB_TOKEN') }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
-  ## execute manually, execute using docker task or use docker compose
-  #- sudo: no
-  #  commands:
-  #    - "docker volume create portainer_data"
-  #    - "docker run --restart=always -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer"
-  ## move to zsh repo
-  #- sudo: no
-  #  commands:
-  #    - "wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh"
+  - sudo: yes
+    commands:
+      - "chsh -s $(which zsh) {{ username }}"
+
 manual: "{{ common_manual }}"
+
 binary:
   - name: cs
     gzip: yes # this is not implemented yet, btw

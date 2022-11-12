@@ -5,6 +5,4 @@
   shell: "{{ item[1] }}"
   args:
     chdir: "{{ home }}"
-  with_subelements:
-    - "{{ manual }}"
-    - commands
+  loop: "{{ manual|subelements('commands') }}"
