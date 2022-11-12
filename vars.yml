@@ -1,5 +1,6 @@
 username: "{{ lookup('env','USER') }}"
 home: "{{ lookup('env','HOME') }}"
+github_token: "{{ lookup('env','GITHUB_TOKEN') }}"
 
 bpkg:
   - gitwatch
@@ -55,7 +56,7 @@ manual_common: # This commands should to be idempotent
   - sudo: no
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
-      - "export GITHUB_TOKEN={{ lookup('env','GITHUB_TOKEN') }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ lookup('env','GITHUB_TOKEN') }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
+      - "export GITHUB_TOKEN={{ github_token }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ github_token }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
   - sudo: no
     commands:
       - curl https://sh.rustup.rs -sSf | sh -s -- -y
