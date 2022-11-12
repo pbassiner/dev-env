@@ -3,4 +3,5 @@
   gem:
     name: "{{ item }}"
     state: latest
+    norc: yes
   loop: "{{ gem }}"
