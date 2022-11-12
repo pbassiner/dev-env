@@ -175,7 +175,6 @@ cask:
   - iterm2
   - expressions
   - copyclip
-
 manual_macos: [] # This commands need to be idempotent
 manual: "{{ manual_common + manual_macos }}"
 dmg:
