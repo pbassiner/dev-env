@@ -9,6 +9,7 @@ bpkg:
 cargo:
   - shellharden
   - difft
+  - when-cli
 go:
   - github.com/wallix/awless@latest
 pip:
