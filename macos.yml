@@ -8,7 +8,7 @@
     - import_tasks: brew.yml
     - import_tasks: cask.yml
     - import_tasks: binary.yml
-    - include_tasks: dmg.yml 
+    - include_tasks: dmg.yml
       vars:
         appName: "{{ item.name }}"
         dmgURL: "{{ item.url }}"
