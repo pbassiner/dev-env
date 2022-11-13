@@ -4,12 +4,16 @@
     - vars.yml
     - vars.macos.yml
   tasks:
-    - import_tasks: dmg.yml appName={{ item.name }} dmgURL={{ item.url }} fileType={{ item.type }}
-      loop: "{{ dmg }}"
-    - import_tasks: binary.yml
     - import_tasks: tap.yml
     - import_tasks: brew.yml
     - import_tasks: cask.yml
+    - import_tasks: binary.yml
+    - include_tasks: dmg.yml 
+      vars:
+        appName: "{{ item.name }}"
+        dmgURL: "{{ item.url }}"
+        fileType: "{{ item.type }}"
+      loop: "{{ dmg }}"
     
     - import_tasks: manual.yml
     
