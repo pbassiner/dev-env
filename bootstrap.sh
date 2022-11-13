@@ -56,6 +56,9 @@ case $machine in
             Manjaro*|Arch*)
                 sudo pacman -S git --noconfirm --needed
                 sudo pacman -S ansible --noconfirm --needed
+                if [ ! -d ~/.ansible/plugins/modules/aur ]; then
+                  git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+                fi
                 TEMPLATE=arch.yml
                 ;;
         esac
@@ -75,15 +78,12 @@ esac
 
 # Bootstrap
 
-if [ ! -d ~/.ansible/plugins/modules/aur ]; then
-  git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
-fi
 if [ ! -d ~/.dev-env ]; then
   git clone https://github.com/aserrallerios/dev-env.git ~/.dev-env
 fi
 
 cd ~/.dev-env
-git checkout ${BRANCH}
+git checkout $BRANCH
 git pull
 
 ./run.sh $TEMPLATE
