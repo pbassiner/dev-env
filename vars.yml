@@ -61,7 +61,7 @@ manual_common: # This commands should to be idempotent
   - sudo: no
     commands:
       - curl https://sh.rustup.rs -sSf | sh -s -- -y
-      - pyenv install 3.10.8
+      - if [ ! -d ~/.pyenv/versions/3.10.8 ]; then; pyenv install 3.10.8; fi
       - pyenv global 3.10.8
       - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
   - sudo: yes
