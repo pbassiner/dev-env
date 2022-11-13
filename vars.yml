@@ -8,7 +8,7 @@ bpkg:
   - xclip
 cargo:
   - shellharden
-  - difft
+  - difftastic
   - when-cli
 go:
   - github.com/wallix/awless@latest
