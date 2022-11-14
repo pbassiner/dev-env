@@ -1,6 +1,5 @@
 ---
 - name: Install pip packages
-  become: yes
   pip:
     name: "{{ pip }}"
-    executable: pip
+    executable: pip3
