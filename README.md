@@ -13,17 +13,18 @@ The GitHub token is required for the `sensible.dotfiles` installation.
 
 ```shell
 # with wget
-export GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+export GITHUB_TOKEN=... && wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh -O bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh
 # with curl
-export GITHUB_TOKEN=...; curl https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash
+export GITHUB_TOKEN=... && curl -s https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh -O && chmod u+x ./bootstrap.sh && ./bootstrap.sh
 # with git
-git clone https://github.com/aserrallerios/dev-env /tmp/.dev-env && export GITHUB_TOKEN=...; /tmp/.dev-env/master/bootstrap.sh
+git clone -b master --single-branch --depth 1 https://github.com/aserrallerios/dev-env /tmp/.dev-env && export GITHUB_TOKEN=... && /tmp/.dev-env/master/bootstrap.sh
 ```
 
 For testing purposes `bootstrap.sh` allows to define the branch with `-b|--branch <BRANCH>` (default is `master`):
 
 ```shell
-export GITHUB_TOKEN=...; wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh | bash -s -- -b test_branch
+BRANCH_NAME=...
+export GITHUB_TOKEN=... && wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/$BRANCH_NAME/bootstrap.sh -O bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh -b $BRANCH_NAME
 ```
 
 # Disclaimer
@@ -40,7 +41,7 @@ Mostly tested on macOS.
 
 ## TODO
 
-- [ ] Fix bootstrap script exiting after brew commands during the first execution (super weird)
+- [x] Fix bootstrap script exiting after brew commands during the first execution (super weird)
 - [ ] Organize files into folders
 - [ ] Update recipes to avoid using `command` or `shell`
 - [ ] Fix idempotency (OK vs changed)
