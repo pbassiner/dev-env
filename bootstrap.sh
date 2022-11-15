@@ -65,9 +65,9 @@ case $machine in
         ;;
     Mac)
         INTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        HOMEBREW_NO_INSTALL_CLEANUP=1 brew install git
-        HOMEBREW_NO_INSTALL_CLEANUP=1 brew install ansible
-        HOMEBREW_NO_INSTALL_CLEANUP=1 brew install wget
+        brew install git
+        brew install ansible
+        brew install wget
         TEMPLATE=macos.yml
         ;;
     Cygwin)            exit 1;;
