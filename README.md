@@ -39,6 +39,7 @@ Mostly tested on macOS.
 
 ## TODO
 
+- [ ] Fix bootstrap script exiting after brew commands during the first execution (super weird)
 - [ ] Fix idempotency (OK vs changed)
 - [ ] Implement install vs update recipes
 - [ ] tmate vs gotty vs showterm vs termshare
