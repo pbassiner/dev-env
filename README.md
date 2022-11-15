@@ -35,7 +35,8 @@ Mostly tested on macOS.
 # What to do after running installation
 
 1. Join Syncthing
-2. Configure VSCode
+2. Log into Nextcloud
+3. Configure VSCode
 
 ## TODO
 
