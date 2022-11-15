@@ -5,9 +5,9 @@ Development Environment Configuration with Ansible
 
 # Prepare
 
-Log into Github and get an access token. You can use [copypaste.me](https://copypaste.me) to share passwords and snippets between devices.
+Log into GitHub and get an access token. You can use [copypaste.me](https://copypaste.me) to share passwords and snippets between devices.
 
-The Github token is required for the `sensible.dotfiles` installation.
+The GitHub token is required for the `sensible.dotfiles` installation.
 
 # Run it
 
