@@ -15,15 +15,15 @@
 - name: "{{ appName }} - Unpack zip"
   unarchive: src=./tmp/{{ appName }}.zip dest=./tmp/ copy=no
   when: fileType == "zip" and app_exists.stat.exists == False
-- name: "{{ appName }} - Mount dmg" 
+- name: "{{ appName }} - Mount dmg"
   command: hdiutil attach ./tmp/{{ appName }}.dmg -nobrowse -mountpoint ./tmp/{{ appName }}
   when: fileType == "dmg" and app_exists.stat.exists == False
-- name: "{{ appName }} - Install app" 
+- name: "{{ appName }} - Install app"
   shell: cp -aR ./tmp/{{ appName }}/*.app /Applications/{{ appName }}.app
   when: app_exists.stat.exists == False
 - name: "{{ appName }} - Unmount dmg"
   command: hdiutil detach ./tmp/{{ appName }}/
   when: app_exists.stat.exists == False
-- name: "{{ appName }} - Cleanup" 
+- name: "{{ appName }} - Cleanup"
   command: rm -R ./tmp/
   when: app_exists.stat.exists == False
