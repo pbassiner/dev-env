@@ -39,10 +39,11 @@ Mostly tested on macOS.
 
 ## TODO
 
--[ ] Fix idempotency (OK vs changed)
--[ ] Implement install vs update
--[ ] tmate vs gotty vs showterm vs termshare
--[ ] glances
+- [ ] Fix idempotency (OK vs changed)
+- [ ] Implement install vs update recipes
+- [ ] tmate vs gotty vs showterm vs termshare
+- [ ] glances
+- [ ] Improve the minimal-install with useful tools (maybe turn the branch into "install for dev", and use master for the comprehensive list of tools)
 
 # License
 
