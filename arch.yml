@@ -6,17 +6,18 @@
   tasks:
     - include: pacman.yml
     - include: aur.yml
-    - include: binary.yml
-    - include: folder.yml
-    - include: manual.yml
-    - include: sysctl.yml
     - include: flatpak.yml
     - include: snap.yml
-    #- include: brew.yml
-    #- include: bpkg.yml
     - include: appimage.yml
+    - include: binary.yml
+    - include: folder.yml
+    - include: sysctl.yml
+
+    - include: manual.yml
+    
     - include: cargo.yml
     - include: pip.yml
     - include: go.yml
     - include: npm.yml
     - include: gem.yml
+    #- include: bpkg.yml
