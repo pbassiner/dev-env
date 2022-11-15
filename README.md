@@ -42,6 +42,7 @@ Mostly tested on macOS.
 
 - [ ] Fix bootstrap script exiting after brew commands during the first execution (super weird)
 - [ ] Organize files into folders
+- [ ] Update recipes to avoid using `command` or `shell`
 - [ ] Fix idempotency (OK vs changed)
 - [ ] Implement install vs update recipes
 - [ ] tmate vs gotty vs showterm vs termshare
