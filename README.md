@@ -15,7 +15,7 @@ The GitHub token is required for the `sensible.dotfiles` installation.
 # with wget
 export GITHUB_TOKEN=... && wget -qO- https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh -O bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh
 # with curl
-export GITHUB_TOKEN=... && curl -s https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh -O && chmod u+x ./bootstrap.sh && ./bootstrap.sh
+export GITHUB_TOKEN=... && curl -s https://raw.githubusercontent.com/aserrallerios/dev-env/master/bootstrap.sh -O && chmod u+x bootstrap.sh && ./bootstrap.sh
 # with git
 git clone -b master --single-branch --depth 1 https://github.com/aserrallerios/dev-env /tmp/.dev-env && export GITHUB_TOKEN=... && /tmp/.dev-env/master/bootstrap.sh
 ```
