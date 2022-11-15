@@ -58,10 +58,6 @@ manual_common: # This commands should to be idempotent
     commands:
       - "wget -qO- https://raw.githubusercontent.com/aserrallerios/dotfiles/master/bootstrap.sh | bash"
       - "export GITHUB_TOKEN={{ github_token }}; sh -c \"$(curl -sSL --header 'Authorization: token {{ github_token }}' --header 'Accept: application/vnd.github.v3.raw' --location https://raw.githubusercontent.com/aserrallerios/sensible.dotfiles/master/bootstrap.sh)\""
-  - sudo: no
-    commands:
-      - curl https://sh.rustup.rs -sSf | sh -s -- -y
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
   - sudo: yes
     commands:
       - "chsh -s $(which zsh) {{ username }}"
