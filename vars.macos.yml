@@ -49,6 +49,7 @@ brew:
   - neovim
   - netdata
   - node
+  - nvm
   - openjdk@11
   - out-of-cheese-error/the-way/the-way
   - paulp/extras/sbtx
