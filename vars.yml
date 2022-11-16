@@ -13,7 +13,6 @@ cargo:
 go:
   - github.com/wallix/awless@latest
 pip:
-  - awscliv2
   - awslogs
   - virtualenv
   - http-prompt
