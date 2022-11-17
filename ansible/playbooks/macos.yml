@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  vars_files:
+    - ../vars/all.yml
+    - ../vars/macos.yml
+  tasks:
+    - import_tasks: ../tasks/tap.yml
+    - import_tasks: ../tasks/brew.yml
+    - import_tasks: ../tasks/cask.yml
+    - import_tasks: ../tasks/binary.yml
+    - include_tasks: ../tasks/dmg.yml
+      vars:
+        appName: "{{ item.name }}"
+        dmgURL: "{{ item.url }}"
+        fileType: "{{ item.type }}"
+      loop: "{{ dmg }}"
+
+    - import_tasks: ../tasks/manual.yml
+
+    - import_tasks: ../tasks/cargo.yml
+    - import_tasks: ../tasks/pip.yml
+    - import_tasks: ../tasks/go.yml
+    - import_tasks: ../tasks/npm.yml
+    - import_tasks: ../tasks/gem.yml
+    #- import_tasks: ../tasks/bpkg.yml

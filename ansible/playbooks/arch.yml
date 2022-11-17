@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  vars_files:
+    - ../vars/all.yml
+    - ../vars/linux.yml
+  tasks:
+    - include: ../tasks/pacman.yml
+    - include: ../tasks/aur.yml
+    - include: ../tasks/flatpak.yml
+    - include: ../tasks/snap.yml
+    - include: ../tasks/appimage.yml
+    - include: ../tasks/binary.yml
+    - include: ../tasks/folder.yml
+    - include: ../tasks/sysctl.yml
+
+    - include: ../tasks/manual.yml
+
+    - include: ../tasks/cargo.yml
+    - include: ../tasks/pip.yml
+    - include: ../tasks/go.yml
+    - include: ../tasks/npm.yml
+    - include: ../tasks/gem.yml
+    #- include: ../tasks/bpkg.yml

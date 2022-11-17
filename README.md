@@ -44,7 +44,7 @@ Mostly tested on macOS.
 ## TODO
 
 - [x] Fix bootstrap script exiting after brew commands during the first execution (super weird)
-- [ ] Organize files into folders
+- [x] Organize files into folders
 - [ ] Update recipes to avoid using `command` or `shell`
 - [ ] Fix idempotency (OK vs changed)
 - [ ] Implement install vs update recipes

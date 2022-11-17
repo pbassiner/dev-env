@@ -59,7 +59,7 @@ case $machine in
                 if [ ! -d ~/.ansible/plugins/modules/aur ]; then
                   git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
                 fi
-                TEMPLATE=arch.yml
+                TEMPLATE="ansible/playbooks/arch.yml"
                 ;;
         esac
         ;;
@@ -67,7 +67,7 @@ case $machine in
         INTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         brew install git
         brew install ansible
-        TEMPLATE=macos.yml
+        TEMPLATE="ansible/playbooks/macos.yml"
         ;;
     Cygwin)            exit 1;;
     MinGw)             exit 1;;
