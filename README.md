@@ -38,6 +38,7 @@ Mostly tested on macOS.
 1. Join Syncthing
 2. Log into Nextcloud
 3. Configure VSCode
+4. Configure iTerm (fonts, shortcuts, drop-down, tmux, ...)
 
 ## TODO
 
