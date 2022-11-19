@@ -51,6 +51,7 @@ Mostly tested on macOS.
 - [ ] tmate vs gotty vs showterm vs termshare
 - [ ] glances
 - [ ] Improve the minimal-install with useful tools (maybe turn the branch into "install for dev", and use master for the comprehensive list of tools)
+- [ ] Incorporate marlonrichert/zsh-autocomplete
 
 # License
 
