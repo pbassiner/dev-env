@@ -1,5 +1,0 @@
----
-- include_vars: vars.yml
-- name: Add user to docker group
-  become: yes
-  shell: "usermod -aG docker {{ username }}"

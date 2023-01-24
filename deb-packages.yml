@@ -1,6 +1,0 @@
----
-- include_vars: vars.yml
-- name: Install .deb files
-  become: yes
-  apt: deb={{ item.value.url }}
-  with_dict: "{{ debs }}"
