@@ -6,7 +6,7 @@ macOS Development Environment Configuration
 # Brew
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew tap Homebrew/bundle # expects Brefile in current dir
+brew tap Homebrew/bundle # expects Brewfile in current dir
 brew bundle # brew bundle dump to backup
 ```
 
@@ -29,7 +29,7 @@ curl -s "https://get.sdkman.io" | bash
 * [MacPass](https://github.com/MacPass/MacPass/releases/latest)
 
 # Other
-* Add `iterm2` to "Open applications at login"
+* Add `iterm2` to "Open applications at login" and load preferences from "Preferences -> Load preferences from a custom folder or URL"
 
 # License
 [MIT License](LICENSE)
