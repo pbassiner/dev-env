@@ -1,0 +1,13 @@
+{
+	"256color": true,
+	"brighten_bold_text": false,
+	"unix_term": "xterm-256color",
+	"theme": "user",
+	"user_theme_colors": {
+        "background": "#111111",
+    },
+    "view_settings": {
+        "font_face": "MesloLGS NF",
+        "font_size": 14
+    }
+}
