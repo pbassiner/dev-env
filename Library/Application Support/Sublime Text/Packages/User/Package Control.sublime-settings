@@ -2,14 +2,12 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Gist",
 	],
 	"installed_packages":
 	[
 		"A File Icon",
 		"Babel",
 		"FileDiffs",
-		"Gist",
 		"GitGutter",
 		"GraphQL",
 		"JSON Reindent",
