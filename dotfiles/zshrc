@@ -48,3 +48,6 @@ if [[ -z "$LC_ALL" ]]; then
   export LC_ALL='en_US.UTF-8'
   export LANG='en_US.UTF-8'
 fi
+
+# Autoload keys from keychain
+ssh-add --apple-load-keychain 2>/dev/null
