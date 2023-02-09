@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+brew "awscli"
 brew "bash"
 brew "docker-compose"
 brew "git"
