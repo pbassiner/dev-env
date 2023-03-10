@@ -1,4 +1,3 @@
-alias git=hub
 alias docker-rmi-untagged="docker images | awk '{if(match(\$1,\"<none>\")){print \"docker rmi \" \$3 \";\" | \"/bin/bash\"}}'"
 
 findLatest() {
