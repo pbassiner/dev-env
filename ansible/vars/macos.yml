@@ -124,6 +124,7 @@ cask:
   - font-sauce-code-pro-nerd-font
   - font-ubuntu-mono-nerd-font
   - font-ubuntu-nerd-font
+  - font-meslo-lg-nerd-font
   - gitkraken
   - gitter
   - google-chrome
