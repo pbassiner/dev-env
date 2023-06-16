@@ -1,5 +1,6 @@
 brew:
   - ansible
+  - python
   - asdf
   - autossh
   - awscli
