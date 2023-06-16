@@ -65,6 +65,9 @@ case $machine in
         ;;
     Mac)
         INTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        # we prefer to do this using the oh-my-zsh plugin, but we still need to add brew to the current shell
+        # (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
         brew install git
         brew install ansible
         TEMPLATE="ansible/playbooks/macos.yml"
