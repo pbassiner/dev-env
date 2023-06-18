@@ -176,7 +176,7 @@ cask:
   - keyboardcleantool
   - iterm2
   - expressions
-  - copyclip
+  - maccy
 manual_macos: [] # This commands need to be idempotent
 manual: "{{ manual_common + manual_macos }}"
 dmg:
