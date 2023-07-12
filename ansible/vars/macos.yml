@@ -8,7 +8,6 @@ brew:
   - chruby
   - coursier/formulas/coursier
   - curl
-  - k9s
   - dos2unix
   - exa
   - figlet
@@ -32,6 +31,7 @@ brew:
   - jfrog-cli
   - jmeter
   - jq
+  - k9s
   - kcat
   - knqyf263/pet/pet
   - kompose
@@ -79,11 +79,11 @@ brew:
   - wget
   - yarn
 tap:
-  - homebrew/cask-fonts 
   - coursier/formulas
   - derailed/k9s
   - graalvm/tap
   - homebrew/cask
+  - homebrew/cask-fonts 
   - homebrew/cask-versions
   - homebrew/core
   - jesseduffield/lazydocker
