@@ -8,7 +8,7 @@ brew:
   - chruby
   - coursier/formulas/coursier
   - curl
-  - derailed/k9s/k9s
+  - k9s
   - dos2unix
   - exa
   - figlet
