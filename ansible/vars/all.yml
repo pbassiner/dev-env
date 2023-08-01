@@ -13,21 +13,22 @@ cargo:
 go:
   - github.com/wallix/awless@latest
 pip:
+  - asciinema
   - awslogs
-  - virtualenv
-  - http-prompt
-  - git-sweep
-  - markdown
   - ctop
-  - thefuck
+  - git-sweep
+  - glances[all]
+  - http-prompt
+  - keep
+  - markdown
+  - organize-tool
   - pipdeptree
   - pip-review
-  - yq
-  - organize-tool
-  - asciinema
   - stormssh
-  - keep
-  - glances[all]
+  - thefuck
+  - tldr
+  - virtualenv
+  - yq
 npm:
   - diff-so-fancy
   - graphqurl
