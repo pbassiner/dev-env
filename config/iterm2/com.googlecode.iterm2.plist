@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>DCD9DF5A-8568-4C8D-8262-7718346DEF27</string>
 	<key>DisableFullscreenTransparency</key>
@@ -24,6 +26,10 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
+	<key>NeverWarnAboutShortLivedSessions_DCD9DF5A-8568-4C8D-8262-7718346DEF27</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_DCD9DF5A-8568-4C8D-8262-7718346DEF27_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2074,7 +2080,7 @@
 		</dict>
 	</dict>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
