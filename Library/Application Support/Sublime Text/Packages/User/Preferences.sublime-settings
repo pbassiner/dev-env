@@ -2,7 +2,6 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Gist",
 		"Vintage",
 	],
 	"save_on_focus_lost": true,
@@ -11,4 +10,5 @@
 	"color_scheme": "Monokai.sublime-color-scheme",
 	"dark_theme": "Default Dark.sublime-theme",
 	"light_theme": "Default.sublime-theme",
+	"index_files": true,
 }
