@@ -7,3 +7,5 @@ findLatest() {
 countOcurrences() {
   sort "$1" | uniq -c | sort -k1nr | head
 }
+
+alias bakZshHistory="cp $HOME/.zsh_history "$HOME/.zsh_history.$(date +"%Y%m%d").bak""
