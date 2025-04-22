@@ -1,10 +1,4 @@
-alias git=hub
-alias docker-compose="sudo docker-compose"
 alias docker-rmi-untagged="docker images | awk '{if(match(\$1,\"<none>\")){print \"docker rmi \" \$3 \";\" | \"/bin/bash\"}}'"
-alias j7="export JAVA_HOME=/usr/lib/jvm/java-7-oracle"
-alias j8="export JAVA_HOME=/usr/lib/jvm/java-8-oracle"
-alias j8-open="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64"
-alias j11="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64"
 
 findLatest() {
   find "$1" -type f -exec stat --format '%Y :%y %n' "{}" \; | sort -nr | cut -d: -f2- | head
@@ -14,29 +8,4 @@ countOcurrences() {
   sort "$1" | uniq -c | sort -k1nr | head
 }
 
-checkForUpdates() {
-  sudo apt-get update
-  apt list --upgradable
-
-  echo "Upgrade them all? (Y/n): "
-  read UPGRADE_ALL
-
-  if [[ -z "$UPGRADE_ALL" || "$UPGRADE_ALL" == "y" || "$UPGRADE_ALL" == "Y" ]]; then
-    sudo apt-get --assume-yes upgrade
-  fi
-}
-
-updateRepos() {
-  for f in *; do
-    if [[ -d $f ]]; then
-      cd $f
-      if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]]; then
-        echo "Updating repo in folder $f"
-        git checkout master
-        git fetch
-        git pull
-      fi
-      cd ..
-    fi
-  done
-}
+alias bakZshHistory="cp $HOME/.zsh_history "$HOME/.zsh_history.$(date +"%Y%m%d").bak""

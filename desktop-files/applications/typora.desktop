@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Typora
-Icon=/home/pbassiner/typora/resources/app/asserts/icon/icon_128x128.png
-Exec="/home/pbassiner/typora/Typora" %f
-Terminal=false
-Name[en_US]=Typora

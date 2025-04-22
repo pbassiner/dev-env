@@ -1,0 +1,9 @@
+[
+	{ "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"github"} },
+	{ "keys": ["ctrl+keypad_divide", "ctrl+/", "ctrl+7"],"command": "toggle_comment", "args": {"block": false} },
+	{ "keys": ["shift+control+keypad_divide", "shift+control+/", "shift+control+7"],"command": "toggle_comment", "args": {"block": true}},
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	// { "keys": ["alt+`"], "command": "toggle_terminus_panel" },
+]
