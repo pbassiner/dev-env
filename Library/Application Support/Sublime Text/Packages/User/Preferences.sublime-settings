@@ -6,9 +6,9 @@
 	],
 	"save_on_focus_lost": true,
 	"spell_check": true,
-	"theme": "auto",
-	"color_scheme": "Monokai.sublime-color-scheme",
+	"theme": "Monokai Classic.sublime-theme",
+	"color_scheme": "Monokai Classic.sublime-color-scheme",
 	"dark_theme": "Default Dark.sublime-theme",
 	"light_theme": "Default.sublime-theme",
-	"index_files": true,
+	"index_files": false,
 }
